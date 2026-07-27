@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DOCUMED
 {
-    public partial class FrmConsulta : Form
+    public partial class frmMedico : Form
     {
-        public FrmConsulta()
+        public frmMedico()
         {
             InitializeComponent();
         }

@@ -54,9 +54,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(470, 9);
+            this.label1.Location = new System.Drawing.Point(26, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 51);
+            this.label1.Size = new System.Drawing.Size(111, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Citas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -256,7 +256,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCitas";
             this.Text = "FrmCitas";
             this.ResumeLayout(false);

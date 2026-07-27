@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DOCUMED
 {
-    public partial class FrmConsulta : Form
+    public partial class frmConsulta : Form
     {
-        public FrmConsulta()
+        public frmConsulta()
         {
             InitializeComponent();
         }
+
+       // private void label9_Click(object sender, EventArgs e)
+       // {
+
+       // }
     }
 }
