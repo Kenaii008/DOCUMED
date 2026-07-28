@@ -24,6 +24,11 @@ namespace DOCUMED
             frm1.Show();
         }
 
+        private void FrmCitas_Load(object sender, EventArgs e)
+        {
+            this.citasTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetCita.Citas);
+        }
+
         //private void panel2_Paint(object sender, PaintEventArgs e)
         //{
 

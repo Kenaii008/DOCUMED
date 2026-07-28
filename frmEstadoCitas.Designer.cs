@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadoCitas));
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -46,12 +47,17 @@
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.binSrcECitas = new System.Windows.Forms.BindingSource(this.components);
+            this.medical_Center_HVIRFILLDataSetECitas = new DOCUMED.Medical_Center_HVIRFILLDataSetECitas();
+            this.estadoCitasTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters.EstadoCitasTableAdapter();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcECitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetECitas)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLimpiar
@@ -105,21 +111,21 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(560, 271);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 30);
+            this.textBox3.Size = new System.Drawing.Size(184, 26);
             this.textBox3.TabIndex = 55;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(569, 235);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(283, 30);
+            this.textBox2.Size = new System.Drawing.Size(283, 26);
             this.textBox2.TabIndex = 54;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(590, 199);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 30);
+            this.textBox1.Size = new System.Drawing.Size(125, 26);
             this.textBox1.TabIndex = 53;
             // 
             // label6
@@ -128,7 +134,7 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label6.Location = new System.Drawing.Point(475, 308);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 26);
+            this.label6.Size = new System.Drawing.Size(122, 21);
             this.label6.TabIndex = 52;
             this.label6.Text = "Reprogramado";
             // 
@@ -138,7 +144,7 @@
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label5.Location = new System.Drawing.Point(475, 275);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 26);
+            this.label5.Size = new System.Drawing.Size(64, 21);
             this.label5.TabIndex = 51;
             this.label5.Text = "Motivo";
             // 
@@ -148,7 +154,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label4.Location = new System.Drawing.Point(475, 203);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 26);
+            this.label4.Size = new System.Drawing.Size(86, 21);
             this.label4.TabIndex = 50;
             this.label4.Text = "ID Estado";
             // 
@@ -158,7 +164,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label3.Location = new System.Drawing.Point(475, 235);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 26);
+            this.label3.Size = new System.Drawing.Size(71, 21);
             this.label3.TabIndex = 49;
             this.label3.Text = "Nombre";
             // 
@@ -168,9 +174,9 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label1.Location = new System.Drawing.Point(899, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 49);
+            this.label1.Size = new System.Drawing.Size(194, 40);
             this.label1.TabIndex = 48;
-            this.label1.Text = "Citas";
+            this.label1.Text = "Estado Citas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
@@ -194,7 +200,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(631, 308);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 30);
+            this.comboBox1.Size = new System.Drawing.Size(174, 27);
             this.comboBox1.TabIndex = 63;
             // 
             // panel2
@@ -206,18 +212,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1901, 100);
             this.panel2.TabIndex = 92;
-            // 
-            // button1
-            // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(1389, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 98);
-            this.button1.TabIndex = 93;
-            this.button1.Text = "Menú Principal";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -241,12 +235,38 @@
             this.pictureBox2.TabIndex = 89;
             this.pictureBox2.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(1389, 394);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 98);
+            this.button1.TabIndex = 93;
+            this.button1.Text = "Menú Principal";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // binSrcECitas
+            // 
+            this.binSrcECitas.DataMember = "EstadoCitas";
+            this.binSrcECitas.DataSource = this.medical_Center_HVIRFILLDataSetECitas;
+            // 
+            // medical_Center_HVIRFILLDataSetECitas
+            // 
+            this.medical_Center_HVIRFILLDataSetECitas.DataSetName = "Medical_Center_HVIRFILLDataSetECitas";
+            this.medical_Center_HVIRFILLDataSetECitas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // estadoCitasTableAdapter
+            // 
+            this.estadoCitasTableAdapter.ClearBeforeFill = true;
+            // 
             // frmEstadoCitas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnLimpiar);
@@ -270,9 +290,12 @@
             this.Name = "frmEstadoCitas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEstadoCitas";
+            this.Load += new System.EventHandler(this.frmEstadoCitas_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcECitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetECitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +323,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource binSrcECitas;
+        private Medical_Center_HVIRFILLDataSetECitas medical_Center_HVIRFILLDataSetECitas;
+        private Medical_Center_HVIRFILLDataSetECitasTableAdapters.EstadoCitasTableAdapter estadoCitasTableAdapter;
     }
 }

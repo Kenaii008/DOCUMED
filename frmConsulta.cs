@@ -23,5 +23,12 @@ namespace DOCUMED
             this.Hide();
             frm1.Show();
         }
+
+        private void FrmConsulta_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetConsulta.Consultas' table. You can move, or remove it, as needed.
+            this.consultasTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetConsulta.Consultas);
+
+        }
     }
 }

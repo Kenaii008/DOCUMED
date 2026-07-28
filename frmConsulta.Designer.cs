@@ -28,43 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsulta));
+            System.Windows.Forms.Label diagnosticoLabel;
+            System.Windows.Forms.Label motivoConsultaLabel;
+            System.Windows.Forms.Label presionArterialLabel;
+            System.Windows.Forms.Label estaturaLabel;
+            System.Windows.Forms.Label pesoLabel;
+            System.Windows.Forms.Label fechaLabel;
+            System.Windows.Forms.Label idMedicoLabel;
+            System.Windows.Forms.Label idPacienteLabel;
+            System.Windows.Forms.Label idCitaLabel;
+            System.Windows.Forms.Label idConsultaLabel;
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnE = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.dtpFecha1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.binSrcConsulta = new System.Windows.Forms.BindingSource(this.components);
+            this.medical_Center_HVIRFILLDataSetConsulta = new DOCUMED.Medical_Center_HVIRFILLDataSetConsulta();
+            this.consultasTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetConsultaTableAdapters.ConsultasTableAdapter();
+            this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetConsultaTableAdapters.TableAdapterManager();
+            this.idConsultaTextBox = new System.Windows.Forms.TextBox();
+            this.diagnosticoTextBox = new System.Windows.Forms.TextBox();
+            this.motivoConsultaTextBox = new System.Windows.Forms.TextBox();
+            this.presionArterialTextBox = new System.Windows.Forms.TextBox();
+            this.estaturaTextBox = new System.Windows.Forms.TextBox();
+            this.pesoTextBox = new System.Windows.Forms.TextBox();
+            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.idMedicoTextBox = new System.Windows.Forms.TextBox();
+            this.idPacienteTextBox = new System.Windows.Forms.TextBox();
+            this.idCitaTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            diagnosticoLabel = new System.Windows.Forms.Label();
+            motivoConsultaLabel = new System.Windows.Forms.Label();
+            presionArterialLabel = new System.Windows.Forms.Label();
+            estaturaLabel = new System.Windows.Forms.Label();
+            pesoLabel = new System.Windows.Forms.Label();
+            fechaLabel = new System.Windows.Forms.Label();
+            idMedicoLabel = new System.Windows.Forms.Label();
+            idPacienteLabel = new System.Windows.Forms.Label();
+            idCitaLabel = new System.Windows.Forms.Label();
+            idConsultaLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcConsulta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetConsulta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label14
@@ -73,144 +101,42 @@
             this.label14.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(595, 22);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(321, 46);
+            this.label14.Size = new System.Drawing.Size(251, 36);
             this.label14.TabIndex = 86;
             this.label14.Text = "Datos De Consulta";
             // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(490, 502);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(234, 30);
-            this.textBox9.TabIndex = 84;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(585, 469);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(298, 30);
-            this.textBox8.TabIndex = 83;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(525, 433);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(271, 30);
-            this.textBox7.TabIndex = 82;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(462, 397);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 30);
-            this.textBox6.TabIndex = 81;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(424, 364);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(143, 30);
-            this.textBox5.TabIndex = 80;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(479, 251);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(130, 30);
-            this.textBox4.TabIndex = 79;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label12.Location = new System.Drawing.Point(362, 502);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(122, 26);
-            this.label12.TabIndex = 77;
-            this.label12.Text = "Diagnostico";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label11.Location = new System.Drawing.Point(362, 469);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(217, 26);
-            this.label11.TabIndex = 76;
-            this.label11.Text = "Motivo de la Consulta";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label10.Location = new System.Drawing.Point(362, 433);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(157, 26);
-            this.label10.TabIndex = 75;
-            this.label10.Text = "Presión Arterial";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label7.Location = new System.Drawing.Point(362, 397);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 26);
-            this.label7.TabIndex = 74;
-            this.label7.Text = "Estatura";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.Location = new System.Drawing.Point(362, 364);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 26);
-            this.label6.TabIndex = 73;
-            this.label6.Text = "Peso";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(362, 326);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 26);
-            this.label1.TabIndex = 72;
-            this.label1.Text = "Fecha";
-            // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(1077, 433);
+            this.btnLimpiar.Location = new System.Drawing.Point(859, 381);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(109, 46);
+            this.btnLimpiar.Size = new System.Drawing.Size(109, 41);
             this.btnLimpiar.TabIndex = 69;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(1077, 381);
+            this.btnEliminar.Location = new System.Drawing.Point(859, 329);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(109, 46);
+            this.btnEliminar.Size = new System.Drawing.Size(109, 41);
             this.btnEliminar.TabIndex = 68;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnE
             // 
-            this.btnE.Location = new System.Drawing.Point(1077, 326);
+            this.btnE.Location = new System.Drawing.Point(859, 274);
             this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(109, 46);
+            this.btnE.Size = new System.Drawing.Size(109, 41);
             this.btnE.TabIndex = 67;
             this.btnE.Text = "Editar";
             this.btnE.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(1077, 273);
+            this.btnGuardar.Location = new System.Drawing.Point(859, 221);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(109, 46);
+            this.btnGuardar.Size = new System.Drawing.Size(109, 41);
             this.btnGuardar.TabIndex = 66;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -218,107 +144,21 @@
             // btnNuevo
             // 
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevo.Location = new System.Drawing.Point(1077, 217);
+            this.btnNuevo.Location = new System.Drawing.Point(859, 165);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(109, 46);
+            this.btnNuevo.Size = new System.Drawing.Size(109, 41);
             this.btnNuevo.TabIndex = 65;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // dtpFecha1
-            // 
-            this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha1.Location = new System.Drawing.Point(435, 326);
-            this.dtpFecha1.Name = "dtpFecha1";
-            this.dtpFecha1.Size = new System.Drawing.Size(145, 30);
-            this.dtpFecha1.TabIndex = 64;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(479, 289);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 30);
-            this.textBox3.TabIndex = 63;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(447, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 30);
-            this.textBox2.TabIndex = 62;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(484, 186);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 30);
-            this.textBox1.TabIndex = 61;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(362, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 26);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "ID Paciente";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(362, 289);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 26);
-            this.label4.TabIndex = 59;
-            this.label4.Text = "ID Médico";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(362, 190);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 26);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "ID Consulta";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(362, 217);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 26);
-            this.label2.TabIndex = 57;
-            this.label2.Text = "ID Cita";
-            // 
             // label8
             // 
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Location = new System.Drawing.Point(1049, 192);
+            this.label8.Location = new System.Drawing.Point(831, 140);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 319);
+            this.label8.Size = new System.Drawing.Size(167, 314);
             this.label8.TabIndex = 70;
-            // 
-            // label9
-            // 
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.Location = new System.Drawing.Point(351, 157);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(901, 422);
-            this.label9.TabIndex = 71;
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(359, 186);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 356);
-            this.panel1.TabIndex = 89;
             // 
             // panel2
             // 
@@ -329,18 +169,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1901, 100);
             this.panel2.TabIndex = 90;
-            // 
-            // button1
-            // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(1283, 481);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 98);
-            this.button1.TabIndex = 91;
-            this.button1.Text = "Menú Principal";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -364,52 +192,367 @@
             this.pictureBox2.TabIndex = 89;
             this.pictureBox2.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(1283, 481);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 98);
+            this.button1.TabIndex = 91;
+            this.button1.Text = "Menú Principal";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // binSrcConsulta
+            // 
+            this.binSrcConsulta.DataMember = "Consultas";
+            this.binSrcConsulta.DataSource = this.medical_Center_HVIRFILLDataSetConsulta;
+            // 
+            // medical_Center_HVIRFILLDataSetConsulta
+            // 
+            this.medical_Center_HVIRFILLDataSetConsulta.DataSetName = "Medical_Center_HVIRFILLDataSetConsulta";
+            this.medical_Center_HVIRFILLDataSetConsulta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // consultasTableAdapter
+            // 
+            this.consultasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.ConsultasTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetConsultaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // idConsultaTextBox
+            // 
+            this.idConsultaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsulta, "IdConsulta", true));
+            this.idConsultaTextBox.Location = new System.Drawing.Point(499, 140);
+            this.idConsultaTextBox.Name = "idConsultaTextBox";
+            this.idConsultaTextBox.Size = new System.Drawing.Size(228, 26);
+            this.idConsultaTextBox.TabIndex = 92;
+            // 
+            // diagnosticoTextBox
+            // 
+            this.diagnosticoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsulta, "Diagnostico", true));
+            this.diagnosticoTextBox.Location = new System.Drawing.Point(499, 428);
+            this.diagnosticoTextBox.Name = "diagnosticoTextBox";
+            this.diagnosticoTextBox.Size = new System.Drawing.Size(228, 26);
+            this.diagnosticoTextBox.TabIndex = 110;
+            // 
+            // diagnosticoLabel
+            // 
+            diagnosticoLabel.AutoSize = true;
+            diagnosticoLabel.Location = new System.Drawing.Point(380, 431);
+            diagnosticoLabel.Name = "diagnosticoLabel";
+            diagnosticoLabel.Size = new System.Drawing.Size(83, 19);
+            diagnosticoLabel.TabIndex = 109;
+            diagnosticoLabel.Text = "Diagnostico:";
+            // 
+            // motivoConsultaTextBox
+            // 
+            this.motivoConsultaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsulta, "MotivoConsulta", true));
+            this.motivoConsultaTextBox.Location = new System.Drawing.Point(499, 396);
+            this.motivoConsultaTextBox.Name = "motivoConsultaTextBox";
+            this.motivoConsultaTextBox.Size = new System.Drawing.Size(228, 26);
+            this.motivoConsultaTextBox.TabIndex = 108;
+            // 
+            // motivoConsultaLabel
+            // 
+            motivoConsultaLabel.AutoSize = true;
+            motivoConsultaLabel.Location = new System.Drawing.Point(380, 399);
+            motivoConsultaLabel.Name = "motivoConsultaLabel";
+            motivoConsultaLabel.Size = new System.Drawing.Size(113, 19);
+            motivoConsultaLabel.TabIndex = 107;
+            motivoConsultaLabel.Text = "Motivo Consulta:";
+            // 
+            // presionArterialTextBox
+            // 
+            this.presionArterialTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsulta, "PresionArterial", true));
+            this.presionArterialTextBox.Location = new System.Drawing.Point(499, 364);
+            this.presionArterialTextBox.Name = "presionArterialTextBox";
+            this.presionArterialTextBox.Size = new System.Drawing.Size(228, 26);
+            this.presionArterialTextBox.TabIndex = 106;
+            // 
+            // presionArterialLabel
+            // 
+            presionArterialLabel.AutoSize = true;
+            presionArterialLabel.Location = new System.Drawing.Point(380, 367);
+            presionArterialLabel.Name = "presionArterialLabel";
+            presionArterialLabel.Size = new System.Drawing.Size(105, 19);
+            presionArterialLabel.TabIndex = 105;
+            presionArterialLabel.Text = "Presion Arterial:";
+            // 
+            // estaturaTextBox
+            // 
+            this.estaturaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsulta, "Estatura", true));
+            this.estaturaTextBox.Location = new System.Drawing.Point(499, 332);
+            this.estaturaTextBox.Name = "estaturaTextBox";
+            this.estaturaTextBox.Size = new System.Drawing.Size(228, 26);
+            this.estaturaTextBox.TabIndex = 104;
+            // 
+            // estaturaLabel
+            // 
+            estaturaLabel.AutoSize = true;
+            estaturaLabel.Location = new System.Drawing.Point(380, 335);
+            estaturaLabel.Name = "estaturaLabel";
+            estaturaLabel.Size = new System.Drawing.Size(61, 19);
+            estaturaLabel.TabIndex = 103;
+            estaturaLabel.Text = "Estatura:";
+            // 
+            // pesoTextBox
+            // 
+            this.pesoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsulta, "Peso", true));
+            this.pesoTextBox.Location = new System.Drawing.Point(499, 300);
+            this.pesoTextBox.Name = "pesoTextBox";
+            this.pesoTextBox.Size = new System.Drawing.Size(228, 26);
+            this.pesoTextBox.TabIndex = 102;
+            // 
+            // pesoLabel
+            // 
+            pesoLabel.AutoSize = true;
+            pesoLabel.Location = new System.Drawing.Point(380, 303);
+            pesoLabel.Name = "pesoLabel";
+            pesoLabel.Size = new System.Drawing.Size(42, 19);
+            pesoLabel.TabIndex = 101;
+            pesoLabel.Text = "Peso:";
+            // 
+            // fechaDateTimePicker
+            // 
+            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.binSrcConsulta, "Fecha", true));
+            this.fechaDateTimePicker.Enabled = false;
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(499, 268);
+            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(228, 26);
+            this.fechaDateTimePicker.TabIndex = 100;
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Location = new System.Drawing.Point(380, 272);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(49, 19);
+            fechaLabel.TabIndex = 99;
+            fechaLabel.Text = "Fecha:";
+            // 
+            // idMedicoTextBox
+            // 
+            this.idMedicoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsulta, "IdMedico", true));
+            this.idMedicoTextBox.Location = new System.Drawing.Point(499, 236);
+            this.idMedicoTextBox.Name = "idMedicoTextBox";
+            this.idMedicoTextBox.Size = new System.Drawing.Size(228, 26);
+            this.idMedicoTextBox.TabIndex = 98;
+            // 
+            // idMedicoLabel
+            // 
+            idMedicoLabel.AutoSize = true;
+            idMedicoLabel.Location = new System.Drawing.Point(380, 239);
+            idMedicoLabel.Name = "idMedicoLabel";
+            idMedicoLabel.Size = new System.Drawing.Size(76, 19);
+            idMedicoLabel.TabIndex = 97;
+            idMedicoLabel.Text = "Id Medico:";
+            // 
+            // idPacienteTextBox
+            // 
+            this.idPacienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsulta, "IdPaciente", true));
+            this.idPacienteTextBox.Location = new System.Drawing.Point(499, 204);
+            this.idPacienteTextBox.Name = "idPacienteTextBox";
+            this.idPacienteTextBox.Size = new System.Drawing.Size(228, 26);
+            this.idPacienteTextBox.TabIndex = 96;
+            // 
+            // idPacienteLabel
+            // 
+            idPacienteLabel.AutoSize = true;
+            idPacienteLabel.Location = new System.Drawing.Point(380, 207);
+            idPacienteLabel.Name = "idPacienteLabel";
+            idPacienteLabel.Size = new System.Drawing.Size(80, 19);
+            idPacienteLabel.TabIndex = 95;
+            idPacienteLabel.Text = "Id Paciente:";
+            // 
+            // idCitaTextBox
+            // 
+            this.idCitaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsulta, "IdCita", true));
+            this.idCitaTextBox.Location = new System.Drawing.Point(499, 172);
+            this.idCitaTextBox.Name = "idCitaTextBox";
+            this.idCitaTextBox.Size = new System.Drawing.Size(228, 26);
+            this.idCitaTextBox.TabIndex = 94;
+            // 
+            // idCitaLabel
+            // 
+            idCitaLabel.AutoSize = true;
+            idCitaLabel.Location = new System.Drawing.Point(380, 175);
+            idCitaLabel.Name = "idCitaLabel";
+            idCitaLabel.Size = new System.Drawing.Size(54, 19);
+            idCitaLabel.TabIndex = 93;
+            idCitaLabel.Text = "Id Cita:";
+            // 
+            // idConsultaLabel
+            // 
+            idConsultaLabel.AutoSize = true;
+            idConsultaLabel.Location = new System.Drawing.Point(380, 143);
+            idConsultaLabel.Name = "idConsultaLabel";
+            idConsultaLabel.Size = new System.Drawing.Size(82, 19);
+            idConsultaLabel.TabIndex = 91;
+            idConsultaLabel.Text = "Id Consulta:";
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(354, 124);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(689, 401);
+            this.label1.TabIndex = 111;
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.BindingSource = this.binSrcConsulta;
+            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigator1.DeleteItem = null;
+            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2});
+            this.bindingNavigator1.Location = new System.Drawing.Point(572, 481);
+            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingNavigator1.Size = new System.Drawing.Size(209, 25);
+            this.bindingNavigator1.TabIndex = 112;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // FrmConsulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(idConsultaLabel);
+            this.Controls.Add(this.idConsultaTextBox);
+            this.Controls.Add(idCitaLabel);
+            this.Controls.Add(this.idCitaTextBox);
+            this.Controls.Add(idPacienteLabel);
+            this.Controls.Add(this.idPacienteTextBox);
+            this.Controls.Add(idMedicoLabel);
+            this.Controls.Add(this.idMedicoTextBox);
+            this.Controls.Add(fechaLabel);
+            this.Controls.Add(this.fechaDateTimePicker);
+            this.Controls.Add(pesoLabel);
+            this.Controls.Add(this.pesoTextBox);
+            this.Controls.Add(estaturaLabel);
+            this.Controls.Add(this.estaturaTextBox);
+            this.Controls.Add(presionArterialLabel);
+            this.Controls.Add(this.presionArterialTextBox);
+            this.Controls.Add(motivoConsultaLabel);
+            this.Controls.Add(this.motivoConsultaTextBox);
+            this.Controls.Add(diagnosticoLabel);
+            this.Controls.Add(this.diagnosticoTextBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnE);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.dtpFecha1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConsulta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmConsulta_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcConsulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetConsulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,37 +561,40 @@
         #endregion
 
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnE;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.DateTimePicker dtpFecha1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.BindingSource binSrcConsulta;
+        private Medical_Center_HVIRFILLDataSetConsulta medical_Center_HVIRFILLDataSetConsulta;
+        private Medical_Center_HVIRFILLDataSetConsultaTableAdapters.ConsultasTableAdapter consultasTableAdapter;
+        private Medical_Center_HVIRFILLDataSetConsultaTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox idConsultaTextBox;
+        private System.Windows.Forms.TextBox diagnosticoTextBox;
+        private System.Windows.Forms.TextBox motivoConsultaTextBox;
+        private System.Windows.Forms.TextBox presionArterialTextBox;
+        private System.Windows.Forms.TextBox estaturaTextBox;
+        private System.Windows.Forms.TextBox pesoTextBox;
+        private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
+        private System.Windows.Forms.TextBox idMedicoTextBox;
+        private System.Windows.Forms.TextBox idPacienteTextBox;
+        private System.Windows.Forms.TextBox idCitaTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
     }
 }

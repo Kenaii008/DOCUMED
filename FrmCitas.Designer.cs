@@ -28,19 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCitas));
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dtpFecha1 = new System.Windows.Forms.DateTimePicker();
-            this.dtpHora = new System.Windows.Forms.DateTimePicker();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            System.Windows.Forms.Label idCitaLabel;
+            System.Windows.Forms.Label idPacienteLabel;
+            System.Windows.Forms.Label idMedicoLabel;
+            System.Windows.Forms.Label fechaLabel;
+            System.Windows.Forms.Label horaLabel;
+            System.Windows.Forms.Label idEstadoLabel;
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnE = new System.Windows.Forms.Button();
@@ -53,115 +48,40 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.binSrcCita = new System.Windows.Forms.BindingSource(this.components);
+            this.medical_Center_HVIRFILLDataSetCita = new DOCUMED.Medical_Center_HVIRFILLDataSetCita();
+            this.citasTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetCitaTableAdapters.CitasTableAdapter();
+            this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetCitaTableAdapters.TableAdapterManager();
+            this.idCitaTextBox = new System.Windows.Forms.TextBox();
+            this.idPacienteTextBox = new System.Windows.Forms.TextBox();
+            this.idMedicoTextBox = new System.Windows.Forms.TextBox();
+            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.horaTextBox = new System.Windows.Forms.TextBox();
+            this.idEstadoTextBox = new System.Windows.Forms.TextBox();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            idCitaLabel = new System.Windows.Forms.Label();
+            idPacienteLabel = new System.Windows.Forms.Label();
+            idMedicoLabel = new System.Windows.Forms.Label();
+            fechaLabel = new System.Windows.Forms.Label();
+            horaLabel = new System.Windows.Forms.Label();
+            idEstadoLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcCita)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetCita)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(377, 264);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 26);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "lD Cita";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(377, 304);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 26);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "lD Paciente";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(377, 336);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 26);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "ID Médico";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(377, 372);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 26);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Fecha";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.Location = new System.Drawing.Point(377, 408);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 26);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Hora";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label7.Location = new System.Drawing.Point(377, 444);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 26);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "ID Estado";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(460, 264);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 30);
-            this.textBox1.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(485, 300);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 30);
-            this.textBox2.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(485, 336);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 30);
-            this.textBox3.TabIndex = 9;
-            // 
-            // dtpFecha1
-            // 
-            this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha1.Location = new System.Drawing.Point(440, 369);
-            this.dtpFecha1.Name = "dtpFecha1";
-            this.dtpFecha1.Size = new System.Drawing.Size(145, 30);
-            this.dtpFecha1.TabIndex = 13;
-            // 
-            // dtpHora
-            // 
-            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHora.Location = new System.Drawing.Point(440, 405);
-            this.dtpHora.Name = "dtpHora";
-            this.dtpHora.Size = new System.Drawing.Size(145, 30);
-            this.dtpHora.TabIndex = 14;
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(494, 440);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(121, 30);
-            this.cmbEstado.TabIndex = 15;
             // 
             // btnNuevo
             // 
@@ -255,7 +175,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label1.Location = new System.Drawing.Point(755, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 49);
+            this.label1.Size = new System.Drawing.Size(89, 40);
             this.label1.TabIndex = 94;
             this.label1.Text = "Citas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -282,12 +202,244 @@
             this.pictureBox2.TabIndex = 89;
             this.pictureBox2.TabStop = false;
             // 
+            // binSrcCita
+            // 
+            this.binSrcCita.DataMember = "Citas";
+            this.binSrcCita.DataSource = this.medical_Center_HVIRFILLDataSetCita;
+            // 
+            // medical_Center_HVIRFILLDataSetCita
+            // 
+            this.medical_Center_HVIRFILLDataSetCita.DataSetName = "Medical_Center_HVIRFILLDataSetCita";
+            this.medical_Center_HVIRFILLDataSetCita.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // citasTableAdapter
+            // 
+            this.citasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CitasTableAdapter = this.citasTableAdapter;
+            this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetCitaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // idCitaLabel
+            // 
+            idCitaLabel.AutoSize = true;
+            idCitaLabel.Location = new System.Drawing.Point(407, 283);
+            idCitaLabel.Name = "idCitaLabel";
+            idCitaLabel.Size = new System.Drawing.Size(54, 19);
+            idCitaLabel.TabIndex = 93;
+            idCitaLabel.Text = "Id Cita:";
+            // 
+            // idCitaTextBox
+            // 
+            this.idCitaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcCita, "IdCita", true));
+            this.idCitaTextBox.Location = new System.Drawing.Point(493, 280);
+            this.idCitaTextBox.Name = "idCitaTextBox";
+            this.idCitaTextBox.Size = new System.Drawing.Size(234, 26);
+            this.idCitaTextBox.TabIndex = 94;
+            // 
+            // idPacienteLabel
+            // 
+            idPacienteLabel.AutoSize = true;
+            idPacienteLabel.Location = new System.Drawing.Point(407, 315);
+            idPacienteLabel.Name = "idPacienteLabel";
+            idPacienteLabel.Size = new System.Drawing.Size(80, 19);
+            idPacienteLabel.TabIndex = 95;
+            idPacienteLabel.Text = "Id Paciente:";
+            // 
+            // idPacienteTextBox
+            // 
+            this.idPacienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcCita, "IdPaciente", true));
+            this.idPacienteTextBox.Location = new System.Drawing.Point(493, 312);
+            this.idPacienteTextBox.Name = "idPacienteTextBox";
+            this.idPacienteTextBox.Size = new System.Drawing.Size(234, 26);
+            this.idPacienteTextBox.TabIndex = 96;
+            // 
+            // idMedicoLabel
+            // 
+            idMedicoLabel.AutoSize = true;
+            idMedicoLabel.Location = new System.Drawing.Point(407, 347);
+            idMedicoLabel.Name = "idMedicoLabel";
+            idMedicoLabel.Size = new System.Drawing.Size(76, 19);
+            idMedicoLabel.TabIndex = 97;
+            idMedicoLabel.Text = "Id Medico:";
+            // 
+            // idMedicoTextBox
+            // 
+            this.idMedicoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcCita, "IdMedico", true));
+            this.idMedicoTextBox.Location = new System.Drawing.Point(493, 344);
+            this.idMedicoTextBox.Name = "idMedicoTextBox";
+            this.idMedicoTextBox.Size = new System.Drawing.Size(234, 26);
+            this.idMedicoTextBox.TabIndex = 98;
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Location = new System.Drawing.Point(407, 380);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(49, 19);
+            fechaLabel.TabIndex = 99;
+            fechaLabel.Text = "Fecha:";
+            // 
+            // fechaDateTimePicker
+            // 
+            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.binSrcCita, "Fecha", true));
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(493, 376);
+            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(234, 26);
+            this.fechaDateTimePicker.TabIndex = 100;
+            // 
+            // horaLabel
+            // 
+            horaLabel.AutoSize = true;
+            horaLabel.Location = new System.Drawing.Point(407, 411);
+            horaLabel.Name = "horaLabel";
+            horaLabel.Size = new System.Drawing.Size(43, 19);
+            horaLabel.TabIndex = 101;
+            horaLabel.Text = "Hora:";
+            // 
+            // horaTextBox
+            // 
+            this.horaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcCita, "Hora", true));
+            this.horaTextBox.Location = new System.Drawing.Point(493, 408);
+            this.horaTextBox.Name = "horaTextBox";
+            this.horaTextBox.Size = new System.Drawing.Size(234, 26);
+            this.horaTextBox.TabIndex = 102;
+            // 
+            // idEstadoLabel
+            // 
+            idEstadoLabel.AutoSize = true;
+            idEstadoLabel.Location = new System.Drawing.Point(407, 443);
+            idEstadoLabel.Name = "idEstadoLabel";
+            idEstadoLabel.Size = new System.Drawing.Size(71, 19);
+            idEstadoLabel.TabIndex = 103;
+            idEstadoLabel.Text = "Id Estado:";
+            // 
+            // idEstadoTextBox
+            // 
+            this.idEstadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcCita, "IdEstado", true));
+            this.idEstadoTextBox.Location = new System.Drawing.Point(493, 440);
+            this.idEstadoTextBox.Name = "idEstadoTextBox";
+            this.idEstadoTextBox.Size = new System.Drawing.Size(234, 26);
+            this.idEstadoTextBox.TabIndex = 104;
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = null;
+            this.bindingNavigator1.BindingSource = this.binSrcCita;
+            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigator1.DeleteItem = null;
+            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2});
+            this.bindingNavigator1.Location = new System.Drawing.Point(650, 513);
+            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingNavigator1.Size = new System.Drawing.Size(209, 25);
+            this.bindingNavigator1.TabIndex = 105;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // FrmCitas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(idCitaLabel);
+            this.Controls.Add(this.idCitaTextBox);
+            this.Controls.Add(idPacienteLabel);
+            this.Controls.Add(this.idPacienteTextBox);
+            this.Controls.Add(idMedicoLabel);
+            this.Controls.Add(this.idMedicoTextBox);
+            this.Controls.Add(fechaLabel);
+            this.Controls.Add(this.fechaDateTimePicker);
+            this.Controls.Add(horaLabel);
+            this.Controls.Add(this.horaTextBox);
+            this.Controls.Add(idEstadoLabel);
+            this.Controls.Add(this.idEstadoTextBox);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLimpiar);
@@ -295,18 +447,6 @@
             this.Controls.Add(this.btnE);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.cmbEstado);
-            this.Controls.Add(this.dtpHora);
-            this.Controls.Add(this.dtpFecha1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -315,28 +455,22 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCitas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmCitas_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcCita)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetCita)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dtpFecha1;
-        private System.Windows.Forms.DateTimePicker dtpHora;
-        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnE;
@@ -349,5 +483,25 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource binSrcCita;
+        private Medical_Center_HVIRFILLDataSetCita medical_Center_HVIRFILLDataSetCita;
+        private Medical_Center_HVIRFILLDataSetCitaTableAdapters.CitasTableAdapter citasTableAdapter;
+        private Medical_Center_HVIRFILLDataSetCitaTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox idCitaTextBox;
+        private System.Windows.Forms.TextBox idPacienteTextBox;
+        private System.Windows.Forms.TextBox idMedicoTextBox;
+        private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
+        private System.Windows.Forms.TextBox horaTextBox;
+        private System.Windows.Forms.TextBox idEstadoTextBox;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
     }
 }
