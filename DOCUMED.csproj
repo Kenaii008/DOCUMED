@@ -136,5 +136,26 @@
   <ItemGroup>
     <None Include="bin\Debug\docMedLogo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\citas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\paciente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\specialiste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\estado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\citaicn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\doc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SALIR.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -118,13 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="doc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\doc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="document" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="citas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\citas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hvLog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\hvLog.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="docMedLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\docMedLogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="specialiste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\specialiste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="estado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\estado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paciente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\paciente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="citaicn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\citaicn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SALIR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SALIR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

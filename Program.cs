@@ -16,7 +16,7 @@ namespace DOCUMED
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmConsulta());
+            Application.Run(new Form1());
         }
     }
 }
