@@ -90,7 +90,7 @@
             idMedicoLabel.Name = "idMedicoLabel";
             idMedicoLabel.Size = new System.Drawing.Size(76, 19);
             idMedicoLabel.TabIndex = 93;
-            idMedicoLabel.Text = "Id Medico:";
+            idMedicoLabel.Text = "Id Médico:";
             // 
             // nombreLabel
             // 
@@ -117,7 +117,7 @@
             cedulaProfesionalLabel.Name = "cedulaProfesionalLabel";
             cedulaProfesionalLabel.Size = new System.Drawing.Size(126, 19);
             cedulaProfesionalLabel.TabIndex = 99;
-            cedulaProfesionalLabel.Text = "Cedula Profesional:";
+            cedulaProfesionalLabel.Text = "Cédula Profesional:";
             // 
             // telefonoLabel
             // 
@@ -126,7 +126,7 @@
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(64, 19);
             telefonoLabel.TabIndex = 101;
-            telefonoLabel.Text = "Telefono:";
+            telefonoLabel.Text = "Teléfono:";
             // 
             // correoLabel
             // 
@@ -188,7 +188,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(821, 44);
+            this.label1.Location = new System.Drawing.Point(755, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 40);
             this.label1.TabIndex = 48;

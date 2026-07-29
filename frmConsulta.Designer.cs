@@ -120,7 +120,7 @@
             presionArterialLabel.Name = "presionArterialLabel";
             presionArterialLabel.Size = new System.Drawing.Size(105, 19);
             presionArterialLabel.TabIndex = 105;
-            presionArterialLabel.Text = "Presion Arterial:";
+            presionArterialLabel.Text = "Presión Arterial:";
             // 
             // estaturaLabel
             // 
@@ -156,7 +156,7 @@
             idMedicoLabel.Name = "idMedicoLabel";
             idMedicoLabel.Size = new System.Drawing.Size(76, 19);
             idMedicoLabel.TabIndex = 97;
-            idMedicoLabel.Text = "Id Medico:";
+            idMedicoLabel.Text = "Id Médico:";
             // 
             // idPacienteLabel
             // 
@@ -189,7 +189,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(595, 22);
+            this.label14.Location = new System.Drawing.Point(755, 25);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(251, 36);
             this.label14.TabIndex = 86;

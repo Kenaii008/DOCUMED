@@ -108,7 +108,7 @@
             idMedicoLabel.Name = "idMedicoLabel";
             idMedicoLabel.Size = new System.Drawing.Size(76, 19);
             idMedicoLabel.TabIndex = 97;
-            idMedicoLabel.Text = "Id Medico:";
+            idMedicoLabel.Text = "Id Médico:";
             // 
             // fechaLabel
             // 

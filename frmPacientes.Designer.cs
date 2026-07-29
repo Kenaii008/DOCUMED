@@ -150,7 +150,7 @@
             padecimientosCronicosLabel.Name = "padecimientosCronicosLabel";
             padecimientosCronicosLabel.Size = new System.Drawing.Size(158, 19);
             padecimientosCronicosLabel.TabIndex = 128;
-            padecimientosCronicosLabel.Text = "Padecimientos Cronicos:";
+            padecimientosCronicosLabel.Text = "Padecimientos Crónicos:";
             // 
             // telefonoLabel
             // 
@@ -159,7 +159,7 @@
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(64, 19);
             telefonoLabel.TabIndex = 130;
-            telefonoLabel.Text = "Telefono:";
+            telefonoLabel.Text = "Teléfono:";
             // 
             // correoLabel
             // 
@@ -177,7 +177,7 @@
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(70, 19);
             direccionLabel.TabIndex = 134;
-            direccionLabel.Text = "Direccion:";
+            direccionLabel.Text = "Dirección:";
             // 
             // contactoEmergenciaLabel
             // 
@@ -195,13 +195,13 @@
             telefonoEmergenciaLabel.Name = "telefonoEmergenciaLabel";
             telefonoEmergenciaLabel.Size = new System.Drawing.Size(138, 19);
             telefonoEmergenciaLabel.TabIndex = 138;
-            telefonoEmergenciaLabel.Text = "Telefono Emergencia:";
+            telefonoEmergenciaLabel.Text = "Teléfono Emergencia:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(886, 40);
+            this.label14.Location = new System.Drawing.Point(755, 25);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(257, 36);
             this.label14.TabIndex = 116;
