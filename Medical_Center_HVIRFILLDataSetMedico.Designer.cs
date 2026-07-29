@@ -20,17 +20,17 @@ namespace DOCUMED {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Medical_Center_HVIRFILLDataSetECitas")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Medical_Center_HVIRFILLDataSetMedico")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Medical_Center_HVIRFILLDataSetECitas : global::System.Data.DataSet {
+    public partial class Medical_Center_HVIRFILLDataSetMedico : global::System.Data.DataSet {
         
-        private EstadoCitasDataTable tableEstadoCitas;
+        private MedicosDataTable tableMedicos;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public Medical_Center_HVIRFILLDataSetECitas() {
+        public Medical_Center_HVIRFILLDataSetMedico() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DOCUMED {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        protected Medical_Center_HVIRFILLDataSetECitas(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Medical_Center_HVIRFILLDataSetMedico(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DOCUMED {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["EstadoCitas"] != null)) {
-                    base.Tables.Add(new EstadoCitasDataTable(ds.Tables["EstadoCitas"]));
+                if ((ds.Tables["Medicos"] != null)) {
+                    base.Tables.Add(new MedicosDataTable(ds.Tables["Medicos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DOCUMED {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public EstadoCitasDataTable EstadoCitas {
+        public MedicosDataTable Medicos {
             get {
-                return this.tableEstadoCitas;
+                return this.tableMedicos;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DOCUMED {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Medical_Center_HVIRFILLDataSetECitas cln = ((Medical_Center_HVIRFILLDataSetECitas)(base.Clone()));
+            Medical_Center_HVIRFILLDataSetMedico cln = ((Medical_Center_HVIRFILLDataSetMedico)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DOCUMED {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["EstadoCitas"] != null)) {
-                    base.Tables.Add(new EstadoCitasDataTable(ds.Tables["EstadoCitas"]));
+                if ((ds.Tables["Medicos"] != null)) {
+                    base.Tables.Add(new MedicosDataTable(ds.Tables["Medicos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DOCUMED {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableEstadoCitas = ((EstadoCitasDataTable)(base.Tables["EstadoCitas"]));
+            this.tableMedicos = ((MedicosDataTable)(base.Tables["Medicos"]));
             if ((initTable == true)) {
-                if ((this.tableEstadoCitas != null)) {
-                    this.tableEstadoCitas.InitVars();
+                if ((this.tableMedicos != null)) {
+                    this.tableMedicos.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DOCUMED {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Medical_Center_HVIRFILLDataSetECitas";
+            this.DataSetName = "Medical_Center_HVIRFILLDataSetMedico";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Medical_Center_HVIRFILLDataSetECitas.xsd";
+            this.Namespace = "http://tempuri.org/Medical_Center_HVIRFILLDataSetMedico.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableEstadoCitas = new EstadoCitasDataTable();
-            base.Tables.Add(this.tableEstadoCitas);
+            this.tableMedicos = new MedicosDataTable();
+            base.Tables.Add(this.tableMedicos);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private bool ShouldSerializeEstadoCitas() {
+        private bool ShouldSerializeMedicos() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DOCUMED {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Medical_Center_HVIRFILLDataSetECitas ds = new Medical_Center_HVIRFILLDataSetECitas();
+            Medical_Center_HVIRFILLDataSetMedico ds = new Medical_Center_HVIRFILLDataSetMedico();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,31 @@ namespace DOCUMED {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public delegate void EstadoCitasRowChangeEventHandler(object sender, EstadoCitasRowChangeEvent e);
+        public delegate void MedicosRowChangeEventHandler(object sender, MedicosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class EstadoCitasDataTable : global::System.Data.TypedTableBase<EstadoCitasRow> {
+        public partial class MedicosDataTable : global::System.Data.TypedTableBase<MedicosRow> {
             
-            private global::System.Data.DataColumn columnIdEstado;
+            private global::System.Data.DataColumn columnIdMedico;
             
             private global::System.Data.DataColumn columnNombre;
             
-            private global::System.Data.DataColumn columnMotivo;
+            private global::System.Data.DataColumn columnEspecialidad;
             
-            private global::System.Data.DataColumn columnReprogramado;
+            private global::System.Data.DataColumn columnCedulaProfesional;
+            
+            private global::System.Data.DataColumn columnTelefono;
+            
+            private global::System.Data.DataColumn columnCorreo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public EstadoCitasDataTable() {
-                this.TableName = "EstadoCitas";
+            public MedicosDataTable() {
+                this.TableName = "Medicos";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +302,7 @@ namespace DOCUMED {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            internal EstadoCitasDataTable(global::System.Data.DataTable table) {
+            internal MedicosDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,16 +319,16 @@ namespace DOCUMED {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            protected EstadoCitasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected MedicosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public global::System.Data.DataColumn IdEstadoColumn {
+            public global::System.Data.DataColumn IdMedicoColumn {
                 get {
-                    return this.columnIdEstado;
+                    return this.columnIdMedico;
                 }
             }
             
@@ -338,17 +342,33 @@ namespace DOCUMED {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public global::System.Data.DataColumn MotivoColumn {
+            public global::System.Data.DataColumn EspecialidadColumn {
                 get {
-                    return this.columnMotivo;
+                    return this.columnEspecialidad;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public global::System.Data.DataColumn ReprogramadoColumn {
+            public global::System.Data.DataColumn CedulaProfesionalColumn {
                 get {
-                    return this.columnReprogramado;
+                    return this.columnCedulaProfesional;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public global::System.Data.DataColumn TelefonoColumn {
+                get {
+                    return this.columnTelefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public global::System.Data.DataColumn CorreoColumn {
+                get {
+                    return this.columnCorreo;
                 }
             }
             
@@ -363,55 +383,57 @@ namespace DOCUMED {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public EstadoCitasRow this[int index] {
+            public MedicosRow this[int index] {
                 get {
-                    return ((EstadoCitasRow)(this.Rows[index]));
+                    return ((MedicosRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public event EstadoCitasRowChangeEventHandler EstadoCitasRowChanging;
+            public event MedicosRowChangeEventHandler MedicosRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public event EstadoCitasRowChangeEventHandler EstadoCitasRowChanged;
+            public event MedicosRowChangeEventHandler MedicosRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public event EstadoCitasRowChangeEventHandler EstadoCitasRowDeleting;
+            public event MedicosRowChangeEventHandler MedicosRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public event EstadoCitasRowChangeEventHandler EstadoCitasRowDeleted;
+            public event MedicosRowChangeEventHandler MedicosRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public void AddEstadoCitasRow(EstadoCitasRow row) {
+            public void AddMedicosRow(MedicosRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public EstadoCitasRow AddEstadoCitasRow(decimal IdEstado, string Nombre, string Motivo, string Reprogramado) {
-                EstadoCitasRow rowEstadoCitasRow = ((EstadoCitasRow)(this.NewRow()));
+            public MedicosRow AddMedicosRow(decimal IdMedico, string Nombre, string Especialidad, string CedulaProfesional, string Telefono, string Correo) {
+                MedicosRow rowMedicosRow = ((MedicosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        IdEstado,
+                        IdMedico,
                         Nombre,
-                        Motivo,
-                        Reprogramado};
-                rowEstadoCitasRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowEstadoCitasRow);
-                return rowEstadoCitasRow;
+                        Especialidad,
+                        CedulaProfesional,
+                        Telefono,
+                        Correo};
+                rowMedicosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMedicosRow);
+                return rowMedicosRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public EstadoCitasRow FindByIdEstado(decimal IdEstado) {
-                return ((EstadoCitasRow)(this.Rows.Find(new object[] {
-                            IdEstado})));
+            public MedicosRow FindByIdMedico(decimal IdMedico) {
+                return ((MedicosRow)(this.Rows.Find(new object[] {
+                            IdMedico})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                EstadoCitasDataTable cln = ((EstadoCitasDataTable)(base.Clone()));
+                MedicosDataTable cln = ((MedicosDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,62 +441,70 @@ namespace DOCUMED {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new EstadoCitasDataTable();
+                return new MedicosDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             internal void InitVars() {
-                this.columnIdEstado = base.Columns["IdEstado"];
+                this.columnIdMedico = base.Columns["IdMedico"];
                 this.columnNombre = base.Columns["Nombre"];
-                this.columnMotivo = base.Columns["Motivo"];
-                this.columnReprogramado = base.Columns["Reprogramado"];
+                this.columnEspecialidad = base.Columns["Especialidad"];
+                this.columnCedulaProfesional = base.Columns["CedulaProfesional"];
+                this.columnTelefono = base.Columns["Telefono"];
+                this.columnCorreo = base.Columns["Correo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             private void InitClass() {
-                this.columnIdEstado = new global::System.Data.DataColumn("IdEstado", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIdEstado);
+                this.columnIdMedico = new global::System.Data.DataColumn("IdMedico", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdMedico);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
-                this.columnMotivo = new global::System.Data.DataColumn("Motivo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMotivo);
-                this.columnReprogramado = new global::System.Data.DataColumn("Reprogramado", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnReprogramado);
+                this.columnEspecialidad = new global::System.Data.DataColumn("Especialidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEspecialidad);
+                this.columnCedulaProfesional = new global::System.Data.DataColumn("CedulaProfesional", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCedulaProfesional);
+                this.columnTelefono = new global::System.Data.DataColumn("Telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefono);
+                this.columnCorreo = new global::System.Data.DataColumn("Correo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCorreo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnIdEstado}, true));
-                this.columnIdEstado.AllowDBNull = false;
-                this.columnIdEstado.Unique = true;
+                                this.columnIdMedico}, true));
+                this.columnIdMedico.AllowDBNull = false;
+                this.columnIdMedico.Unique = true;
                 this.columnNombre.MaxLength = 50;
-                this.columnMotivo.MaxLength = 100;
-                this.columnReprogramado.MaxLength = 5;
+                this.columnEspecialidad.MaxLength = 40;
+                this.columnCedulaProfesional.MaxLength = 20;
+                this.columnTelefono.MaxLength = 15;
+                this.columnCorreo.MaxLength = 60;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public EstadoCitasRow NewEstadoCitasRow() {
-                return ((EstadoCitasRow)(this.NewRow()));
+            public MedicosRow NewMedicosRow() {
+                return ((MedicosRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new EstadoCitasRow(builder);
+                return new MedicosRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(EstadoCitasRow);
+                return typeof(MedicosRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.EstadoCitasRowChanged != null)) {
-                    this.EstadoCitasRowChanged(this, new EstadoCitasRowChangeEvent(((EstadoCitasRow)(e.Row)), e.Action));
+                if ((this.MedicosRowChanged != null)) {
+                    this.MedicosRowChanged(this, new MedicosRowChangeEvent(((MedicosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -482,8 +512,8 @@ namespace DOCUMED {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.EstadoCitasRowChanging != null)) {
-                    this.EstadoCitasRowChanging(this, new EstadoCitasRowChangeEvent(((EstadoCitasRow)(e.Row)), e.Action));
+                if ((this.MedicosRowChanging != null)) {
+                    this.MedicosRowChanging(this, new MedicosRowChangeEvent(((MedicosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -491,8 +521,8 @@ namespace DOCUMED {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.EstadoCitasRowDeleted != null)) {
-                    this.EstadoCitasRowDeleted(this, new EstadoCitasRowChangeEvent(((EstadoCitasRow)(e.Row)), e.Action));
+                if ((this.MedicosRowDeleted != null)) {
+                    this.MedicosRowDeleted(this, new MedicosRowChangeEvent(((MedicosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -500,14 +530,14 @@ namespace DOCUMED {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.EstadoCitasRowDeleting != null)) {
-                    this.EstadoCitasRowDeleting(this, new EstadoCitasRowChangeEvent(((EstadoCitasRow)(e.Row)), e.Action));
+                if ((this.MedicosRowDeleting != null)) {
+                    this.MedicosRowDeleting(this, new MedicosRowChangeEvent(((MedicosRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public void RemoveEstadoCitasRow(EstadoCitasRow row) {
+            public void RemoveMedicosRow(MedicosRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -516,7 +546,7 @@ namespace DOCUMED {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Medical_Center_HVIRFILLDataSetECitas ds = new Medical_Center_HVIRFILLDataSetECitas();
+                Medical_Center_HVIRFILLDataSetMedico ds = new Medical_Center_HVIRFILLDataSetMedico();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -534,7 +564,7 @@ namespace DOCUMED {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "EstadoCitasDataTable";
+                attribute2.FixedValue = "MedicosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -578,25 +608,25 @@ namespace DOCUMED {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class EstadoCitasRow : global::System.Data.DataRow {
+        public partial class MedicosRow : global::System.Data.DataRow {
             
-            private EstadoCitasDataTable tableEstadoCitas;
+            private MedicosDataTable tableMedicos;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            internal EstadoCitasRow(global::System.Data.DataRowBuilder rb) : 
+            internal MedicosRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableEstadoCitas = ((EstadoCitasDataTable)(this.Table));
+                this.tableMedicos = ((MedicosDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public decimal IdEstado {
+            public decimal IdMedico {
                 get {
-                    return ((decimal)(this[this.tableEstadoCitas.IdEstadoColumn]));
+                    return ((decimal)(this[this.tableMedicos.IdMedicoColumn]));
                 }
                 set {
-                    this[this.tableEstadoCitas.IdEstadoColumn] = value;
+                    this[this.tableMedicos.IdMedicoColumn] = value;
                 }
             }
             
@@ -605,83 +635,139 @@ namespace DOCUMED {
             public string Nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadoCitas.NombreColumn]));
+                        return ((string)(this[this.tableMedicos.NombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Nombre\' in table \'EstadoCitas\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nombre\' in table \'Medicos\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstadoCitas.NombreColumn] = value;
+                    this[this.tableMedicos.NombreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string Motivo {
+            public string Especialidad {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadoCitas.MotivoColumn]));
+                        return ((string)(this[this.tableMedicos.EspecialidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Motivo\' in table \'EstadoCitas\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Especialidad\' in table \'Medicos\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstadoCitas.MotivoColumn] = value;
+                    this[this.tableMedicos.EspecialidadColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string Reprogramado {
+            public string CedulaProfesional {
                 get {
                     try {
-                        return ((string)(this[this.tableEstadoCitas.ReprogramadoColumn]));
+                        return ((string)(this[this.tableMedicos.CedulaProfesionalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Reprogramado\' in table \'EstadoCitas\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CedulaProfesional\' in table \'Medicos\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEstadoCitas.ReprogramadoColumn] = value;
+                    this[this.tableMedicos.CedulaProfesionalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public string Telefono {
+                get {
+                    try {
+                        return ((string)(this[this.tableMedicos.TelefonoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Telefono\' in table \'Medicos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMedicos.TelefonoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public string Correo {
+                get {
+                    try {
+                        return ((string)(this[this.tableMedicos.CorreoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Correo\' in table \'Medicos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMedicos.CorreoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public bool IsNombreNull() {
-                return this.IsNull(this.tableEstadoCitas.NombreColumn);
+                return this.IsNull(this.tableMedicos.NombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public void SetNombreNull() {
-                this[this.tableEstadoCitas.NombreColumn] = global::System.Convert.DBNull;
+                this[this.tableMedicos.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public bool IsMotivoNull() {
-                return this.IsNull(this.tableEstadoCitas.MotivoColumn);
+            public bool IsEspecialidadNull() {
+                return this.IsNull(this.tableMedicos.EspecialidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public void SetMotivoNull() {
-                this[this.tableEstadoCitas.MotivoColumn] = global::System.Convert.DBNull;
+            public void SetEspecialidadNull() {
+                this[this.tableMedicos.EspecialidadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public bool IsReprogramadoNull() {
-                return this.IsNull(this.tableEstadoCitas.ReprogramadoColumn);
+            public bool IsCedulaProfesionalNull() {
+                return this.IsNull(this.tableMedicos.CedulaProfesionalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public void SetReprogramadoNull() {
-                this[this.tableEstadoCitas.ReprogramadoColumn] = global::System.Convert.DBNull;
+            public void SetCedulaProfesionalNull() {
+                this[this.tableMedicos.CedulaProfesionalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public bool IsTelefonoNull() {
+                return this.IsNull(this.tableMedicos.TelefonoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public void SetTelefonoNull() {
+                this[this.tableMedicos.TelefonoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public bool IsCorreoNull() {
+                return this.IsNull(this.tableMedicos.CorreoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public void SetCorreoNull() {
+                this[this.tableMedicos.CorreoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -689,22 +775,22 @@ namespace DOCUMED {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public class EstadoCitasRowChangeEvent : global::System.EventArgs {
+        public class MedicosRowChangeEvent : global::System.EventArgs {
             
-            private EstadoCitasRow eventRow;
+            private MedicosRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public EstadoCitasRowChangeEvent(EstadoCitasRow row, global::System.Data.DataRowAction action) {
+            public MedicosRowChangeEvent(MedicosRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public EstadoCitasRow Row {
+            public MedicosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -720,7 +806,7 @@ namespace DOCUMED {
         }
     }
 }
-namespace DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters {
+namespace DOCUMED.Medical_Center_HVIRFILLDataSetMedicoTableAdapters {
     
     
     /// <summary>
@@ -732,7 +818,7 @@ namespace DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class EstadoCitasTableAdapter : global::System.ComponentModel.Component {
+    public partial class MedicosTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -746,7 +832,7 @@ namespace DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public EstadoCitasTableAdapter() {
+        public MedicosTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -843,49 +929,62 @@ namespace DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "EstadoCitas";
-            tableMapping.ColumnMappings.Add("IdEstado", "IdEstado");
+            tableMapping.DataSetTable = "Medicos";
+            tableMapping.ColumnMappings.Add("IdMedico", "IdMedico");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
-            tableMapping.ColumnMappings.Add("Motivo", "Motivo");
-            tableMapping.ColumnMappings.Add("Reprogramado", "Reprogramado");
+            tableMapping.ColumnMappings.Add("Especialidad", "Especialidad");
+            tableMapping.ColumnMappings.Add("CedulaProfesional", "CedulaProfesional");
+            tableMapping.ColumnMappings.Add("Telefono", "Telefono");
+            tableMapping.ColumnMappings.Add("Correo", "Correo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [EstadoCitas] WHERE (([IdEstado] = @Original_IdEstado) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Motivo = 1 AND [Motivo] IS NULL) OR ([Motivo] = @Original_Motivo)) AND ((@IsNull_Reprogramado = 1 AND [Reprogramado] IS NULL) OR ([Reprogramado] = @Original_Reprogramado)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Medicos] WHERE (([IdMedico] = @Original_IdMedico) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Especialidad = 1 AND [Especialidad] IS NULL) OR ([Especialidad] = @Original_Especialidad)) AND ((@IsNull_CedulaProfesional = 1 AND [CedulaProfesional] IS NULL) OR ([CedulaProfesional] = @Original_CedulaProfesional)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdEstado", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdMedico", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Motivo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Reprogramado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reprogramado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Especialidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CedulaProfesional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CedulaProfesional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Correo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [EstadoCitas] ([IdEstado], [Nombre], [Motivo], [Reprogramado]) VALUES" +
-                " (@IdEstado, @Nombre, @Motivo, @Reprogramado);\r\nSELECT IdEstado, Nombre, Motivo," +
-                " Reprogramado FROM EstadoCitas WHERE (IdEstado = @IdEstado)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Medicos] ([IdMedico], [Nombre], [Especialidad], [CedulaProfesional], [Telefono], [Correo]) VALUES (@IdMedico, @Nombre, @Especialidad, @CedulaProfesional, @Telefono, @Correo);
+SELECT IdMedico, Nombre, Especialidad, CedulaProfesional, Telefono, Correo FROM Medicos WHERE (IdMedico = @IdMedico)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdEstado", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdMedico", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reprogramado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CedulaProfesional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [EstadoCitas] SET [IdEstado] = @IdEstado, [Nombre] = @Nombre, [Motivo] = @Motivo, [Reprogramado] = @Reprogramado WHERE (([IdEstado] = @Original_IdEstado) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Motivo = 1 AND [Motivo] IS NULL) OR ([Motivo] = @Original_Motivo)) AND ((@IsNull_Reprogramado = 1 AND [Reprogramado] IS NULL) OR ([Reprogramado] = @Original_Reprogramado)));
-SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado = @IdEstado)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Medicos] SET [IdMedico] = @IdMedico, [Nombre] = @Nombre, [Especialidad] = @Especialidad, [CedulaProfesional] = @CedulaProfesional, [Telefono] = @Telefono, [Correo] = @Correo WHERE (([IdMedico] = @Original_IdMedico) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Especialidad = 1 AND [Especialidad] IS NULL) OR ([Especialidad] = @Original_Especialidad)) AND ((@IsNull_CedulaProfesional = 1 AND [CedulaProfesional] IS NULL) OR ([CedulaProfesional] = @Original_CedulaProfesional)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)));
+SELECT IdMedico, Nombre, Especialidad, CedulaProfesional, Telefono, Correo FROM Medicos WHERE (IdMedico = @IdMedico)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdEstado", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdMedico", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reprogramado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdEstado", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CedulaProfesional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdMedico", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Motivo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Reprogramado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reprogramado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Especialidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CedulaProfesional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CedulaProfesional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Correo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -901,52 +1000,65 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        IdEstado, Nombre, Motivo, Reprogramado\r\nFROM            EstadoCitas" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT        IdMedico, Nombre, Especialidad, CedulaProfesional, Telefono, Correo" +
+                "\r\nFROM            Medicos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"UPDATE [dbo].[EstadoCitas] SET [IdEstado] = @IdEstado, [Nombre] = @Nombre, [Motivo] = @Motivo, [Reprogramado] = @Reprogramado WHERE (([IdEstado] = @Original_IdEstado) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Motivo = 1 AND [Motivo] IS NULL) OR ([Motivo] = @Original_Motivo)) AND ((@IsNull_Reprogramado = 1 AND [Reprogramado] IS NULL) OR ([Reprogramado] = @Original_Reprogramado)))
-SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado = @IdEstado)";
+            this._commandCollection[1].CommandText = @"UPDATE [Medicos] SET [IdMedico] = @IdMedico, [Nombre] = @Nombre, [Especialidad] = @Especialidad, [CedulaProfesional] = @CedulaProfesional, [Telefono] = @Telefono, [Correo] = @Correo WHERE (([IdMedico] = @Original_IdMedico) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Especialidad = 1 AND [Especialidad] IS NULL) OR ([Especialidad] = @Original_Especialidad)) AND ((@IsNull_CedulaProfesional = 1 AND [CedulaProfesional] IS NULL) OR ([CedulaProfesional] = @Original_CedulaProfesional)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)))
+SELECT IdMedico, Nombre, Especialidad, CedulaProfesional, Telefono, Correo FROM Medicos WHERE (IdMedico = @IdMedico)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdEstado", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdMedico", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reprogramado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdEstado", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CedulaProfesional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdMedico", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Motivo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Reprogramado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reprogramado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Especialidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CedulaProfesional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CedulaProfesional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Correo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO [dbo].[EstadoCitas] ([IdEstado], [Nombre], [Motivo], [Reprogramado]) " +
-                "VALUES (@IdEstado, @Nombre, @Motivo, @Reprogramado)";
+            this._commandCollection[2].CommandText = "INSERT INTO [Medicos] ([IdMedico], [Nombre], [Especialidad], [CedulaProfesional]," +
+                " [Telefono], [Correo]) VALUES (@IdMedico, @Nombre, @Especialidad, @CedulaProfesi" +
+                "onal, @Telefono, @Correo)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdEstado", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdMedico", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Motivo", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reprogramado", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Especialidad", global::System.Data.SqlDbType.VarChar, 40, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CedulaProfesional", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"DELETE FROM [dbo].[EstadoCitas] WHERE (([IdEstado] = @Original_IdEstado) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Motivo = 1 AND [Motivo] IS NULL) OR ([Motivo] = @Original_Motivo)) AND ((@IsNull_Reprogramado = 1 AND [Reprogramado] IS NULL) OR ([Reprogramado] = @Original_Reprogramado)))";
+            this._commandCollection[3].CommandText = @"DELETE FROM [Medicos] WHERE (([IdMedico] = @Original_IdMedico) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Especialidad = 1 AND [Especialidad] IS NULL) OR ([Especialidad] = @Original_Especialidad)) AND ((@IsNull_CedulaProfesional = 1 AND [CedulaProfesional] IS NULL) OR ([CedulaProfesional] = @Original_CedulaProfesional)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)))";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdEstado", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdMedico", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Motivo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Motivo", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Reprogramado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reprogramado", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Especialidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Especialidad", global::System.Data.SqlDbType.VarChar, 40, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CedulaProfesional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CedulaProfesional", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Correo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Medical_Center_HVIRFILLDataSetECitas.EstadoCitasDataTable dataTable) {
+        public virtual int Fill(Medical_Center_HVIRFILLDataSetMedico.MedicosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -959,9 +1071,9 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Medical_Center_HVIRFILLDataSetECitas.EstadoCitasDataTable GetData() {
+        public virtual Medical_Center_HVIRFILLDataSetMedico.MedicosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Medical_Center_HVIRFILLDataSetECitas.EstadoCitasDataTable dataTable = new Medical_Center_HVIRFILLDataSetECitas.EstadoCitasDataTable();
+            Medical_Center_HVIRFILLDataSetMedico.MedicosDataTable dataTable = new Medical_Center_HVIRFILLDataSetMedico.MedicosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -969,15 +1081,15 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Medical_Center_HVIRFILLDataSetECitas.EstadoCitasDataTable dataTable) {
+        public virtual int Update(Medical_Center_HVIRFILLDataSetMedico.MedicosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Medical_Center_HVIRFILLDataSetECitas dataSet) {
-            return this.Adapter.Update(dataSet, "EstadoCitas");
+        public virtual int Update(Medical_Center_HVIRFILLDataSetMedico dataSet) {
+            return this.Adapter.Update(dataSet, "Medicos");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -999,8 +1111,8 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_IdEstado, string Original_Nombre, string Original_Motivo, string Original_Reprogramado) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_IdEstado));
+        public virtual int Delete(decimal Original_IdMedico, string Original_Nombre, string Original_Especialidad, string Original_CedulaProfesional, string Original_Telefono, string Original_Correo) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_IdMedico));
             if ((Original_Nombre == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -1009,21 +1121,37 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Nombre));
             }
-            if ((Original_Motivo == null)) {
+            if ((Original_Especialidad == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Motivo));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Especialidad));
             }
-            if ((Original_Reprogramado == null)) {
+            if ((Original_CedulaProfesional == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Reprogramado));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_CedulaProfesional));
+            }
+            if ((Original_Telefono == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Telefono));
+            }
+            if ((Original_Correo == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Correo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1045,25 +1173,37 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(decimal IdEstado, string Nombre, string Motivo, string Reprogramado) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(IdEstado));
+        public virtual int Insert(decimal IdMedico, string Nombre, string Especialidad, string CedulaProfesional, string Telefono, string Correo) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(IdMedico));
             if ((Nombre == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Nombre));
             }
-            if ((Motivo == null)) {
+            if ((Especialidad == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Motivo));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Especialidad));
             }
-            if ((Reprogramado == null)) {
+            if ((CedulaProfesional == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Reprogramado));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CedulaProfesional));
+            }
+            if ((Telefono == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Telefono));
+            }
+            if ((Correo == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Correo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1085,50 +1225,78 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(decimal IdEstado, string Nombre, string Motivo, string Reprogramado, decimal Original_IdEstado, string Original_Nombre, string Original_Motivo, string Original_Reprogramado) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(IdEstado));
+        public virtual int Update(decimal IdMedico, string Nombre, string Especialidad, string CedulaProfesional, string Telefono, string Correo, decimal Original_IdMedico, string Original_Nombre, string Original_Especialidad, string Original_CedulaProfesional, string Original_Telefono, string Original_Correo) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(IdMedico));
             if ((Nombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Nombre));
             }
-            if ((Motivo == null)) {
+            if ((Especialidad == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Motivo));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Especialidad));
             }
-            if ((Reprogramado == null)) {
+            if ((CedulaProfesional == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Reprogramado));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(CedulaProfesional));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Original_IdEstado));
-            if ((Original_Nombre == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((Telefono == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Nombre));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Telefono));
             }
-            if ((Original_Motivo == null)) {
+            if ((Correo == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Correo));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Original_IdMedico));
+            if ((Original_Nombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Motivo));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Nombre));
             }
-            if ((Original_Reprogramado == null)) {
+            if ((Original_Especialidad == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Reprogramado));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Especialidad));
+            }
+            if ((Original_CedulaProfesional == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_CedulaProfesional));
+            }
+            if ((Original_Telefono == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Telefono));
+            }
+            if ((Original_Correo == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Correo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1150,71 +1318,124 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nombre, string Motivo, string Reprogramado, decimal Original_IdEstado, string Original_Nombre, string Original_Motivo, string Original_Reprogramado) {
-            return this.Update(Original_IdEstado, Nombre, Motivo, Reprogramado, Original_IdEstado, Original_Nombre, Original_Motivo, Original_Reprogramado);
+        public virtual int Update(string Nombre, string Especialidad, string CedulaProfesional, string Telefono, string Correo, decimal Original_IdMedico, string Original_Nombre, string Original_Especialidad, string Original_CedulaProfesional, string Original_Telefono, string Original_Correo) {
+            return this.Update(Original_IdMedico, Nombre, Especialidad, CedulaProfesional, Telefono, Correo, Original_IdMedico, Original_Nombre, Original_Especialidad, Original_CedulaProfesional, Original_Telefono, Original_Correo);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int ActualizarECitas(decimal IdEstado, string Nombre, string Motivo, string Reprogramado, decimal Original_IdEstado, global::System.Nullable<int> IsNull_Nombre, string Original_Nombre, global::System.Nullable<int> IsNull_Motivo, string Original_Motivo, global::System.Nullable<int> IsNull_Reprogramado, string Original_Reprogramado) {
+        public virtual int ActualizarMedico(
+                    decimal IdMedico, 
+                    string Nombre, 
+                    string Especialidad, 
+                    string CedulaProfesional, 
+                    string Telefono, 
+                    string Correo, 
+                    decimal Original_IdMedico, 
+                    global::System.Nullable<int> IsNull_Nombre, 
+                    string Original_Nombre, 
+                    global::System.Nullable<int> IsNull_Especialidad, 
+                    string Original_Especialidad, 
+                    global::System.Nullable<int> IsNull_CedulaProfesional, 
+                    string Original_CedulaProfesional, 
+                    global::System.Nullable<int> IsNull_Telefono, 
+                    string Original_Telefono, 
+                    global::System.Nullable<int> IsNull_Correo, 
+                    string Original_Correo) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            command.Parameters[0].Value = ((decimal)(IdEstado));
+            command.Parameters[0].Value = ((decimal)(IdMedico));
             if ((Nombre == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 command.Parameters[1].Value = ((string)(Nombre));
             }
-            if ((Motivo == null)) {
+            if ((Especialidad == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(Motivo));
+                command.Parameters[2].Value = ((string)(Especialidad));
             }
-            if ((Reprogramado == null)) {
+            if ((CedulaProfesional == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(Reprogramado));
+                command.Parameters[3].Value = ((string)(CedulaProfesional));
             }
-            command.Parameters[4].Value = ((decimal)(Original_IdEstado));
-            if ((IsNull_Nombre.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(IsNull_Nombre.Value));
+            if ((Telefono == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
+                command.Parameters[4].Value = ((string)(Telefono));
+            }
+            if ((Correo == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Original_Nombre == null)) {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
             else {
-                command.Parameters[6].Value = ((string)(Original_Nombre));
+                command.Parameters[5].Value = ((string)(Correo));
             }
-            if ((IsNull_Motivo.HasValue == true)) {
-                command.Parameters[7].Value = ((int)(IsNull_Motivo.Value));
+            command.Parameters[6].Value = ((decimal)(Original_IdMedico));
+            if ((IsNull_Nombre.HasValue == true)) {
+                command.Parameters[7].Value = ((int)(IsNull_Nombre.Value));
             }
             else {
                 command.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Original_Motivo == null)) {
+            if ((Original_Nombre == null)) {
                 command.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[8].Value = ((string)(Original_Motivo));
+                command.Parameters[8].Value = ((string)(Original_Nombre));
             }
-            if ((IsNull_Reprogramado.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(IsNull_Reprogramado.Value));
+            if ((IsNull_Especialidad.HasValue == true)) {
+                command.Parameters[9].Value = ((int)(IsNull_Especialidad.Value));
             }
             else {
                 command.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_Reprogramado == null)) {
+            if ((Original_Especialidad == null)) {
                 command.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[10].Value = ((string)(Original_Reprogramado));
+                command.Parameters[10].Value = ((string)(Original_Especialidad));
+            }
+            if ((IsNull_CedulaProfesional.HasValue == true)) {
+                command.Parameters[11].Value = ((int)(IsNull_CedulaProfesional.Value));
+            }
+            else {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_CedulaProfesional == null)) {
+                command.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[12].Value = ((string)(Original_CedulaProfesional));
+            }
+            if ((IsNull_Telefono.HasValue == true)) {
+                command.Parameters[13].Value = ((int)(IsNull_Telefono.Value));
+            }
+            else {
+                command.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Telefono == null)) {
+                command.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[14].Value = ((string)(Original_Telefono));
+            }
+            if ((IsNull_Correo.HasValue == true)) {
+                command.Parameters[15].Value = ((int)(IsNull_Correo.Value));
+            }
+            else {
+                command.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Correo == null)) {
+                command.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[16].Value = ((string)(Original_Correo));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1237,26 +1458,38 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int AgregarECitas(decimal IdEstado, string Nombre, string Motivo, string Reprogramado) {
+        public virtual int AgregarMedico(decimal IdMedico, string Nombre, string Especialidad, string CedulaProfesional, string Telefono, string Correo) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((decimal)(IdEstado));
+            command.Parameters[0].Value = ((decimal)(IdMedico));
             if ((Nombre == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 command.Parameters[1].Value = ((string)(Nombre));
             }
-            if ((Motivo == null)) {
+            if ((Especialidad == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(Motivo));
+                command.Parameters[2].Value = ((string)(Especialidad));
             }
-            if ((Reprogramado == null)) {
+            if ((CedulaProfesional == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(Reprogramado));
+                command.Parameters[3].Value = ((string)(CedulaProfesional));
+            }
+            if ((Telefono == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(Telefono));
+            }
+            if ((Correo == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(Correo));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1279,9 +1512,9 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int EliminarECitas(decimal Original_IdEstado, global::System.Nullable<int> IsNull_Nombre, string Original_Nombre, global::System.Nullable<int> IsNull_Motivo, string Original_Motivo, global::System.Nullable<int> IsNull_Reprogramado, string Original_Reprogramado) {
+        public virtual int EliminarMedico(decimal Original_IdMedico, global::System.Nullable<int> IsNull_Nombre, string Original_Nombre, global::System.Nullable<int> IsNull_Especialidad, string Original_Especialidad, global::System.Nullable<int> IsNull_CedulaProfesional, string Original_CedulaProfesional, global::System.Nullable<int> IsNull_Telefono, string Original_Telefono, global::System.Nullable<int> IsNull_Correo, string Original_Correo) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
-            command.Parameters[0].Value = ((decimal)(Original_IdEstado));
+            command.Parameters[0].Value = ((decimal)(Original_IdMedico));
             if ((IsNull_Nombre.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(IsNull_Nombre.Value));
             }
@@ -1294,29 +1527,53 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
             else {
                 command.Parameters[2].Value = ((string)(Original_Nombre));
             }
-            if ((IsNull_Motivo.HasValue == true)) {
-                command.Parameters[3].Value = ((int)(IsNull_Motivo.Value));
+            if ((IsNull_Especialidad.HasValue == true)) {
+                command.Parameters[3].Value = ((int)(IsNull_Especialidad.Value));
             }
             else {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Original_Motivo == null)) {
+            if ((Original_Especialidad == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(Original_Motivo));
+                command.Parameters[4].Value = ((string)(Original_Especialidad));
             }
-            if ((IsNull_Reprogramado.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(IsNull_Reprogramado.Value));
+            if ((IsNull_CedulaProfesional.HasValue == true)) {
+                command.Parameters[5].Value = ((int)(IsNull_CedulaProfesional.Value));
             }
             else {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Original_Reprogramado == null)) {
+            if ((Original_CedulaProfesional == null)) {
                 command.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[6].Value = ((string)(Original_Reprogramado));
+                command.Parameters[6].Value = ((string)(Original_CedulaProfesional));
+            }
+            if ((IsNull_Telefono.HasValue == true)) {
+                command.Parameters[7].Value = ((int)(IsNull_Telefono.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Telefono == null)) {
+                command.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[8].Value = ((string)(Original_Telefono));
+            }
+            if ((IsNull_Correo.HasValue == true)) {
+                command.Parameters[9].Value = ((int)(IsNull_Correo.Value));
+            }
+            else {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Correo == null)) {
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[10].Value = ((string)(Original_Correo));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1348,7 +1605,7 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         
         private UpdateOrderOption _updateOrder;
         
-        private EstadoCitasTableAdapter _estadoCitasTableAdapter;
+        private MedicosTableAdapter _medicosTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1370,12 +1627,12 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public EstadoCitasTableAdapter EstadoCitasTableAdapter {
+        public MedicosTableAdapter MedicosTableAdapter {
             get {
-                return this._estadoCitasTableAdapter;
+                return this._medicosTableAdapter;
             }
             set {
-                this._estadoCitasTableAdapter = value;
+                this._medicosTableAdapter = value;
             }
         }
         
@@ -1398,9 +1655,9 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._estadoCitasTableAdapter != null) 
-                            && (this._estadoCitasTableAdapter.Connection != null))) {
-                    return this._estadoCitasTableAdapter.Connection;
+                if (((this._medicosTableAdapter != null) 
+                            && (this._medicosTableAdapter.Connection != null))) {
+                    return this._medicosTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1415,7 +1672,7 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._estadoCitasTableAdapter != null)) {
+                if ((this._medicosTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1427,14 +1684,14 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private int UpdateUpdatedRows(Medical_Center_HVIRFILLDataSetECitas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Medical_Center_HVIRFILLDataSetMedico dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._estadoCitasTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.EstadoCitas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._medicosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Medicos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._estadoCitasTableAdapter.Update(updatedRows));
+                    result = (result + this._medicosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1446,13 +1703,13 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private int UpdateInsertedRows(Medical_Center_HVIRFILLDataSetECitas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Medical_Center_HVIRFILLDataSetMedico dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._estadoCitasTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.EstadoCitas.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._medicosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Medicos.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._estadoCitasTableAdapter.Update(addedRows));
+                    result = (result + this._medicosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1464,13 +1721,13 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private int UpdateDeletedRows(Medical_Center_HVIRFILLDataSetECitas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Medical_Center_HVIRFILLDataSetMedico dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._estadoCitasTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.EstadoCitas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._medicosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Medicos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._estadoCitasTableAdapter.Update(deletedRows));
+                    result = (result + this._medicosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1506,15 +1763,15 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public virtual int UpdateAll(Medical_Center_HVIRFILLDataSetECitas dataSet) {
+        public virtual int UpdateAll(Medical_Center_HVIRFILLDataSetMedico dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._estadoCitasTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._estadoCitasTableAdapter.Connection) == false))) {
+            if (((this._medicosTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._medicosTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1550,13 +1807,13 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._estadoCitasTableAdapter != null)) {
-                    revertConnections.Add(this._estadoCitasTableAdapter, this._estadoCitasTableAdapter.Connection);
-                    this._estadoCitasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._estadoCitasTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._estadoCitasTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._estadoCitasTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._estadoCitasTableAdapter.Adapter);
+                if ((this._medicosTableAdapter != null)) {
+                    revertConnections.Add(this._medicosTableAdapter, this._medicosTableAdapter.Connection);
+                    this._medicosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._medicosTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._medicosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._medicosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._medicosTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1617,9 +1874,9 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._estadoCitasTableAdapter != null)) {
-                    this._estadoCitasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._estadoCitasTableAdapter]));
-                    this._estadoCitasTableAdapter.Transaction = null;
+                if ((this._medicosTableAdapter != null)) {
+                    this._medicosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._medicosTableAdapter]));
+                    this._medicosTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

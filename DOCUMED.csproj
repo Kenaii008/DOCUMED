@@ -99,6 +99,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Medical_Center_HVIRFILLDataSetECitas.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Medical_Center_HVIRFILLDataSetMedico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Medical_Center_HVIRFILLDataSetMedico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Medical_Center_HVIRFILLDataSetPaciente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Medical_Center_HVIRFILLDataSetPaciente.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -156,6 +166,28 @@
     </None>
     <None Include="Medical_Center_HVIRFILLDataSetECitas.xss">
       <DependentUpon>Medical_Center_HVIRFILLDataSetECitas.xsd</DependentUpon>
+    </None>
+    <None Include="Medical_Center_HVIRFILLDataSetMedico.xsc">
+      <DependentUpon>Medical_Center_HVIRFILLDataSetMedico.xsd</DependentUpon>
+    </None>
+    <None Include="Medical_Center_HVIRFILLDataSetMedico.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Medical_Center_HVIRFILLDataSetMedico.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Medical_Center_HVIRFILLDataSetMedico.xss">
+      <DependentUpon>Medical_Center_HVIRFILLDataSetMedico.xsd</DependentUpon>
+    </None>
+    <None Include="Medical_Center_HVIRFILLDataSetPaciente.xsc">
+      <DependentUpon>Medical_Center_HVIRFILLDataSetPaciente.xsd</DependentUpon>
+    </None>
+    <None Include="Medical_Center_HVIRFILLDataSetPaciente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Medical_Center_HVIRFILLDataSetPaciente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Medical_Center_HVIRFILLDataSetPaciente.xss">
+      <DependentUpon>Medical_Center_HVIRFILLDataSetPaciente.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
