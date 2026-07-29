@@ -15,6 +15,24 @@ namespace DOCUMED
         public Form1()
         {
             InitializeComponent();
+            this.Resize += Form1_Resize;
+            CenterMenuPanel();
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            CenterMenuPanel();
+        }
+
+        private void CenterMenuPanel()
+        {
+            int anchoDisponible = this.ClientSize.Width - panel1.Width;
+            int altoDisponible = this.ClientSize.Height;
+
+            panel2.Location = new Point(
+                panel1.Width + (anchoDisponible - panel2.Width) / 2,
+                (altoDisponible - panel2.Height) / 2
+            );
         }
 
         // private void pictureBox3_Click(object sender, EventArgs e)

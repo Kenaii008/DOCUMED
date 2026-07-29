@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCitas));
             System.Windows.Forms.Label idCitaLabel;
             System.Windows.Forms.Label idPacienteLabel;
             System.Windows.Forms.Label idMedicoLabel;
             System.Windows.Forms.Label fechaLabel;
             System.Windows.Forms.Label horaLabel;
             System.Windows.Forms.Label idEstadoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCitas));
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnE = new System.Windows.Forms.Button();
@@ -59,11 +59,11 @@
             this.horaTextBox = new System.Windows.Forms.TextBox();
             this.idEstadoTextBox = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -82,6 +82,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idCitaLabel
+            // 
+            idCitaLabel.AutoSize = true;
+            idCitaLabel.Location = new System.Drawing.Point(407, 283);
+            idCitaLabel.Name = "idCitaLabel";
+            idCitaLabel.Size = new System.Drawing.Size(54, 19);
+            idCitaLabel.TabIndex = 93;
+            idCitaLabel.Text = "Id Cita:";
+            // 
+            // idPacienteLabel
+            // 
+            idPacienteLabel.AutoSize = true;
+            idPacienteLabel.Location = new System.Drawing.Point(407, 315);
+            idPacienteLabel.Name = "idPacienteLabel";
+            idPacienteLabel.Size = new System.Drawing.Size(80, 19);
+            idPacienteLabel.TabIndex = 95;
+            idPacienteLabel.Text = "Id Paciente:";
+            // 
+            // idMedicoLabel
+            // 
+            idMedicoLabel.AutoSize = true;
+            idMedicoLabel.Location = new System.Drawing.Point(407, 347);
+            idMedicoLabel.Name = "idMedicoLabel";
+            idMedicoLabel.Size = new System.Drawing.Size(76, 19);
+            idMedicoLabel.TabIndex = 97;
+            idMedicoLabel.Text = "Id Medico:";
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Location = new System.Drawing.Point(407, 380);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(49, 19);
+            fechaLabel.TabIndex = 99;
+            fechaLabel.Text = "Fecha:";
+            // 
+            // horaLabel
+            // 
+            horaLabel.AutoSize = true;
+            horaLabel.Location = new System.Drawing.Point(407, 411);
+            horaLabel.Name = "horaLabel";
+            horaLabel.Size = new System.Drawing.Size(43, 19);
+            horaLabel.TabIndex = 101;
+            horaLabel.Text = "Hora:";
+            // 
+            // idEstadoLabel
+            // 
+            idEstadoLabel.AutoSize = true;
+            idEstadoLabel.Location = new System.Drawing.Point(407, 443);
+            idEstadoLabel.Name = "idEstadoLabel";
+            idEstadoLabel.Size = new System.Drawing.Size(71, 19);
+            idEstadoLabel.TabIndex = 103;
+            idEstadoLabel.Text = "Id Estado:";
             // 
             // btnNuevo
             // 
@@ -222,15 +276,6 @@
             this.tableAdapterManager.CitasTableAdapter = this.citasTableAdapter;
             this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetCitaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // idCitaLabel
-            // 
-            idCitaLabel.AutoSize = true;
-            idCitaLabel.Location = new System.Drawing.Point(407, 283);
-            idCitaLabel.Name = "idCitaLabel";
-            idCitaLabel.Size = new System.Drawing.Size(54, 19);
-            idCitaLabel.TabIndex = 93;
-            idCitaLabel.Text = "Id Cita:";
-            // 
             // idCitaTextBox
             // 
             this.idCitaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcCita, "IdCita", true));
@@ -238,15 +283,6 @@
             this.idCitaTextBox.Name = "idCitaTextBox";
             this.idCitaTextBox.Size = new System.Drawing.Size(234, 26);
             this.idCitaTextBox.TabIndex = 94;
-            // 
-            // idPacienteLabel
-            // 
-            idPacienteLabel.AutoSize = true;
-            idPacienteLabel.Location = new System.Drawing.Point(407, 315);
-            idPacienteLabel.Name = "idPacienteLabel";
-            idPacienteLabel.Size = new System.Drawing.Size(80, 19);
-            idPacienteLabel.TabIndex = 95;
-            idPacienteLabel.Text = "Id Paciente:";
             // 
             // idPacienteTextBox
             // 
@@ -256,15 +292,6 @@
             this.idPacienteTextBox.Size = new System.Drawing.Size(234, 26);
             this.idPacienteTextBox.TabIndex = 96;
             // 
-            // idMedicoLabel
-            // 
-            idMedicoLabel.AutoSize = true;
-            idMedicoLabel.Location = new System.Drawing.Point(407, 347);
-            idMedicoLabel.Name = "idMedicoLabel";
-            idMedicoLabel.Size = new System.Drawing.Size(76, 19);
-            idMedicoLabel.TabIndex = 97;
-            idMedicoLabel.Text = "Id Medico:";
-            // 
             // idMedicoTextBox
             // 
             this.idMedicoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcCita, "IdMedico", true));
@@ -272,15 +299,6 @@
             this.idMedicoTextBox.Name = "idMedicoTextBox";
             this.idMedicoTextBox.Size = new System.Drawing.Size(234, 26);
             this.idMedicoTextBox.TabIndex = 98;
-            // 
-            // fechaLabel
-            // 
-            fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(407, 380);
-            fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(49, 19);
-            fechaLabel.TabIndex = 99;
-            fechaLabel.Text = "Fecha:";
             // 
             // fechaDateTimePicker
             // 
@@ -290,15 +308,6 @@
             this.fechaDateTimePicker.Size = new System.Drawing.Size(234, 26);
             this.fechaDateTimePicker.TabIndex = 100;
             // 
-            // horaLabel
-            // 
-            horaLabel.AutoSize = true;
-            horaLabel.Location = new System.Drawing.Point(407, 411);
-            horaLabel.Name = "horaLabel";
-            horaLabel.Size = new System.Drawing.Size(43, 19);
-            horaLabel.TabIndex = 101;
-            horaLabel.Text = "Hora:";
-            // 
             // horaTextBox
             // 
             this.horaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcCita, "Hora", true));
@@ -306,15 +315,6 @@
             this.horaTextBox.Name = "horaTextBox";
             this.horaTextBox.Size = new System.Drawing.Size(234, 26);
             this.horaTextBox.TabIndex = 102;
-            // 
-            // idEstadoLabel
-            // 
-            idEstadoLabel.AutoSize = true;
-            idEstadoLabel.Location = new System.Drawing.Point(407, 443);
-            idEstadoLabel.Name = "idEstadoLabel";
-            idEstadoLabel.Size = new System.Drawing.Size(71, 19);
-            idEstadoLabel.TabIndex = 103;
-            idEstadoLabel.Text = "Id Estado:";
             // 
             // idEstadoTextBox
             // 
@@ -341,7 +341,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingNavigator1.Location = new System.Drawing.Point(650, 513);
+            this.bindingNavigator1.Location = new System.Drawing.Point(508, 502);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -351,6 +351,13 @@
             this.bindingNavigator1.Size = new System.Drawing.Size(209, 25);
             this.bindingNavigator1.TabIndex = 105;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -385,16 +392,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -417,7 +417,7 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // FrmCitas
@@ -453,7 +453,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCitas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCitas";
+            this.Text = "DocuMed - Gestión de Citas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmCitas_Load);
             this.panel2.ResumeLayout(false);

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadoCitas));
             System.Windows.Forms.Label idEstadoLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label motivoLabel;
             System.Windows.Forms.Label reprogramadoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadoCitas));
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnE = new System.Windows.Forms.Button();
@@ -55,11 +55,11 @@
             this.motivoTextBox = new System.Windows.Forms.TextBox();
             this.reprogramadoTextBox = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -76,6 +76,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idEstadoLabel
+            // 
+            idEstadoLabel.AutoSize = true;
+            idEstadoLabel.Location = new System.Drawing.Point(503, 240);
+            idEstadoLabel.Name = "idEstadoLabel";
+            idEstadoLabel.Size = new System.Drawing.Size(71, 19);
+            idEstadoLabel.TabIndex = 93;
+            idEstadoLabel.Text = "Id Estado:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(503, 272);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(63, 19);
+            nombreLabel.TabIndex = 95;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // motivoLabel
+            // 
+            motivoLabel.AutoSize = true;
+            motivoLabel.Location = new System.Drawing.Point(503, 304);
+            motivoLabel.Name = "motivoLabel";
+            motivoLabel.Size = new System.Drawing.Size(56, 19);
+            motivoLabel.TabIndex = 97;
+            motivoLabel.Text = "Motivo:";
+            // 
+            // reprogramadoLabel
+            // 
+            reprogramadoLabel.AutoSize = true;
+            reprogramadoLabel.Location = new System.Drawing.Point(503, 336);
+            reprogramadoLabel.Name = "reprogramadoLabel";
+            reprogramadoLabel.Size = new System.Drawing.Size(103, 19);
+            reprogramadoLabel.TabIndex = 99;
+            reprogramadoLabel.Text = "Reprogramado:";
             // 
             // btnLimpiar
             // 
@@ -215,15 +251,6 @@
             this.tableAdapterManager.EstadoCitasTableAdapter = this.estadoCitasTableAdapter;
             this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // idEstadoLabel
-            // 
-            idEstadoLabel.AutoSize = true;
-            idEstadoLabel.Location = new System.Drawing.Point(503, 240);
-            idEstadoLabel.Name = "idEstadoLabel";
-            idEstadoLabel.Size = new System.Drawing.Size(71, 19);
-            idEstadoLabel.TabIndex = 93;
-            idEstadoLabel.Text = "Id Estado:";
-            // 
             // idEstadoTextBox
             // 
             this.idEstadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcECitas, "IdEstado", true));
@@ -231,15 +258,6 @@
             this.idEstadoTextBox.Name = "idEstadoTextBox";
             this.idEstadoTextBox.Size = new System.Drawing.Size(216, 26);
             this.idEstadoTextBox.TabIndex = 94;
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(503, 272);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(63, 19);
-            nombreLabel.TabIndex = 95;
-            nombreLabel.Text = "Nombre:";
             // 
             // nombreTextBox
             // 
@@ -249,15 +267,6 @@
             this.nombreTextBox.Size = new System.Drawing.Size(216, 26);
             this.nombreTextBox.TabIndex = 96;
             // 
-            // motivoLabel
-            // 
-            motivoLabel.AutoSize = true;
-            motivoLabel.Location = new System.Drawing.Point(503, 304);
-            motivoLabel.Name = "motivoLabel";
-            motivoLabel.Size = new System.Drawing.Size(56, 19);
-            motivoLabel.TabIndex = 97;
-            motivoLabel.Text = "Motivo:";
-            // 
             // motivoTextBox
             // 
             this.motivoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcECitas, "Motivo", true));
@@ -265,15 +274,6 @@
             this.motivoTextBox.Name = "motivoTextBox";
             this.motivoTextBox.Size = new System.Drawing.Size(216, 26);
             this.motivoTextBox.TabIndex = 98;
-            // 
-            // reprogramadoLabel
-            // 
-            reprogramadoLabel.AutoSize = true;
-            reprogramadoLabel.Location = new System.Drawing.Point(503, 336);
-            reprogramadoLabel.Name = "reprogramadoLabel";
-            reprogramadoLabel.Size = new System.Drawing.Size(103, 19);
-            reprogramadoLabel.TabIndex = 99;
-            reprogramadoLabel.Text = "Reprogramado:";
             // 
             // reprogramadoTextBox
             // 
@@ -311,6 +311,13 @@
             this.bindingNavigator1.TabIndex = 101;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -344,16 +351,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -376,7 +376,7 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // frmEstadoCitas
@@ -409,7 +409,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEstadoCitas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEstadoCitas";
+            this.Text = "DocuMed - Estado de Citas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmEstadoCitas_Load);
             this.panel2.ResumeLayout(false);

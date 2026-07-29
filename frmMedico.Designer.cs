@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedico));
             System.Windows.Forms.Label idMedicoLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label especialidadLabel;
             System.Windows.Forms.Label cedulaProfesionalLabel;
             System.Windows.Forms.Label telefonoLabel;
             System.Windows.Forms.Label correoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedico));
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnE = new System.Windows.Forms.Button();
@@ -59,11 +59,11 @@
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -82,6 +82,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idMedicoLabel
+            // 
+            idMedicoLabel.AutoSize = true;
+            idMedicoLabel.Location = new System.Drawing.Point(491, 262);
+            idMedicoLabel.Name = "idMedicoLabel";
+            idMedicoLabel.Size = new System.Drawing.Size(76, 19);
+            idMedicoLabel.TabIndex = 93;
+            idMedicoLabel.Text = "Id Medico:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(491, 294);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(63, 19);
+            nombreLabel.TabIndex = 95;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // especialidadLabel
+            // 
+            especialidadLabel.AutoSize = true;
+            especialidadLabel.Location = new System.Drawing.Point(491, 326);
+            especialidadLabel.Name = "especialidadLabel";
+            especialidadLabel.Size = new System.Drawing.Size(88, 19);
+            especialidadLabel.TabIndex = 97;
+            especialidadLabel.Text = "Especialidad:";
+            // 
+            // cedulaProfesionalLabel
+            // 
+            cedulaProfesionalLabel.AutoSize = true;
+            cedulaProfesionalLabel.Location = new System.Drawing.Point(491, 358);
+            cedulaProfesionalLabel.Name = "cedulaProfesionalLabel";
+            cedulaProfesionalLabel.Size = new System.Drawing.Size(126, 19);
+            cedulaProfesionalLabel.TabIndex = 99;
+            cedulaProfesionalLabel.Text = "Cedula Profesional:";
+            // 
+            // telefonoLabel
+            // 
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.Location = new System.Drawing.Point(491, 390);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new System.Drawing.Size(64, 19);
+            telefonoLabel.TabIndex = 101;
+            telefonoLabel.Text = "Telefono:";
+            // 
+            // correoLabel
+            // 
+            correoLabel.AutoSize = true;
+            correoLabel.Location = new System.Drawing.Point(491, 422);
+            correoLabel.Name = "correoLabel";
+            correoLabel.Size = new System.Drawing.Size(56, 19);
+            correoLabel.TabIndex = 103;
+            correoLabel.Text = "Correo:";
             // 
             // btnLimpiar
             // 
@@ -221,15 +275,6 @@
             this.tableAdapterManager.MedicosTableAdapter = this.medicosTableAdapter;
             this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetMedicoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // idMedicoLabel
-            // 
-            idMedicoLabel.AutoSize = true;
-            idMedicoLabel.Location = new System.Drawing.Point(491, 262);
-            idMedicoLabel.Name = "idMedicoLabel";
-            idMedicoLabel.Size = new System.Drawing.Size(76, 19);
-            idMedicoLabel.TabIndex = 93;
-            idMedicoLabel.Text = "Id Medico:";
-            // 
             // idMedicoTextBox
             // 
             this.idMedicoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcMedico, "IdMedico", true));
@@ -237,15 +282,6 @@
             this.idMedicoTextBox.Name = "idMedicoTextBox";
             this.idMedicoTextBox.Size = new System.Drawing.Size(210, 26);
             this.idMedicoTextBox.TabIndex = 94;
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(491, 294);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(63, 19);
-            nombreLabel.TabIndex = 95;
-            nombreLabel.Text = "Nombre:";
             // 
             // nombreTextBox
             // 
@@ -255,15 +291,6 @@
             this.nombreTextBox.Size = new System.Drawing.Size(210, 26);
             this.nombreTextBox.TabIndex = 96;
             // 
-            // especialidadLabel
-            // 
-            especialidadLabel.AutoSize = true;
-            especialidadLabel.Location = new System.Drawing.Point(491, 326);
-            especialidadLabel.Name = "especialidadLabel";
-            especialidadLabel.Size = new System.Drawing.Size(88, 19);
-            especialidadLabel.TabIndex = 97;
-            especialidadLabel.Text = "Especialidad:";
-            // 
             // especialidadTextBox
             // 
             this.especialidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcMedico, "Especialidad", true));
@@ -271,15 +298,6 @@
             this.especialidadTextBox.Name = "especialidadTextBox";
             this.especialidadTextBox.Size = new System.Drawing.Size(210, 26);
             this.especialidadTextBox.TabIndex = 98;
-            // 
-            // cedulaProfesionalLabel
-            // 
-            cedulaProfesionalLabel.AutoSize = true;
-            cedulaProfesionalLabel.Location = new System.Drawing.Point(491, 358);
-            cedulaProfesionalLabel.Name = "cedulaProfesionalLabel";
-            cedulaProfesionalLabel.Size = new System.Drawing.Size(126, 19);
-            cedulaProfesionalLabel.TabIndex = 99;
-            cedulaProfesionalLabel.Text = "Cedula Profesional:";
             // 
             // cedulaProfesionalTextBox
             // 
@@ -289,15 +307,6 @@
             this.cedulaProfesionalTextBox.Size = new System.Drawing.Size(210, 26);
             this.cedulaProfesionalTextBox.TabIndex = 100;
             // 
-            // telefonoLabel
-            // 
-            telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(491, 390);
-            telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(64, 19);
-            telefonoLabel.TabIndex = 101;
-            telefonoLabel.Text = "Telefono:";
-            // 
             // telefonoTextBox
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcMedico, "Telefono", true));
@@ -305,15 +314,6 @@
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(210, 26);
             this.telefonoTextBox.TabIndex = 102;
-            // 
-            // correoLabel
-            // 
-            correoLabel.AutoSize = true;
-            correoLabel.Location = new System.Drawing.Point(491, 422);
-            correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(56, 19);
-            correoLabel.TabIndex = 103;
-            correoLabel.Text = "Correo:";
             // 
             // correoTextBox
             // 
@@ -351,6 +351,13 @@
             this.bindingNavigator1.TabIndex = 105;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -384,16 +391,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -416,7 +416,7 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // frmMedico
@@ -453,7 +453,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMedico";
+            this.Text = "DocuMed - Gestión de Médicos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMedico_Load);
             this.panel2.ResumeLayout(false);
