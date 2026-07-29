@@ -1002,30 +1002,21 @@ SELECT IdCita, IdPaciente, IdMedico, Fecha, Hora, IdEstado FROM Citas WHERE (IdC
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"UPDATE [dbo].[Citas] SET [IdCita] = @IdCita, [IdPaciente] = @IdPaciente, [IdMedico] = @IdMedico, [Fecha] = @Fecha, [Hora] = @Hora, [IdEstado] = @IdEstado WHERE (([IdCita] = @Original_IdCita) AND ((@IsNull_IdPaciente = 1 AND [IdPaciente] IS NULL) OR ([IdPaciente] = @Original_IdPaciente)) AND ((@IsNull_IdMedico = 1 AND [IdMedico] IS NULL) OR ([IdMedico] = @Original_IdMedico)) AND ((@IsNull_Fecha = 1 AND [Fecha] IS NULL) OR ([Fecha] = @Original_Fecha)) AND ((@IsNull_Hora = 1 AND [Hora] IS NULL) OR ([Hora] = @Original_Hora)) AND ((@IsNull_IdEstado = 1 AND [IdEstado] IS NULL) OR ([IdEstado] = @Original_IdEstado)));
-SELECT IdCita, IdPaciente, IdMedico, Fecha, Hora, IdEstado FROM Citas WHERE (IdCita = @IdCita)";
+            this._commandCollection[1].CommandText = "UPDATE Citas\r\nSET\r\n    IdPaciente = @IdPaciente,\r\n    IdMedico = @IdMedico,\r\n    " +
+                "Fecha = @Fecha,\r\n    Hora = @Hora,\r\n    IdEstado = @IdEstado\r\nWHERE IdCita = @Id" +
+                "Cita";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCita", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 5, 0, "IdCita", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdMedico", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hora", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdEstado", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdCita", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 5, 0, "IdCita", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IdMedico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdMedico", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdMedico", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fecha", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Hora", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hora", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IdEstado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdEstado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdEstado", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCita", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 5, 0, "IdCita", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO [dbo].[Citas] ([IdCita], [IdPaciente], [IdMedico], [Fecha], [Hora], [" +
-                "IdEstado]) VALUES (@IdCita, @IdPaciente, @IdMedico, @Fecha, @Hora, @IdEstado)";
+            this._commandCollection[2].CommandText = "INSERT INTO Citas\r\n(\r\n    IdCita,\r\n    IdPaciente,\r\n    IdMedico,\r\n    Fecha,\r\n  " +
+                "  Hora,\r\n    IdEstado\r\n)\r\nVALUES\r\n(\r\n    @IdCita,\r\n    @IdPaciente,\r\n    @IdMedi" +
+                "co,\r\n    @Fecha,\r\n    @Hora,\r\n    @IdEstado\r\n)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCita", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 5, 0, "IdCita", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1035,19 +1026,9 @@ SELECT IdCita, IdPaciente, IdMedico, Fecha, Hora, IdEstado FROM Citas WHERE (IdC
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdEstado", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"DELETE FROM [dbo].[Citas] WHERE (([IdCita] = @Original_IdCita) AND ((@IsNull_IdPaciente = 1 AND [IdPaciente] IS NULL) OR ([IdPaciente] = @Original_IdPaciente)) AND ((@IsNull_IdMedico = 1 AND [IdMedico] IS NULL) OR ([IdMedico] = @Original_IdMedico)) AND ((@IsNull_Fecha = 1 AND [Fecha] IS NULL) OR ([Fecha] = @Original_Fecha)) AND ((@IsNull_Hora = 1 AND [Hora] IS NULL) OR ([Hora] = @Original_Hora)) AND ((@IsNull_IdEstado = 1 AND [IdEstado] IS NULL) OR ([IdEstado] = @Original_IdEstado)))";
+            this._commandCollection[3].CommandText = "DELETE FROM Citas\r\nWHERE IdCita = @IdCita";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdCita", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 5, 0, "IdCita", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IdPaciente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IdMedico", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdMedico", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdMedico", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fecha", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fecha", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Fecha", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Hora", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hora", global::System.Data.SqlDbType.Time, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Hora", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IdEstado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdEstado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdEstado", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCita", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 5, 0, "IdCita", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1322,117 +1303,39 @@ SELECT IdCita, IdPaciente, IdMedico, Fecha, Hora, IdEstado FROM Citas WHERE (IdC
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int ActualizarCitas(
-                    decimal IdCita, 
-                    global::System.Nullable<decimal> IdPaciente, 
-                    global::System.Nullable<decimal> IdMedico, 
-                    string Fecha, 
-                    string Hora, 
-                    global::System.Nullable<decimal> IdEstado, 
-                    decimal Original_IdCita, 
-                    global::System.Nullable<int> IsNull_IdPaciente, 
-                    global::System.Nullable<decimal> Original_IdPaciente, 
-                    global::System.Nullable<int> IsNull_IdMedico, 
-                    global::System.Nullable<decimal> Original_IdMedico, 
-                    global::System.Nullable<int> IsNull_Fecha, 
-                    string Original_Fecha, 
-                    global::System.Nullable<int> IsNull_Hora, 
-                    string Original_Hora, 
-                    global::System.Nullable<int> IsNull_IdEstado, 
-                    global::System.Nullable<decimal> Original_IdEstado) {
+        public virtual int ActualizarCitas(global::System.Nullable<decimal> IdPaciente, global::System.Nullable<decimal> IdMedico, global::System.Nullable<global::System.DateTime> Fecha, string Hora, global::System.Nullable<decimal> IdEstado, decimal IdCita) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            command.Parameters[0].Value = ((decimal)(IdCita));
             if ((IdPaciente.HasValue == true)) {
-                command.Parameters[1].Value = ((decimal)(IdPaciente.Value));
+                command.Parameters[0].Value = ((decimal)(IdPaciente.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((IdMedico.HasValue == true)) {
+                command.Parameters[1].Value = ((decimal)(IdMedico.Value));
             }
             else {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((IdMedico.HasValue == true)) {
-                command.Parameters[2].Value = ((decimal)(IdMedico.Value));
+            if ((Fecha.HasValue == true)) {
+                command.Parameters[2].Value = ((System.DateTime)(Fecha.Value));
             }
             else {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Fecha == null)) {
+            if ((Hora == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(Fecha));
-            }
-            if ((Hora == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(Hora));
+                command.Parameters[3].Value = ((string)(Hora));
             }
             if ((IdEstado.HasValue == true)) {
-                command.Parameters[5].Value = ((decimal)(IdEstado.Value));
+                command.Parameters[4].Value = ((decimal)(IdEstado.Value));
             }
             else {
-                command.Parameters[5].Value = global::System.DBNull.Value;
+                command.Parameters[4].Value = global::System.DBNull.Value;
             }
-            command.Parameters[6].Value = ((decimal)(Original_IdCita));
-            if ((IsNull_IdPaciente.HasValue == true)) {
-                command.Parameters[7].Value = ((int)(IsNull_IdPaciente.Value));
-            }
-            else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IdPaciente.HasValue == true)) {
-                command.Parameters[8].Value = ((decimal)(Original_IdPaciente.Value));
-            }
-            else {
-                command.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((IsNull_IdMedico.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(IsNull_IdMedico.Value));
-            }
-            else {
-                command.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IdMedico.HasValue == true)) {
-                command.Parameters[10].Value = ((decimal)(Original_IdMedico.Value));
-            }
-            else {
-                command.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((IsNull_Fecha.HasValue == true)) {
-                command.Parameters[11].Value = ((int)(IsNull_Fecha.Value));
-            }
-            else {
-                command.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Fecha == null)) {
-                command.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[12].Value = ((string)(Original_Fecha));
-            }
-            if ((IsNull_Hora.HasValue == true)) {
-                command.Parameters[13].Value = ((int)(IsNull_Hora.Value));
-            }
-            else {
-                command.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Hora == null)) {
-                command.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[14].Value = ((string)(Original_Hora));
-            }
-            if ((IsNull_IdEstado.HasValue == true)) {
-                command.Parameters[15].Value = ((int)(IsNull_IdEstado.Value));
-            }
-            else {
-                command.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IdEstado.HasValue == true)) {
-                command.Parameters[16].Value = ((decimal)(Original_IdEstado.Value));
-            }
-            else {
-                command.Parameters[16].Value = global::System.DBNull.Value;
-            }
+            command.Parameters[5].Value = ((decimal)(IdCita));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1454,7 +1357,7 @@ SELECT IdCita, IdPaciente, IdMedico, Fecha, Hora, IdEstado FROM Citas WHERE (IdC
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int AgregarCitas(decimal IdCita, global::System.Nullable<decimal> IdPaciente, global::System.Nullable<decimal> IdMedico, string Fecha, string Hora, global::System.Nullable<decimal> IdEstado) {
+        public virtual int AgregarCita(decimal IdCita, global::System.Nullable<decimal> IdPaciente, global::System.Nullable<decimal> IdMedico, string Fecha, string Hora, global::System.Nullable<decimal> IdEstado) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             command.Parameters[0].Value = ((decimal)(IdCita));
             if ((IdPaciente.HasValue == true)) {
@@ -1508,69 +1411,9 @@ SELECT IdCita, IdPaciente, IdMedico, Fecha, Hora, IdEstado FROM Citas WHERE (IdC
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int EliminarCitas(decimal Original_IdCita, global::System.Nullable<int> IsNull_IdPaciente, global::System.Nullable<decimal> Original_IdPaciente, global::System.Nullable<int> IsNull_IdMedico, global::System.Nullable<decimal> Original_IdMedico, global::System.Nullable<int> IsNull_Fecha, string Original_Fecha, global::System.Nullable<int> IsNull_Hora, string Original_Hora, global::System.Nullable<int> IsNull_IdEstado, global::System.Nullable<decimal> Original_IdEstado) {
+        public virtual int EliminarCitas(decimal IdCita) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
-            command.Parameters[0].Value = ((decimal)(Original_IdCita));
-            if ((IsNull_IdPaciente.HasValue == true)) {
-                command.Parameters[1].Value = ((int)(IsNull_IdPaciente.Value));
-            }
-            else {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IdPaciente.HasValue == true)) {
-                command.Parameters[2].Value = ((decimal)(Original_IdPaciente.Value));
-            }
-            else {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((IsNull_IdMedico.HasValue == true)) {
-                command.Parameters[3].Value = ((int)(IsNull_IdMedico.Value));
-            }
-            else {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IdMedico.HasValue == true)) {
-                command.Parameters[4].Value = ((decimal)(Original_IdMedico.Value));
-            }
-            else {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((IsNull_Fecha.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(IsNull_Fecha.Value));
-            }
-            else {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Fecha == null)) {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[6].Value = ((string)(Original_Fecha));
-            }
-            if ((IsNull_Hora.HasValue == true)) {
-                command.Parameters[7].Value = ((int)(IsNull_Hora.Value));
-            }
-            else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Hora == null)) {
-                command.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[8].Value = ((string)(Original_Hora));
-            }
-            if ((IsNull_IdEstado.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(IsNull_IdEstado.Value));
-            }
-            else {
-                command.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IdEstado.HasValue == true)) {
-                command.Parameters[10].Value = ((decimal)(Original_IdEstado.Value));
-            }
-            else {
-                command.Parameters[10].Value = global::System.DBNull.Value;
-            }
+            command.Parameters[0].Value = ((decimal)(IdCita));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

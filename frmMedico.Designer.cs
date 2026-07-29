@@ -48,10 +48,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.binSrcMedico = new System.Windows.Forms.BindingSource(this.components);
-            this.medical_Center_HVIRFILLDataSetMedico = new DOCUMED.Medical_Center_HVIRFILLDataSetMedico();
-            this.medicosTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetMedicoTableAdapters.MedicosTableAdapter();
-            this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetMedicoTableAdapters.TableAdapterManager();
             this.idMedicoTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.especialidadTextBox = new System.Windows.Forms.TextBox();
@@ -68,6 +64,10 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.binSrcMedico = new System.Windows.Forms.BindingSource(this.components);
+            this.medical_Center_HVIRFILLDataSetMedico = new DOCUMED.Medical_Center_HVIRFILLDataSetMedico();
+            this.medicosTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetMedicoTableAdapters.MedicosTableAdapter();
+            this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetMedicoTableAdapters.TableAdapterManager();
             idMedicoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             especialidadLabel = new System.Windows.Forms.Label();
@@ -77,10 +77,10 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.binSrcMedico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetMedico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcMedico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetMedico)).BeginInit();
             this.SuspendLayout();
             // 
             // idMedicoLabel
@@ -154,6 +154,7 @@
             this.btnEliminar.TabIndex = 59;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnE
             // 
@@ -163,6 +164,7 @@
             this.btnE.TabIndex = 58;
             this.btnE.Text = "Editar";
             this.btnE.UseVisualStyleBackColor = true;
+            this.btnE.Click += new System.EventHandler(this.btnE_Click);
             // 
             // btnGuardar
             // 
@@ -172,6 +174,7 @@
             this.btnGuardar.TabIndex = 57;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnNuevo
             // 
@@ -254,26 +257,6 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // binSrcMedico
-            // 
-            this.binSrcMedico.DataMember = "Medicos";
-            this.binSrcMedico.DataSource = this.medical_Center_HVIRFILLDataSetMedico;
-            // 
-            // medical_Center_HVIRFILLDataSetMedico
-            // 
-            this.medical_Center_HVIRFILLDataSetMedico.DataSetName = "Medical_Center_HVIRFILLDataSetMedico";
-            this.medical_Center_HVIRFILLDataSetMedico.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // medicosTableAdapter
-            // 
-            this.medicosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.MedicosTableAdapter = this.medicosTableAdapter;
-            this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetMedicoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // idMedicoTextBox
             // 
@@ -419,13 +402,33 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // binSrcMedico
+            // 
+            this.binSrcMedico.DataMember = "Medicos";
+            this.binSrcMedico.DataSource = this.medical_Center_HVIRFILLDataSetMedico;
+            // 
+            // medical_Center_HVIRFILLDataSetMedico
+            // 
+            this.medical_Center_HVIRFILLDataSetMedico.DataSetName = "Medical_Center_HVIRFILLDataSetMedico";
+            this.medical_Center_HVIRFILLDataSetMedico.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // medicosTableAdapter
+            // 
+            this.medicosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MedicosTableAdapter = this.medicosTableAdapter;
+            this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetMedicoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // frmMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 766);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(idMedicoLabel);
             this.Controls.Add(this.idMedicoTextBox);
@@ -459,11 +462,11 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.binSrcMedico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetMedico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcMedico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetMedico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

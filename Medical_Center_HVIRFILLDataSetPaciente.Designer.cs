@@ -283,8 +283,6 @@ namespace DOCUMED {
             
             private global::System.Data.DataColumn columnNombre;
             
-            private global::System.Data.DataColumn columnFechaNacimiento;
-            
             private global::System.Data.DataColumn columnSexo;
             
             private global::System.Data.DataColumn columnAlergias;
@@ -300,6 +298,8 @@ namespace DOCUMED {
             private global::System.Data.DataColumn columnContactoEmergencia;
             
             private global::System.Data.DataColumn columnTelefonoEmergencia;
+            
+            private global::System.Data.DataColumn columnFechaNacimiento;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
@@ -347,14 +347,6 @@ namespace DOCUMED {
             public global::System.Data.DataColumn NombreColumn {
                 get {
                     return this.columnNombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public global::System.Data.DataColumn FechaNacimientoColumn {
-                get {
-                    return this.columnFechaNacimiento;
                 }
             }
             
@@ -424,6 +416,14 @@ namespace DOCUMED {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public global::System.Data.DataColumn FechaNacimientoColumn {
+                get {
+                    return this.columnFechaNacimiento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -459,12 +459,11 @@ namespace DOCUMED {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public PacientesRow AddPacientesRow(decimal IdPaciente, string Nombre, System.DateTime FechaNacimiento, string Sexo, string Alergias, string PadecimientosCronicos, string Telefono, string Correo, string Direccion, string ContactoEmergencia, string TelefonoEmergencia) {
+            public PacientesRow AddPacientesRow(decimal IdPaciente, string Nombre, string Sexo, string Alergias, string PadecimientosCronicos, string Telefono, string Correo, string Direccion, string ContactoEmergencia, string TelefonoEmergencia, System.DateTime FechaNacimiento) {
                 PacientesRow rowPacientesRow = ((PacientesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IdPaciente,
                         Nombre,
-                        FechaNacimiento,
                         Sexo,
                         Alergias,
                         PadecimientosCronicos,
@@ -472,7 +471,8 @@ namespace DOCUMED {
                         Correo,
                         Direccion,
                         ContactoEmergencia,
-                        TelefonoEmergencia};
+                        TelefonoEmergencia,
+                        FechaNacimiento};
                 rowPacientesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPacientesRow);
                 return rowPacientesRow;
@@ -504,7 +504,6 @@ namespace DOCUMED {
             internal void InitVars() {
                 this.columnIdPaciente = base.Columns["IdPaciente"];
                 this.columnNombre = base.Columns["Nombre"];
-                this.columnFechaNacimiento = base.Columns["FechaNacimiento"];
                 this.columnSexo = base.Columns["Sexo"];
                 this.columnAlergias = base.Columns["Alergias"];
                 this.columnPadecimientosCronicos = base.Columns["PadecimientosCronicos"];
@@ -513,6 +512,7 @@ namespace DOCUMED {
                 this.columnDireccion = base.Columns["Direccion"];
                 this.columnContactoEmergencia = base.Columns["ContactoEmergencia"];
                 this.columnTelefonoEmergencia = base.Columns["TelefonoEmergencia"];
+                this.columnFechaNacimiento = base.Columns["FechaNacimiento"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -522,8 +522,6 @@ namespace DOCUMED {
                 base.Columns.Add(this.columnIdPaciente);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
-                this.columnFechaNacimiento = new global::System.Data.DataColumn("FechaNacimiento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFechaNacimiento);
                 this.columnSexo = new global::System.Data.DataColumn("Sexo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSexo);
                 this.columnAlergias = new global::System.Data.DataColumn("Alergias", typeof(string), null, global::System.Data.MappingType.Element);
@@ -540,6 +538,8 @@ namespace DOCUMED {
                 base.Columns.Add(this.columnContactoEmergencia);
                 this.columnTelefonoEmergencia = new global::System.Data.DataColumn("TelefonoEmergencia", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTelefonoEmergencia);
+                this.columnFechaNacimiento = new global::System.Data.DataColumn("FechaNacimiento", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaNacimiento);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdPaciente}, true));
                 this.columnIdPaciente.AllowDBNull = false;
@@ -722,22 +722,6 @@ namespace DOCUMED {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public System.DateTime FechaNacimiento {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablePacientes.FechaNacimientoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FechaNacimiento\' in table \'Pacientes\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePacientes.FechaNacimientoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public string Sexo {
                 get {
                     try {
@@ -866,6 +850,22 @@ namespace DOCUMED {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public System.DateTime FechaNacimiento {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablePacientes.FechaNacimientoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FechaNacimiento\' in table \'Pacientes\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePacientes.FechaNacimientoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public bool IsNombreNull() {
                 return this.IsNull(this.tablePacientes.NombreColumn);
             }
@@ -874,18 +874,6 @@ namespace DOCUMED {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public void SetNombreNull() {
                 this[this.tablePacientes.NombreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public bool IsFechaNacimientoNull() {
-                return this.IsNull(this.tablePacientes.FechaNacimientoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public void SetFechaNacimientoNull() {
-                this[this.tablePacientes.FechaNacimientoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -982,6 +970,18 @@ namespace DOCUMED {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public void SetTelefonoEmergenciaNull() {
                 this[this.tablePacientes.TelefonoEmergenciaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public bool IsFechaNacimientoNull() {
+                return this.IsNull(this.tablePacientes.FechaNacimientoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public void SetFechaNacimientoNull() {
+                this[this.tablePacientes.FechaNacimientoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1146,7 +1146,6 @@ namespace DOCUMED.Medical_Center_HVIRFILLDataSetPacienteTableAdapters {
             tableMapping.DataSetTable = "Pacientes";
             tableMapping.ColumnMappings.Add("IdPaciente", "IdPaciente");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
-            tableMapping.ColumnMappings.Add("FechaNacimiento", "FechaNacimiento");
             tableMapping.ColumnMappings.Add("Sexo", "Sexo");
             tableMapping.ColumnMappings.Add("Alergias", "Alergias");
             tableMapping.ColumnMappings.Add("PadecimientosCronicos", "PadecimientosCronicos");
@@ -1155,16 +1154,17 @@ namespace DOCUMED.Medical_Center_HVIRFILLDataSetPacienteTableAdapters {
             tableMapping.ColumnMappings.Add("Direccion", "Direccion");
             tableMapping.ColumnMappings.Add("ContactoEmergencia", "ContactoEmergencia");
             tableMapping.ColumnMappings.Add("TelefonoEmergencia", "TelefonoEmergencia");
+            tableMapping.ColumnMappings.Add("FechaNacimiento", "FechaNacimiento");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Pacientes] WHERE (([IdPaciente] = @Original_IdPaciente) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_FechaNacimiento = 1 AND [FechaNacimiento] IS NULL) OR ([FechaNacimiento] = @Original_FechaNacimiento)) AND ((@IsNull_Sexo = 1 AND [Sexo] IS NULL) OR ([Sexo] = @Original_Sexo)) AND ((@IsNull_Alergias = 1 AND [Alergias] IS NULL) OR ([Alergias] = @Original_Alergias)) AND ((@IsNull_PadecimientosCronicos = 1 AND [PadecimientosCronicos] IS NULL) OR ([PadecimientosCronicos] = @Original_PadecimientosCronicos)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_ContactoEmergencia = 1 AND [ContactoEmergencia] IS NULL) OR ([ContactoEmergencia] = @Original_ContactoEmergencia)) AND ((@IsNull_TelefonoEmergencia = 1 AND [TelefonoEmergencia] IS NULL) OR ([TelefonoEmergencia] = @Original_TelefonoEmergencia)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Pacientes] WHERE (([IdPaciente] = @Original_IdPaciente) AND ((@IsNull_FechaNacimiento = 1 AND [FechaNacimiento] IS NULL) OR ([FechaNacimiento] = @Original_FechaNacimiento)) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Sexo = 1 AND [Sexo] IS NULL) OR ([Sexo] = @Original_Sexo)) AND ((@IsNull_Alergias = 1 AND [Alergias] IS NULL) OR ([Alergias] = @Original_Alergias)) AND ((@IsNull_PadecimientosCronicos = 1 AND [PadecimientosCronicos] IS NULL) OR ([PadecimientosCronicos] = @Original_PadecimientosCronicos)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_ContactoEmergencia = 1 AND [ContactoEmergencia] IS NULL) OR ([ContactoEmergencia] = @Original_ContactoEmergencia)) AND ((@IsNull_TelefonoEmergencia = 1 AND [TelefonoEmergencia] IS NULL) OR ([TelefonoEmergencia] = @Original_TelefonoEmergencia)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaNacimiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaNacimiento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sexo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sexo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alergias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergias", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1183,12 +1183,12 @@ namespace DOCUMED.Medical_Center_HVIRFILLDataSetPacienteTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TelefonoEmergencia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmergencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Pacientes] ([IdPaciente], [Nombre], [FechaNacimiento], [Sexo], [Alergias], [PadecimientosCronicos], [Telefono], [Correo], [Direccion], [ContactoEmergencia], [TelefonoEmergencia]) VALUES (@IdPaciente, @Nombre, @FechaNacimiento, @Sexo, @Alergias, @PadecimientosCronicos, @Telefono, @Correo, @Direccion, @ContactoEmergencia, @TelefonoEmergencia);
-SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronicos, Telefono, Correo, Direccion, ContactoEmergencia, TelefonoEmergencia FROM Pacientes WHERE (IdPaciente = @IdPaciente)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Pacientes] ([IdPaciente], [FechaNacimiento], [Nombre], [Sexo], [Alergias], [PadecimientosCronicos], [Telefono], [Correo], [Direccion], [ContactoEmergencia], [TelefonoEmergencia]) VALUES (@IdPaciente, @FechaNacimiento, @Nombre, @Sexo, @Alergias, @PadecimientosCronicos, @Telefono, @Correo, @Direccion, @ContactoEmergencia, @TelefonoEmergencia);
+SELECT IdPaciente, FechaNacimiento, Nombre, Sexo, Alergias, PadecimientosCronicos, Telefono, Correo, Direccion, ContactoEmergencia, TelefonoEmergencia FROM Pacientes WHERE (IdPaciente = @IdPaciente)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaNacimiento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sexo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alergias", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PadecimientosCronicos", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PadecimientosCronicos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1199,14 +1199,14 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TelefonoEmergencia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmergencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Pacientes] SET [IdPaciente] = @IdPaciente, [Nombre] = @Nombre, [FechaNaci" +
-                "miento] = @FechaNacimiento, [Sexo] = @Sexo, [Alergias] = @Alergias, [Padecimient" +
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Pacientes] SET [IdPaciente] = @IdPaciente, [FechaNacimiento] = @FechaNaci" +
+                "miento, [Nombre] = @Nombre, [Sexo] = @Sexo, [Alergias] = @Alergias, [Padecimient" +
                 "osCronicos] = @PadecimientosCronicos, [Telefono] = @Telefono, [Correo] = @Correo" +
                 ", [Direccion] = @Direccion, [ContactoEmergencia] = @ContactoEmergencia, [Telefon" +
                 "oEmergencia] = @TelefonoEmergencia WHERE (([IdPaciente] = @Original_IdPaciente) " +
-                "AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre))" +
-                " AND ((@IsNull_FechaNacimiento = 1 AND [FechaNacimiento] IS NULL) OR ([FechaNaci" +
-                "miento] = @Original_FechaNacimiento)) AND ((@IsNull_Sexo = 1 AND [Sexo] IS NULL)" +
+                "AND ((@IsNull_FechaNacimiento = 1 AND [FechaNacimiento] IS NULL) OR ([FechaNacim" +
+                "iento] = @Original_FechaNacimiento)) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NU" +
+                "LL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Sexo = 1 AND [Sexo] IS NULL)" +
                 " OR ([Sexo] = @Original_Sexo)) AND ((@IsNull_Alergias = 1 AND [Alergias] IS NULL" +
                 ") OR ([Alergias] = @Original_Alergias)) AND ((@IsNull_PadecimientosCronicos = 1 " +
                 "AND [PadecimientosCronicos] IS NULL) OR ([PadecimientosCronicos] = @Original_Pad" +
@@ -1217,13 +1217,13 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
                 " AND [ContactoEmergencia] IS NULL) OR ([ContactoEmergencia] = @Original_Contacto" +
                 "Emergencia)) AND ((@IsNull_TelefonoEmergencia = 1 AND [TelefonoEmergencia] IS NU" +
                 "LL) OR ([TelefonoEmergencia] = @Original_TelefonoEmergencia)));\r\nSELECT IdPacien" +
-                "te, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronicos, Telefono, Co" +
+                "te, FechaNacimiento, Nombre, Sexo, Alergias, PadecimientosCronicos, Telefono, Co" +
                 "rreo, Direccion, ContactoEmergencia, TelefonoEmergencia FROM Pacientes WHERE (Id" +
                 "Paciente = @IdPaciente)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaNacimiento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sexo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alergias", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PadecimientosCronicos", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PadecimientosCronicos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1233,10 +1233,10 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactoEmergencia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactoEmergencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TelefonoEmergencia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmergencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaNacimiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaNacimiento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sexo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sexo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alergias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergias", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1268,66 +1268,37 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosC" +
+            this._commandCollection[0].CommandText = "SELECT        IdPaciente, FechaNacimiento, Nombre, Sexo, Alergias, PadecimientosC" +
                 "ronicos, Telefono, Correo, Direccion, ContactoEmergencia, TelefonoEmergencia\r\nFR" +
                 "OM            Pacientes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "UPDATE [Pacientes] SET [IdPaciente] = @IdPaciente, [Nombre] = @Nombre, [FechaNaci" +
-                "miento] = @FechaNacimiento, [Sexo] = @Sexo, [Alergias] = @Alergias, [Padecimient" +
-                "osCronicos] = @PadecimientosCronicos, [Telefono] = @Telefono, [Correo] = @Correo" +
-                ", [Direccion] = @Direccion, [ContactoEmergencia] = @ContactoEmergencia, [Telefon" +
-                "oEmergencia] = @TelefonoEmergencia WHERE (([IdPaciente] = @Original_IdPaciente) " +
-                "AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre))" +
-                " AND ((@IsNull_FechaNacimiento = 1 AND [FechaNacimiento] IS NULL) OR ([FechaNaci" +
-                "miento] = @Original_FechaNacimiento)) AND ((@IsNull_Sexo = 1 AND [Sexo] IS NULL)" +
-                " OR ([Sexo] = @Original_Sexo)) AND ((@IsNull_Alergias = 1 AND [Alergias] IS NULL" +
-                ") OR ([Alergias] = @Original_Alergias)) AND ((@IsNull_PadecimientosCronicos = 1 " +
-                "AND [PadecimientosCronicos] IS NULL) OR ([PadecimientosCronicos] = @Original_Pad" +
-                "ecimientosCronicos)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Tel" +
-                "efono] = @Original_Telefono)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR " +
-                "([Correo] = @Original_Correo)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NU" +
-                "LL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_ContactoEmergencia = 1" +
-                " AND [ContactoEmergencia] IS NULL) OR ([ContactoEmergencia] = @Original_Contacto" +
-                "Emergencia)) AND ((@IsNull_TelefonoEmergencia = 1 AND [TelefonoEmergencia] IS NU" +
-                "LL) OR ([TelefonoEmergencia] = @Original_TelefonoEmergencia)))\r\nSELECT IdPacient" +
-                "e, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronicos, Telefono, Cor" +
-                "reo, Direccion, ContactoEmergencia, TelefonoEmergencia FROM Pacientes WHERE (IdP" +
-                "aciente = @IdPaciente)";
+            this._commandCollection[1].CommandText = @"UPDATE Pacientes
+SET
+    Nombre = @Nombre,
+    FechaNacimiento = @FechaNacimiento,
+    Sexo = @Sexo,
+    Alergias = @Alergias,
+    PadecimientosCronicos = @PadecimientosCronicos,
+    Telefono = @Telefono,
+    Correo = @Correo,
+    Direccion = @Direccion,
+    ContactoEmergencia = @ContactoEmergencia,
+    TelefonoEmergencia = @TelefonoEmergencia
+WHERE IdPaciente = @IdPaciente";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaNacimiento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sexo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alergias", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PadecimientosCronicos", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PadecimientosCronicos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Direccion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Direccion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactoEmergencia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactoEmergencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TelefonoEmergencia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmergencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaNacimiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaNacimiento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sexo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sexo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alergias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergias", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alergias", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PadecimientosCronicos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PadecimientosCronicos", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PadecimientosCronicos", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PadecimientosCronicos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Correo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Direccion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Direccion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Direccion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Direccion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContactoEmergencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactoEmergencia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContactoEmergencia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactoEmergencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TelefonoEmergencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmergencia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TelefonoEmergencia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmergencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaNacimiento", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sexo", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alergias", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Alergias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PadecimientosCronicos", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "PadecimientosCronicos", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Direccion", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Direccion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactoEmergencia", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "ContactoEmergencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TelefonoEmergencia", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmergencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = @"INSERT INTO [Pacientes] ([IdPaciente], [Nombre], [FechaNacimiento], [Sexo], [Alergias], [PadecimientosCronicos], [Telefono], [Correo], [Direccion], [ContactoEmergencia], [TelefonoEmergencia]) VALUES (@IdPaciente, @Nombre, @FechaNacimiento, @Sexo, @Alergias, @PadecimientosCronicos, @Telefono, @Correo, @Direccion, @ContactoEmergencia, @TelefonoEmergencia)";
@@ -1345,29 +1316,9 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TelefonoEmergencia", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmergencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"DELETE FROM [Pacientes] WHERE (([IdPaciente] = @Original_IdPaciente) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_FechaNacimiento = 1 AND [FechaNacimiento] IS NULL) OR ([FechaNacimiento] = @Original_FechaNacimiento)) AND ((@IsNull_Sexo = 1 AND [Sexo] IS NULL) OR ([Sexo] = @Original_Sexo)) AND ((@IsNull_Alergias = 1 AND [Alergias] IS NULL) OR ([Alergias] = @Original_Alergias)) AND ((@IsNull_PadecimientosCronicos = 1 AND [PadecimientosCronicos] IS NULL) OR ([PadecimientosCronicos] = @Original_PadecimientosCronicos)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)) AND ((@IsNull_Direccion = 1 AND [Direccion] IS NULL) OR ([Direccion] = @Original_Direccion)) AND ((@IsNull_ContactoEmergencia = 1 AND [ContactoEmergencia] IS NULL) OR ([ContactoEmergencia] = @Original_ContactoEmergencia)) AND ((@IsNull_TelefonoEmergencia = 1 AND [TelefonoEmergencia] IS NULL) OR ([TelefonoEmergencia] = @Original_TelefonoEmergencia)))";
+            this._commandCollection[3].CommandText = "DELETE FROM Pacientes\r\nWHERE IdPaciente = @IdPaciente";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdPaciente", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FechaNacimiento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaNacimiento", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sexo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sexo", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Sexo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alergias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alergias", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alergias", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Alergias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PadecimientosCronicos", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PadecimientosCronicos", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PadecimientosCronicos", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "PadecimientosCronicos", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Correo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Direccion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Direccion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Direccion", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Direccion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContactoEmergencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactoEmergencia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContactoEmergencia", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "ContactoEmergencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TelefonoEmergencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmergencia", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TelefonoEmergencia", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "TelefonoEmergencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdPaciente", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdPaciente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1427,23 +1378,23 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_IdPaciente, string Original_Nombre, global::System.Nullable<global::System.DateTime> Original_FechaNacimiento, string Original_Sexo, string Original_Alergias, string Original_PadecimientosCronicos, string Original_Telefono, string Original_Correo, string Original_Direccion, string Original_ContactoEmergencia, string Original_TelefonoEmergencia) {
+        public virtual int Delete(decimal Original_IdPaciente, global::System.Nullable<global::System.DateTime> Original_FechaNacimiento, string Original_Nombre, string Original_Sexo, string Original_Alergias, string Original_PadecimientosCronicos, string Original_Telefono, string Original_Correo, string Original_Direccion, string Original_ContactoEmergencia, string Original_TelefonoEmergencia) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_IdPaciente));
-            if ((Original_Nombre == null)) {
+            if ((Original_FechaNacimiento.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_FechaNacimiento.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Nombre));
-            }
-            if ((Original_FechaNacimiento.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_FechaNacimiento.Value));
-            }
-            else {
+            if ((Original_Nombre == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Nombre));
             }
             if ((Original_Sexo == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -1529,19 +1480,19 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(decimal IdPaciente, string Nombre, global::System.Nullable<global::System.DateTime> FechaNacimiento, string Sexo, string Alergias, string PadecimientosCronicos, string Telefono, string Correo, string Direccion, string ContactoEmergencia, string TelefonoEmergencia) {
+        public virtual int Insert(decimal IdPaciente, global::System.Nullable<global::System.DateTime> FechaNacimiento, string Nombre, string Sexo, string Alergias, string PadecimientosCronicos, string Telefono, string Correo, string Direccion, string ContactoEmergencia, string TelefonoEmergencia) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(IdPaciente));
-            if ((Nombre == null)) {
+            if ((FechaNacimiento.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(FechaNacimiento.Value));
+            }
+            else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Nombre));
-            }
-            if ((FechaNacimiento.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(FechaNacimiento.Value));
-            }
-            else {
+            if ((Nombre == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Nombre));
             }
             if ((Sexo == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -1613,8 +1564,8 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     decimal IdPaciente, 
-                    string Nombre, 
                     global::System.Nullable<global::System.DateTime> FechaNacimiento, 
+                    string Nombre, 
                     string Sexo, 
                     string Alergias, 
                     string PadecimientosCronicos, 
@@ -1624,8 +1575,8 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
                     string ContactoEmergencia, 
                     string TelefonoEmergencia, 
                     decimal Original_IdPaciente, 
-                    string Original_Nombre, 
                     global::System.Nullable<global::System.DateTime> Original_FechaNacimiento, 
+                    string Original_Nombre, 
                     string Original_Sexo, 
                     string Original_Alergias, 
                     string Original_PadecimientosCronicos, 
@@ -1635,17 +1586,17 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
                     string Original_ContactoEmergencia, 
                     string Original_TelefonoEmergencia) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(IdPaciente));
-            if ((Nombre == null)) {
+            if ((FechaNacimiento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(FechaNacimiento.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Nombre));
-            }
-            if ((FechaNacimiento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(FechaNacimiento.Value));
-            }
-            else {
+            if ((Nombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Nombre));
             }
             if ((Sexo == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -1696,21 +1647,21 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(TelefonoEmergencia));
             }
             this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_IdPaciente));
-            if ((Original_Nombre == null)) {
+            if ((Original_FechaNacimiento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_FechaNacimiento.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Nombre));
-            }
-            if ((Original_FechaNacimiento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_FechaNacimiento.Value));
-            }
-            else {
+            if ((Original_Nombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Nombre));
             }
             if ((Original_Sexo == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
@@ -1797,8 +1748,8 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    string Nombre, 
                     global::System.Nullable<global::System.DateTime> FechaNacimiento, 
+                    string Nombre, 
                     string Sexo, 
                     string Alergias, 
                     string PadecimientosCronicos, 
@@ -1808,8 +1759,8 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
                     string ContactoEmergencia, 
                     string TelefonoEmergencia, 
                     decimal Original_IdPaciente, 
-                    string Original_Nombre, 
                     global::System.Nullable<global::System.DateTime> Original_FechaNacimiento, 
+                    string Original_Nombre, 
                     string Original_Sexo, 
                     string Original_Alergias, 
                     string Original_PadecimientosCronicos, 
@@ -1818,229 +1769,76 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
                     string Original_Direccion, 
                     string Original_ContactoEmergencia, 
                     string Original_TelefonoEmergencia) {
-            return this.Update(Original_IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronicos, Telefono, Correo, Direccion, ContactoEmergencia, TelefonoEmergencia, Original_IdPaciente, Original_Nombre, Original_FechaNacimiento, Original_Sexo, Original_Alergias, Original_PadecimientosCronicos, Original_Telefono, Original_Correo, Original_Direccion, Original_ContactoEmergencia, Original_TelefonoEmergencia);
+            return this.Update(Original_IdPaciente, FechaNacimiento, Nombre, Sexo, Alergias, PadecimientosCronicos, Telefono, Correo, Direccion, ContactoEmergencia, TelefonoEmergencia, Original_IdPaciente, Original_FechaNacimiento, Original_Nombre, Original_Sexo, Original_Alergias, Original_PadecimientosCronicos, Original_Telefono, Original_Correo, Original_Direccion, Original_ContactoEmergencia, Original_TelefonoEmergencia);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int ActualizarPaciente(
-                    decimal IdPaciente, 
-                    string Nombre, 
-                    global::System.Nullable<global::System.DateTime> FechaNacimiento, 
-                    string Sexo, 
-                    string Alergias, 
-                    string PadecimientosCronicos, 
-                    string Telefono, 
-                    string Correo, 
-                    string Direccion, 
-                    string ContactoEmergencia, 
-                    string TelefonoEmergencia, 
-                    decimal Original_IdPaciente, 
-                    global::System.Nullable<int> IsNull_Nombre, 
-                    string Original_Nombre, 
-                    global::System.Nullable<int> IsNull_FechaNacimiento, 
-                    global::System.Nullable<global::System.DateTime> Original_FechaNacimiento, 
-                    global::System.Nullable<int> IsNull_Sexo, 
-                    string Original_Sexo, 
-                    global::System.Nullable<int> IsNull_Alergias, 
-                    string Original_Alergias, 
-                    global::System.Nullable<int> IsNull_PadecimientosCronicos, 
-                    string Original_PadecimientosCronicos, 
-                    global::System.Nullable<int> IsNull_Telefono, 
-                    string Original_Telefono, 
-                    global::System.Nullable<int> IsNull_Correo, 
-                    string Original_Correo, 
-                    global::System.Nullable<int> IsNull_Direccion, 
-                    string Original_Direccion, 
-                    global::System.Nullable<int> IsNull_ContactoEmergencia, 
-                    string Original_ContactoEmergencia, 
-                    global::System.Nullable<int> IsNull_TelefonoEmergencia, 
-                    string Original_TelefonoEmergencia) {
+        public virtual int ActualizarPaciente(string Nombre, string FechaNacimiento, string Sexo, string Alergias, string PadecimientosCronicos, string Telefono, string Correo, string Direccion, string ContactoEmergencia, string TelefonoEmergencia, decimal IdPaciente) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            command.Parameters[0].Value = ((decimal)(IdPaciente));
             if ((Nombre == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Nombre));
+            }
+            if ((FechaNacimiento == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[1].Value = ((string)(Nombre));
-            }
-            if ((FechaNacimiento.HasValue == true)) {
-                command.Parameters[2].Value = ((System.DateTime)(FechaNacimiento.Value));
-            }
-            else {
-                command.Parameters[2].Value = global::System.DBNull.Value;
+                command.Parameters[1].Value = ((string)(FechaNacimiento));
             }
             if ((Sexo == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Sexo));
+            }
+            if ((Alergias == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(Sexo));
+                command.Parameters[3].Value = ((string)(Alergias));
             }
-            if ((Alergias == null)) {
+            if ((PadecimientosCronicos == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(Alergias));
+                command.Parameters[4].Value = ((string)(PadecimientosCronicos));
             }
-            if ((PadecimientosCronicos == null)) {
+            if ((Telefono == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = ((string)(PadecimientosCronicos));
+                command.Parameters[5].Value = ((string)(Telefono));
             }
-            if ((Telefono == null)) {
+            if ((Correo == null)) {
                 command.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[6].Value = ((string)(Telefono));
+                command.Parameters[6].Value = ((string)(Correo));
             }
-            if ((Correo == null)) {
+            if ((Direccion == null)) {
                 command.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[7].Value = ((string)(Correo));
+                command.Parameters[7].Value = ((string)(Direccion));
             }
-            if ((Direccion == null)) {
+            if ((ContactoEmergencia == null)) {
                 command.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[8].Value = ((string)(Direccion));
+                command.Parameters[8].Value = ((string)(ContactoEmergencia));
             }
-            if ((ContactoEmergencia == null)) {
+            if ((TelefonoEmergencia == null)) {
                 command.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[9].Value = ((string)(ContactoEmergencia));
+                command.Parameters[9].Value = ((string)(TelefonoEmergencia));
             }
-            if ((TelefonoEmergencia == null)) {
-                command.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[10].Value = ((string)(TelefonoEmergencia));
-            }
-            command.Parameters[11].Value = ((decimal)(Original_IdPaciente));
-            if ((IsNull_Nombre.HasValue == true)) {
-                command.Parameters[12].Value = ((int)(IsNull_Nombre.Value));
-            }
-            else {
-                command.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Nombre == null)) {
-                command.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[13].Value = ((string)(Original_Nombre));
-            }
-            if ((IsNull_FechaNacimiento.HasValue == true)) {
-                command.Parameters[14].Value = ((int)(IsNull_FechaNacimiento.Value));
-            }
-            else {
-                command.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            if ((Original_FechaNacimiento.HasValue == true)) {
-                command.Parameters[15].Value = ((System.DateTime)(Original_FechaNacimiento.Value));
-            }
-            else {
-                command.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((IsNull_Sexo.HasValue == true)) {
-                command.Parameters[16].Value = ((int)(IsNull_Sexo.Value));
-            }
-            else {
-                command.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Sexo == null)) {
-                command.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[17].Value = ((string)(Original_Sexo));
-            }
-            if ((IsNull_Alergias.HasValue == true)) {
-                command.Parameters[18].Value = ((int)(IsNull_Alergias.Value));
-            }
-            else {
-                command.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Alergias == null)) {
-                command.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[19].Value = ((string)(Original_Alergias));
-            }
-            if ((IsNull_PadecimientosCronicos.HasValue == true)) {
-                command.Parameters[20].Value = ((int)(IsNull_PadecimientosCronicos.Value));
-            }
-            else {
-                command.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PadecimientosCronicos == null)) {
-                command.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[21].Value = ((string)(Original_PadecimientosCronicos));
-            }
-            if ((IsNull_Telefono.HasValue == true)) {
-                command.Parameters[22].Value = ((int)(IsNull_Telefono.Value));
-            }
-            else {
-                command.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Telefono == null)) {
-                command.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[23].Value = ((string)(Original_Telefono));
-            }
-            if ((IsNull_Correo.HasValue == true)) {
-                command.Parameters[24].Value = ((int)(IsNull_Correo.Value));
-            }
-            else {
-                command.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Correo == null)) {
-                command.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[25].Value = ((string)(Original_Correo));
-            }
-            if ((IsNull_Direccion.HasValue == true)) {
-                command.Parameters[26].Value = ((int)(IsNull_Direccion.Value));
-            }
-            else {
-                command.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Direccion == null)) {
-                command.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[27].Value = ((string)(Original_Direccion));
-            }
-            if ((IsNull_ContactoEmergencia.HasValue == true)) {
-                command.Parameters[28].Value = ((int)(IsNull_ContactoEmergencia.Value));
-            }
-            else {
-                command.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ContactoEmergencia == null)) {
-                command.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[29].Value = ((string)(Original_ContactoEmergencia));
-            }
-            if ((IsNull_TelefonoEmergencia.HasValue == true)) {
-                command.Parameters[30].Value = ((int)(IsNull_TelefonoEmergencia.Value));
-            }
-            else {
-                command.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            if ((Original_TelefonoEmergencia == null)) {
-                command.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[31].Value = ((string)(Original_TelefonoEmergencia));
-            }
+            command.Parameters[10].Value = ((decimal)(IdPaciente));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2146,150 +1944,9 @@ SELECT IdPaciente, Nombre, FechaNacimiento, Sexo, Alergias, PadecimientosCronico
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int EliminarPaciente(
-                    decimal Original_IdPaciente, 
-                    global::System.Nullable<int> IsNull_Nombre, 
-                    string Original_Nombre, 
-                    global::System.Nullable<int> IsNull_FechaNacimiento, 
-                    string Original_FechaNacimiento, 
-                    global::System.Nullable<int> IsNull_Sexo, 
-                    string Original_Sexo, 
-                    global::System.Nullable<int> IsNull_Alergias, 
-                    string Original_Alergias, 
-                    global::System.Nullable<int> IsNull_PadecimientosCronicos, 
-                    string Original_PadecimientosCronicos, 
-                    global::System.Nullable<int> IsNull_Telefono, 
-                    string Original_Telefono, 
-                    global::System.Nullable<int> IsNull_Correo, 
-                    string Original_Correo, 
-                    global::System.Nullable<int> IsNull_Direccion, 
-                    string Original_Direccion, 
-                    global::System.Nullable<int> IsNull_ContactoEmergencia, 
-                    string Original_ContactoEmergencia, 
-                    global::System.Nullable<int> IsNull_TelefonoEmergencia, 
-                    string Original_TelefonoEmergencia) {
+        public virtual int EliminarPaciente(decimal IdPaciente) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
-            command.Parameters[0].Value = ((decimal)(Original_IdPaciente));
-            if ((IsNull_Nombre.HasValue == true)) {
-                command.Parameters[1].Value = ((int)(IsNull_Nombre.Value));
-            }
-            else {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Nombre == null)) {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[2].Value = ((string)(Original_Nombre));
-            }
-            if ((IsNull_FechaNacimiento.HasValue == true)) {
-                command.Parameters[3].Value = ((int)(IsNull_FechaNacimiento.Value));
-            }
-            else {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_FechaNacimiento == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(Original_FechaNacimiento));
-            }
-            if ((IsNull_Sexo.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(IsNull_Sexo.Value));
-            }
-            else {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Sexo == null)) {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[6].Value = ((string)(Original_Sexo));
-            }
-            if ((IsNull_Alergias.HasValue == true)) {
-                command.Parameters[7].Value = ((int)(IsNull_Alergias.Value));
-            }
-            else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Alergias == null)) {
-                command.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[8].Value = ((string)(Original_Alergias));
-            }
-            if ((IsNull_PadecimientosCronicos.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(IsNull_PadecimientosCronicos.Value));
-            }
-            else {
-                command.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PadecimientosCronicos == null)) {
-                command.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[10].Value = ((string)(Original_PadecimientosCronicos));
-            }
-            if ((IsNull_Telefono.HasValue == true)) {
-                command.Parameters[11].Value = ((int)(IsNull_Telefono.Value));
-            }
-            else {
-                command.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Telefono == null)) {
-                command.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[12].Value = ((string)(Original_Telefono));
-            }
-            if ((IsNull_Correo.HasValue == true)) {
-                command.Parameters[13].Value = ((int)(IsNull_Correo.Value));
-            }
-            else {
-                command.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Correo == null)) {
-                command.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[14].Value = ((string)(Original_Correo));
-            }
-            if ((IsNull_Direccion.HasValue == true)) {
-                command.Parameters[15].Value = ((int)(IsNull_Direccion.Value));
-            }
-            else {
-                command.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Direccion == null)) {
-                command.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[16].Value = ((string)(Original_Direccion));
-            }
-            if ((IsNull_ContactoEmergencia.HasValue == true)) {
-                command.Parameters[17].Value = ((int)(IsNull_ContactoEmergencia.Value));
-            }
-            else {
-                command.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ContactoEmergencia == null)) {
-                command.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[18].Value = ((string)(Original_ContactoEmergencia));
-            }
-            if ((IsNull_TelefonoEmergencia.HasValue == true)) {
-                command.Parameters[19].Value = ((int)(IsNull_TelefonoEmergencia.Value));
-            }
-            else {
-                command.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            if ((Original_TelefonoEmergencia == null)) {
-                command.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[20].Value = ((string)(Original_TelefonoEmergencia));
-            }
+            command.Parameters[0].Value = ((decimal)(IdPaciente));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

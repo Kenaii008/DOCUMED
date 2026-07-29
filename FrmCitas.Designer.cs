@@ -48,14 +48,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.idCitaTextBox = new System.Windows.Forms.TextBox();
             this.binSrcCita = new System.Windows.Forms.BindingSource(this.components);
             this.medical_Center_HVIRFILLDataSetCita = new DOCUMED.Medical_Center_HVIRFILLDataSetCita();
-            this.citasTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetCitaTableAdapters.CitasTableAdapter();
-            this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetCitaTableAdapters.TableAdapterManager();
-            this.idCitaTextBox = new System.Windows.Forms.TextBox();
             this.idPacienteTextBox = new System.Windows.Forms.TextBox();
             this.idMedicoTextBox = new System.Windows.Forms.TextBox();
-            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.horaTextBox = new System.Windows.Forms.TextBox();
             this.idEstadoTextBox = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -68,6 +65,9 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.citasTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetCitaTableAdapters.CitasTableAdapter();
+            this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetCitaTableAdapters.TableAdapterManager();
+            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             idCitaLabel = new System.Windows.Forms.Label();
             idPacienteLabel = new System.Windows.Forms.Label();
             idMedicoLabel = new System.Windows.Forms.Label();
@@ -147,6 +147,7 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
@@ -156,6 +157,7 @@
             this.btnGuardar.TabIndex = 17;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnE
             // 
@@ -165,6 +167,7 @@
             this.btnE.TabIndex = 18;
             this.btnE.Text = "Editar";
             this.btnE.UseVisualStyleBackColor = true;
+            this.btnE.Click += new System.EventHandler(this.btnE_Click);
             // 
             // btnEliminar
             // 
@@ -174,6 +177,7 @@
             this.btnEliminar.TabIndex = 19;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnLimpiar
             // 
@@ -256,6 +260,14 @@
             this.pictureBox2.TabIndex = 89;
             this.pictureBox2.TabStop = false;
             // 
+            // idCitaTextBox
+            // 
+            this.idCitaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcCita, "IdCita", true));
+            this.idCitaTextBox.Location = new System.Drawing.Point(493, 280);
+            this.idCitaTextBox.Name = "idCitaTextBox";
+            this.idCitaTextBox.Size = new System.Drawing.Size(234, 26);
+            this.idCitaTextBox.TabIndex = 94;
+            // 
             // binSrcCita
             // 
             this.binSrcCita.DataMember = "Citas";
@@ -265,24 +277,6 @@
             // 
             this.medical_Center_HVIRFILLDataSetCita.DataSetName = "Medical_Center_HVIRFILLDataSetCita";
             this.medical_Center_HVIRFILLDataSetCita.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // citasTableAdapter
-            // 
-            this.citasTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CitasTableAdapter = this.citasTableAdapter;
-            this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetCitaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // idCitaTextBox
-            // 
-            this.idCitaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcCita, "IdCita", true));
-            this.idCitaTextBox.Location = new System.Drawing.Point(493, 280);
-            this.idCitaTextBox.Name = "idCitaTextBox";
-            this.idCitaTextBox.Size = new System.Drawing.Size(234, 26);
-            this.idCitaTextBox.TabIndex = 94;
             // 
             // idPacienteTextBox
             // 
@@ -299,14 +293,6 @@
             this.idMedicoTextBox.Name = "idMedicoTextBox";
             this.idMedicoTextBox.Size = new System.Drawing.Size(234, 26);
             this.idMedicoTextBox.TabIndex = 98;
-            // 
-            // fechaDateTimePicker
-            // 
-            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.binSrcCita, "Fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(493, 376);
-            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(234, 26);
-            this.fechaDateTimePicker.TabIndex = 100;
             // 
             // horaTextBox
             // 
@@ -420,6 +406,26 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // citasTableAdapter
+            // 
+            this.citasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CitasTableAdapter = this.citasTableAdapter;
+            this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetCitaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // fechaDateTimePicker
+            // 
+            this.fechaDateTimePicker.CustomFormat = "dd/mm/yyy";
+            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.binSrcCita, "Fecha", true));
+            this.fechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(493, 376);
+            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(234, 26);
+            this.fechaDateTimePicker.TabIndex = 100;
+            // 
             // FrmCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -490,7 +496,6 @@
         private System.Windows.Forms.TextBox idCitaTextBox;
         private System.Windows.Forms.TextBox idPacienteTextBox;
         private System.Windows.Forms.TextBox idMedicoTextBox;
-        private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
         private System.Windows.Forms.TextBox horaTextBox;
         private System.Windows.Forms.TextBox idEstadoTextBox;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
@@ -503,5 +508,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
     }
 }

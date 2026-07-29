@@ -1005,26 +1005,16 @@ SELECT IdMedico, Nombre, Especialidad, CedulaProfesional, Telefono, Correo FROM 
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"UPDATE [Medicos] SET [IdMedico] = @IdMedico, [Nombre] = @Nombre, [Especialidad] = @Especialidad, [CedulaProfesional] = @CedulaProfesional, [Telefono] = @Telefono, [Correo] = @Correo WHERE (([IdMedico] = @Original_IdMedico) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Especialidad = 1 AND [Especialidad] IS NULL) OR ([Especialidad] = @Original_Especialidad)) AND ((@IsNull_CedulaProfesional = 1 AND [CedulaProfesional] IS NULL) OR ([CedulaProfesional] = @Original_CedulaProfesional)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)))
-SELECT IdMedico, Nombre, Especialidad, CedulaProfesional, Telefono, Correo FROM Medicos WHERE (IdMedico = @IdMedico)";
+            this._commandCollection[1].CommandText = "UPDATE Medicos\r\nSET\r\n    Nombre = @Nombre,\r\n    Especialidad = @Especialidad,\r\n  " +
+                "  Telefono = @Telefono,\r\n    Correo = @Correo,\r\n    CedulaProfesional = @CedulaP" +
+                "rofesional\r\nWHERE IdMedico = @IdMedico";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdMedico", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CedulaProfesional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdMedico", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Especialidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Especialidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CedulaProfesional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CedulaProfesional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Correo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Especialidad", global::System.Data.SqlDbType.VarChar, 40, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CedulaProfesional", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdMedico", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "INSERT INTO [Medicos] ([IdMedico], [Nombre], [Especialidad], [CedulaProfesional]," +
@@ -1039,19 +1029,9 @@ SELECT IdMedico, Nombre, Especialidad, CedulaProfesional, Telefono, Correo FROM 
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Correo", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"DELETE FROM [Medicos] WHERE (([IdMedico] = @Original_IdMedico) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Especialidad = 1 AND [Especialidad] IS NULL) OR ([Especialidad] = @Original_Especialidad)) AND ((@IsNull_CedulaProfesional = 1 AND [CedulaProfesional] IS NULL) OR ([CedulaProfesional] = @Original_CedulaProfesional)) AND ((@IsNull_Telefono = 1 AND [Telefono] IS NULL) OR ([Telefono] = @Original_Telefono)) AND ((@IsNull_Correo = 1 AND [Correo] IS NULL) OR ([Correo] = @Original_Correo)))";
+            this._commandCollection[3].CommandText = "DELETE FROM Medicos\r\nWHERE IdMedico = @IdMedico";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdMedico", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Especialidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Especialidad", global::System.Data.SqlDbType.VarChar, 40, global::System.Data.ParameterDirection.Input, 0, 0, "Especialidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CedulaProfesional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CedulaProfesional", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "CedulaProfesional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Correo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Correo", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdMedico", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 0, "IdMedico", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1326,117 +1306,39 @@ SELECT IdMedico, Nombre, Especialidad, CedulaProfesional, Telefono, Correo FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int ActualizarMedico(
-                    decimal IdMedico, 
-                    string Nombre, 
-                    string Especialidad, 
-                    string CedulaProfesional, 
-                    string Telefono, 
-                    string Correo, 
-                    decimal Original_IdMedico, 
-                    global::System.Nullable<int> IsNull_Nombre, 
-                    string Original_Nombre, 
-                    global::System.Nullable<int> IsNull_Especialidad, 
-                    string Original_Especialidad, 
-                    global::System.Nullable<int> IsNull_CedulaProfesional, 
-                    string Original_CedulaProfesional, 
-                    global::System.Nullable<int> IsNull_Telefono, 
-                    string Original_Telefono, 
-                    global::System.Nullable<int> IsNull_Correo, 
-                    string Original_Correo) {
+        public virtual int ActualizarMedico(string Nombre, string Especialidad, string Telefono, string Correo, string CedulaProfesional, decimal IdMedico) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            command.Parameters[0].Value = ((decimal)(IdMedico));
             if ((Nombre == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Nombre));
+            }
+            if ((Especialidad == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[1].Value = ((string)(Nombre));
+                command.Parameters[1].Value = ((string)(Especialidad));
             }
-            if ((Especialidad == null)) {
+            if ((Telefono == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(Especialidad));
+                command.Parameters[2].Value = ((string)(Telefono));
             }
-            if ((CedulaProfesional == null)) {
+            if ((Correo == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(CedulaProfesional));
+                command.Parameters[3].Value = ((string)(Correo));
             }
-            if ((Telefono == null)) {
+            if ((CedulaProfesional == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(Telefono));
+                command.Parameters[4].Value = ((string)(CedulaProfesional));
             }
-            if ((Correo == null)) {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[5].Value = ((string)(Correo));
-            }
-            command.Parameters[6].Value = ((decimal)(Original_IdMedico));
-            if ((IsNull_Nombre.HasValue == true)) {
-                command.Parameters[7].Value = ((int)(IsNull_Nombre.Value));
-            }
-            else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Nombre == null)) {
-                command.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[8].Value = ((string)(Original_Nombre));
-            }
-            if ((IsNull_Especialidad.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(IsNull_Especialidad.Value));
-            }
-            else {
-                command.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Especialidad == null)) {
-                command.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[10].Value = ((string)(Original_Especialidad));
-            }
-            if ((IsNull_CedulaProfesional.HasValue == true)) {
-                command.Parameters[11].Value = ((int)(IsNull_CedulaProfesional.Value));
-            }
-            else {
-                command.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CedulaProfesional == null)) {
-                command.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[12].Value = ((string)(Original_CedulaProfesional));
-            }
-            if ((IsNull_Telefono.HasValue == true)) {
-                command.Parameters[13].Value = ((int)(IsNull_Telefono.Value));
-            }
-            else {
-                command.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Telefono == null)) {
-                command.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[14].Value = ((string)(Original_Telefono));
-            }
-            if ((IsNull_Correo.HasValue == true)) {
-                command.Parameters[15].Value = ((int)(IsNull_Correo.Value));
-            }
-            else {
-                command.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Correo == null)) {
-                command.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[16].Value = ((string)(Original_Correo));
-            }
+            command.Parameters[5].Value = ((decimal)(IdMedico));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1512,69 +1414,9 @@ SELECT IdMedico, Nombre, Especialidad, CedulaProfesional, Telefono, Correo FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int EliminarMedico(decimal Original_IdMedico, global::System.Nullable<int> IsNull_Nombre, string Original_Nombre, global::System.Nullable<int> IsNull_Especialidad, string Original_Especialidad, global::System.Nullable<int> IsNull_CedulaProfesional, string Original_CedulaProfesional, global::System.Nullable<int> IsNull_Telefono, string Original_Telefono, global::System.Nullable<int> IsNull_Correo, string Original_Correo) {
+        public virtual int EliminarMedico(decimal IdMedico) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
-            command.Parameters[0].Value = ((decimal)(Original_IdMedico));
-            if ((IsNull_Nombre.HasValue == true)) {
-                command.Parameters[1].Value = ((int)(IsNull_Nombre.Value));
-            }
-            else {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Nombre == null)) {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[2].Value = ((string)(Original_Nombre));
-            }
-            if ((IsNull_Especialidad.HasValue == true)) {
-                command.Parameters[3].Value = ((int)(IsNull_Especialidad.Value));
-            }
-            else {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Especialidad == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(Original_Especialidad));
-            }
-            if ((IsNull_CedulaProfesional.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(IsNull_CedulaProfesional.Value));
-            }
-            else {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CedulaProfesional == null)) {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[6].Value = ((string)(Original_CedulaProfesional));
-            }
-            if ((IsNull_Telefono.HasValue == true)) {
-                command.Parameters[7].Value = ((int)(IsNull_Telefono.Value));
-            }
-            else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Telefono == null)) {
-                command.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[8].Value = ((string)(Original_Telefono));
-            }
-            if ((IsNull_Correo.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(IsNull_Correo.Value));
-            }
-            else {
-                command.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Correo == null)) {
-                command.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[10].Value = ((string)(Original_Correo));
-            }
+            command.Parameters[0].Value = ((decimal)(IdMedico));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
