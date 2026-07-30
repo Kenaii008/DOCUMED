@@ -84,15 +84,15 @@
     <Compile Include="frmPacientes.Designer.cs">
       <DependentUpon>frmPacientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Medical_Center_HVIRFILLDataSetCita.Designer.cs">
+    <Compile Include="Medical_Center_HVIRFILLDataSetCitasY.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Medical_Center_HVIRFILLDataSetCita.xsd</DependentUpon>
+      <DependentUpon>Medical_Center_HVIRFILLDataSetCitasY.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Medical_Center_HVIRFILLDataSetConsultas.Designer.cs">
+    <Compile Include="Medical_Center_HVIRFILLDataSetConsultasW.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Medical_Center_HVIRFILLDataSetConsultas.xsd</DependentUpon>
+      <DependentUpon>Medical_Center_HVIRFILLDataSetConsultasW.xsd</DependentUpon>
     </Compile>
     <Compile Include="Medical_Center_HVIRFILLDataSetECitas.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -104,10 +104,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Medical_Center_HVIRFILLDataSetMedico.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Medical_Center_HVIRFILLDataSetPaciente.Designer.cs">
+    <Compile Include="Medical_Center_HVIRFILLDataSetPacientesX.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Medical_Center_HVIRFILLDataSetPaciente.xsd</DependentUpon>
+      <DependentUpon>Medical_Center_HVIRFILLDataSetPacientesX.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,26 +134,27 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Medical_Center_HVIRFILLDataSetCita.xsc">
-      <DependentUpon>Medical_Center_HVIRFILLDataSetCita.xsd</DependentUpon>
+    <None Include="Medical_Center_HVIRFILLDataSetCitasY.xsc">
+      <DependentUpon>Medical_Center_HVIRFILLDataSetCitasY.xsd</DependentUpon>
     </None>
-    <None Include="Medical_Center_HVIRFILLDataSetCita.xsd">
+    <None Include="Medical_Center_HVIRFILLDataSetCitasY.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Medical_Center_HVIRFILLDataSetCita.Designer.cs</LastGenOutput>
+      <LastGenOutput>Medical_Center_HVIRFILLDataSetCitasY.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Medical_Center_HVIRFILLDataSetCita.xss">
-      <DependentUpon>Medical_Center_HVIRFILLDataSetCita.xsd</DependentUpon>
+    <None Include="Medical_Center_HVIRFILLDataSetCitasY.xss">
+      <DependentUpon>Medical_Center_HVIRFILLDataSetCitasY.xsd</DependentUpon>
     </None>
-    <None Include="Medical_Center_HVIRFILLDataSetConsultas.xsc">
-      <DependentUpon>Medical_Center_HVIRFILLDataSetConsultas.xsd</DependentUpon>
+    <None Include="Medical_Center_HVIRFILLDataSetConsultasW.xsc">
+      <DependentUpon>Medical_Center_HVIRFILLDataSetConsultasW.xsd</DependentUpon>
     </None>
-    <None Include="Medical_Center_HVIRFILLDataSetConsultas.xsd">
+    <None Include="Medical_Center_HVIRFILLDataSetConsultasW.xsd">
       <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Medical_Center_HVIRFILLDataSetConsultasW.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Medical_Center_HVIRFILLDataSetConsultas.xss">
-      <DependentUpon>Medical_Center_HVIRFILLDataSetConsultas.xsd</DependentUpon>
+    <None Include="Medical_Center_HVIRFILLDataSetConsultasW.xss">
+      <DependentUpon>Medical_Center_HVIRFILLDataSetConsultasW.xsd</DependentUpon>
     </None>
     <None Include="Medical_Center_HVIRFILLDataSetECitas.xsc">
       <DependentUpon>Medical_Center_HVIRFILLDataSetECitas.xsd</DependentUpon>
@@ -177,16 +178,16 @@
     <None Include="Medical_Center_HVIRFILLDataSetMedico.xss">
       <DependentUpon>Medical_Center_HVIRFILLDataSetMedico.xsd</DependentUpon>
     </None>
-    <None Include="Medical_Center_HVIRFILLDataSetPaciente.xsc">
-      <DependentUpon>Medical_Center_HVIRFILLDataSetPaciente.xsd</DependentUpon>
+    <None Include="Medical_Center_HVIRFILLDataSetPacientesX.xsc">
+      <DependentUpon>Medical_Center_HVIRFILLDataSetPacientesX.xsd</DependentUpon>
     </None>
-    <None Include="Medical_Center_HVIRFILLDataSetPaciente.xsd">
+    <None Include="Medical_Center_HVIRFILLDataSetPacientesX.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Medical_Center_HVIRFILLDataSetPaciente.Designer.cs</LastGenOutput>
+      <LastGenOutput>Medical_Center_HVIRFILLDataSetPacientesX.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Medical_Center_HVIRFILLDataSetPaciente.xss">
-      <DependentUpon>Medical_Center_HVIRFILLDataSetPaciente.xsd</DependentUpon>
+    <None Include="Medical_Center_HVIRFILLDataSetPacientesX.xss">
+      <DependentUpon>Medical_Center_HVIRFILLDataSetPacientesX.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

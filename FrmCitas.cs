@@ -14,19 +14,7 @@ namespace DOCUMED
     {
         private void btnE_Click(object sender, EventArgs e)
         {
-            string vHora, vFecha;
-            decimal vIdP, vIdM, vIdC, vIdE;
-
-            vIdC = decimal.Parse(idCitaTextBox.Text);
-            vIdP = decimal.Parse(idPacienteTextBox.Text);
-            vIdM = decimal.Parse(idMedicoTextBox.Text);
-            vFecha = fechaDateTimePicker.Value.ToString("yyyy/MM/dd");
-            vHora = horaTextBox.Text;
-            vIdE = decimal.Parse(idEstadoTextBox.Text);
-
-            this.citasTableAdapter.ActualizarCitas(vIdP, vIdM, vFecha, vHora, vIdE, vIdC);
-
-            MessageBox.Show("Cita actualizada correctamente", "ACTUALIZAR REGISTRO");
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -37,11 +25,11 @@ namespace DOCUMED
             vIdC = decimal.Parse(idCitaTextBox.Text);
             vIdP = decimal.Parse(idPacienteTextBox.Text);
             vIdM = decimal.Parse(idMedicoTextBox.Text);
-            vFecha = fechaDateTimePicker.Value.ToString("yyyy/MM/dd");
+            vFecha = fechaTextBox.Text;
             vHora = horaTextBox.Text;
             vIdE = decimal.Parse(idEstadoTextBox.Text);
 
-            this.citasTableAdapter.EliminarCitas(vIdC);
+            this.citasYTableAdapter.Delete(vIdC, vIdP, vIdM, vFecha, vHora, vIdE);
 
             MessageBox.Show("Cita eliminada correctamente", "ELIMINAR REGISTRO");
         }
@@ -56,7 +44,7 @@ namespace DOCUMED
             idCitaTextBox.Clear();
             idPacienteTextBox.Clear();
             idMedicoTextBox.Clear();
-            fechaDateTimePicker.Value = DateTime.Now;
+            fechaTextBox.Clear();
             horaTextBox.Clear();
             idEstadoTextBox.Clear();
             idCitaTextBox.Focus();
@@ -71,7 +59,9 @@ namespace DOCUMED
 
         private void FrmCitas_Load(object sender, EventArgs e)
         {
-            this.citasTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetCita.Citas);
+            // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetCitasY.CitasY' table. You can move, or remove it, as needed.
+            this.citasYTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetCitasY.CitasY);
+            //this.citasTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetCita.Citas);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -82,11 +72,11 @@ namespace DOCUMED
             vIdC = decimal.Parse(idCitaTextBox.Text);
             vIdP = decimal.Parse(idPacienteTextBox.Text);
             vIdM = decimal.Parse(idMedicoTextBox.Text);
-            vFecha = fechaDateTimePicker.Value.ToString("yyyy/MM/dd");
+            vFecha = fechaTextBox.Text;
             vHora = horaTextBox.Text;
             vIdE = decimal.Parse(idEstadoTextBox.Text);
 
-            this.citasTableAdapter.AgregarCita(vIdC, vIdP, vIdM, vFecha, vHora, vIdE);
+            this.citasYTableAdapter.Insert(vIdC, vIdP, vIdM, vFecha, vHora, vIdE);
 
             MessageBox.Show("Cita agregada correctamente", "NUEVO REGISTRO");
         }

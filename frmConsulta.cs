@@ -18,58 +18,17 @@ namespace DOCUMED
         }
         private void btnE_Click(object sender, EventArgs e)
         {
-            decimal vIdConsulta, vIdCita, vIdP, vIdM, vPeso, vEstatura;
-            string vFecha, vPArterial, vMConsulta, vDiagnostico;
-            vIdConsulta = decimal.Parse(idConsultaTextBox.Text);
-            vIdCita = decimal.Parse(idCitaTextBox.Text);
-            vIdP = decimal.Parse(idPacienteTextBox.Text);
-            vIdM = decimal.Parse(idMedicoTextBox.Text);
-            vPeso = decimal.Parse(pesoTextBox.Text);
-            vEstatura = decimal.Parse(estaturaTextBox.Text);
-            vFecha = fechaDateTimePicker.Value.ToString("yyyy/MM/dd");
-            vPArterial = presionArterialTextBox.Text;
-            vMConsulta = motivoConsultaTextBox.Text;
-            vDiagnostico = diagnosticoTextBox.Text;
-
-            //this.consultasTableAdapter.Update(vIdCita, vIdP, vIdM, vFecha, vPeso, vEstatura, vPArterial, vMConsulta, vDiagnostico, vIdConsulta);
-
-            MessageBox.Show("Consulta actualizada correctamente", "ACTUALIZAR REGISTRO");
+          
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         { 
-            decimal vIdConsulta, vIdCita, vIdP, vIdM, vPeso, vEstatura;
-            string vFecha, vPArterial, vMConsulta, vDiagnostico;
-
-            vIdConsulta = decimal.Parse(idConsultaTextBox.Text);
-            vIdCita = decimal.Parse(idCitaTextBox.Text);
-            vIdP = decimal.Parse(idPacienteTextBox.Text);
-            vIdM = decimal.Parse(idMedicoTextBox.Text);
-            vPeso = decimal.Parse(pesoTextBox.Text);
-            vEstatura = decimal.Parse(estaturaTextBox.Text);
-            vFecha = fechaDateTimePicker.Value.ToString("yyyy/MM/dd");
-            vPArterial = presionArterialTextBox.Text;
-            vMConsulta = motivoConsultaTextBox.Text;
-            vDiagnostico = diagnosticoTextBox.Text;
-
-            //this.consultasTableAdapter.EliminarConsulta(vIdConsulta);
-
-            MessageBox.Show("Consulta eliminada correctamente", "ELIMINAR REGISTRO");
+           
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            idConsultaTextBox.Clear();
-            idCitaTextBox.Clear();
-            idPacienteTextBox.Clear();
-            idMedicoTextBox.Clear();
-            pesoTextBox.Clear();
-            estaturaTextBox.Clear();
-            fechaDateTimePicker.Value = DateTime.Now;
-            presionArterialTextBox.Clear();
-            motivoConsultaTextBox.Clear();
-            diagnosticoTextBox.Clear();
-            idConsultaTextBox.Focus();
+        
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -81,8 +40,10 @@ namespace DOCUMED
 
         private void FrmConsulta_Load_1(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetConsultasW.ConsultasW' table. You can move, or remove it, as needed.
+            this.consultasWTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetConsultasW.ConsultasW);
             // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetConsultas.Consultas' table. You can move, or remove it, as needed.
-            this.consultasTableAdapter1.Fill(this.medical_Center_HVIRFILLDataSetConsultas.Consultas);
+            //this.consultasTableAdapter1.Fill(this.medical_Center_HVIRFILLDataSetConsultas.Consultas);
 
         }
 
@@ -91,20 +52,61 @@ namespace DOCUMED
             decimal vIdConsulta, vIdCita, vIdP, vIdM, vPeso, vEstatura;
             string vFecha, vPArterial, vMConsulta, vDiagnostico;
 
-            vIdConsulta = decimal.Parse(idConsultaTextBox.Text);
-            vIdCita = decimal.Parse(idCitaTextBox.Text);
-            vIdP = decimal.Parse(idPacienteTextBox.Text);
-            vIdM = decimal.Parse(idMedicoTextBox.Text);
-            vPeso = decimal.Parse(pesoTextBox.Text);
-            vEstatura = decimal.Parse(estaturaTextBox.Text);
-            vFecha = fechaDateTimePicker.Value.ToString("yyyy/MM/dd");
-            vPArterial = presionArterialTextBox.Text;
-            vMConsulta = motivoConsultaTextBox.Text;
-            vDiagnostico = diagnosticoTextBox.Text;
+            vIdConsulta = decimal.Parse(idConsultaTextBox1.Text);
+            vIdCita = decimal.Parse(idCitaTextBox1.Text);
+            vIdP = decimal.Parse(idPacienteTextBox1.Text);
+            vIdM = decimal.Parse(idMedicoTextBox1.Text);
+            vPeso = decimal.Parse(pesoTextBox1.Text);
+            vEstatura = decimal.Parse(estaturaTextBox1.Text);
+            vFecha = fechaTextBox.Text;
+            vPArterial = presionArterialTextBox1.Text;
+            vMConsulta = motivoConsultaTextBox1.Text;
+            vDiagnostico = diagnosticoTextBox1.Text;
 
-            this.consultasTableAdapter1.Insert(vIdConsulta, vIdCita, vIdP, vIdM, Convert.ToDateTime(vFecha), vPeso, vEstatura, vPArterial, vMConsulta, vDiagnostico);
+            this.consultasWTableAdapter.Insert(vIdConsulta, vIdCita, vIdP, vIdM, vFecha, vPeso, vEstatura, vPArterial, vMConsulta, vDiagnostico);
 
             MessageBox.Show("Consulta agregada correctamente", "AGREGAR REGISTRO");
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            decimal vIdConsulta, vIdCita, vIdP, vIdM, vPeso, vEstatura;
+            string vFecha, vPArterial, vMConsulta, vDiagnostico;
+
+            vIdConsulta = decimal.Parse(idConsultaTextBox1.Text);
+            vIdCita = decimal.Parse(idCitaTextBox1.Text);
+            vIdP = decimal.Parse(idPacienteTextBox1.Text);
+            vIdM = decimal.Parse(idMedicoTextBox1.Text);
+            vPeso = decimal.Parse(pesoTextBox1.Text);
+            vEstatura = decimal.Parse(estaturaTextBox1.Text);
+            vFecha = fechaTextBox.Text;
+            vPArterial = presionArterialTextBox1.Text;
+            vMConsulta = motivoConsultaTextBox1.Text;
+            vDiagnostico = diagnosticoTextBox1.Text;
+
+            this.consultasWTableAdapter.Delete(vIdConsulta, vIdCita, vIdP, vIdM, vFecha, vPeso, vEstatura, vPArterial, vMConsulta, vDiagnostico);
+
+            MessageBox.Show("Consulta eliminada correctamente", "ELIMINAR REGISTRO");
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            idConsultaTextBox1.Clear();
+            idCitaTextBox1.Clear();
+            idPacienteTextBox1.Clear();
+            idMedicoTextBox1.Clear();
+            pesoTextBox1.Clear();
+            estaturaTextBox1.Clear();
+            fechaTextBox.Clear();
+            presionArterialTextBox1.Clear();
+            motivoConsultaTextBox1.Clear();
+            diagnosticoTextBox1.Clear();
+            idConsultaTextBox1.Focus();
         }
     }
 }

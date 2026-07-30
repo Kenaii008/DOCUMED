@@ -19,7 +19,7 @@ namespace DOCUMED
             idPacienteTextBox.Clear();
             nombreTextBox.Clear();
             sexoTextBox.Clear();
-            fechaNacimientoDateTimePicker.Value = DateTime.Now;
+            fechaNacimientoTextBox.Clear();
             alergiasTextBox.Clear();
             padecimientosCronicosTextBox.Clear();
             telefonoTextBox.Clear();
@@ -34,21 +34,7 @@ namespace DOCUMED
         string vFNacimiento;
         private void btnE_Click(object sender, EventArgs e)
         {
-            vIdP = decimal.Parse(idPacienteTextBox.Text);
-            vNombre = nombreTextBox.Text;
-            vSexo = sexoTextBox.Text;
-            vFNacimiento = fechaNacimientoDateTimePicker.Value.ToString("yyyy/MM/dd");
-            vAlergias = alergiasTextBox.Text;
-            vPCronicos = padecimientosCronicosTextBox.Text;
-            vTelefono = telefonoTextBox.Text;
-            vCorreo = correoTextBox.Text;
-            vDireccion = direccionTextBox.Text;
-            vCEmergencia = contactoEmergenciaTextBox.Text;
-            vTEmergencia = telefonoEmergenciaTextBox.Text;
-
-            this.pacientesTableAdapter.ActualizarPaciente(vNombre, vFNacimiento, vSexo, vAlergias, vPCronicos, vTelefono, vCorreo, vDireccion, vCEmergencia, vTEmergencia, vIdP);
-
-            MessageBox.Show("Paciente actualizado correctamente", "ACTUALIZAR REGISTRO");
+           
         }
         public frmPacientes()
         {
@@ -64,8 +50,10 @@ namespace DOCUMED
 
         private void frmPacientes_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetPacientesX.PacientesX' table. You can move, or remove it, as needed.
+            this.pacientesXTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetPacientesX.PacientesX);
             // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetPaciente.Pacientes' table. You can move, or remove it, as needed.
-            this.pacientesTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetPaciente.Pacientes);
+            //this.pacientesTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetPaciente.Pacientes);
 
         }
 
@@ -74,7 +62,7 @@ namespace DOCUMED
             vIdP = decimal.Parse(idPacienteTextBox.Text);
             vNombre = nombreTextBox.Text;
             vSexo = sexoTextBox.Text;
-            vFNacimiento = fechaNacimientoDateTimePicker.Value.ToString("yyyy/MM/dd");
+            vFNacimiento = fechaNacimientoTextBox.Text;
             vAlergias = alergiasTextBox.Text;
             vPCronicos = padecimientosCronicosTextBox.Text;
             vTelefono = telefonoTextBox.Text;
@@ -83,7 +71,7 @@ namespace DOCUMED
             vCEmergencia = contactoEmergenciaTextBox.Text;
             vTEmergencia = telefonoEmergenciaTextBox.Text;
 
-            this.pacientesTableAdapter.AgregarPaciente(vIdP, vNombre, vSexo, vFNacimiento, vAlergias, vPCronicos, vTelefono, vCorreo, vDireccion, vCEmergencia, vTEmergencia);
+            this.pacientesXTableAdapter.Insert(vIdP, vNombre, vSexo, vFNacimiento, vAlergias, vPCronicos, vTelefono, vCorreo, vDireccion, vCEmergencia, vTEmergencia);
 
             MessageBox.Show("Paciente agregado correctamente", "NUEVO REGISTRO");
         }
@@ -93,7 +81,7 @@ namespace DOCUMED
             vIdP = decimal.Parse(idPacienteTextBox.Text);
             vNombre = nombreTextBox.Text;
             vSexo = sexoTextBox.Text;
-            vFNacimiento = fechaNacimientoDateTimePicker.Value.ToString("yyyy/MM/dd");
+            vFNacimiento = fechaNacimientoTextBox.Text;
             vAlergias = alergiasTextBox.Text;
             vPCronicos = padecimientosCronicosTextBox.Text;
             vTelefono = telefonoTextBox.Text;
@@ -102,7 +90,7 @@ namespace DOCUMED
             vCEmergencia = contactoEmergenciaTextBox.Text;
             vTEmergencia = telefonoEmergenciaTextBox.Text;
 
-            this.pacientesTableAdapter.EliminarPaciente(vIdP);
+            this.pacientesXTableAdapter.Delete(vIdP, vNombre, vSexo, vFNacimiento, vAlergias, vPCronicos, vTelefono, vCorreo, vDireccion, vCEmergencia, vTEmergencia);
 
             MessageBox.Show("Paciente eliminado correctamente", "ELIMINAR REGISTRO");
         }
