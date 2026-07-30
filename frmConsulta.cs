@@ -31,7 +31,7 @@ namespace DOCUMED
             vMConsulta = motivoConsultaTextBox.Text;
             vDiagnostico = diagnosticoTextBox.Text;
 
-            this.consultasTableAdapter.ActualizarConsulta(vIdCita, vIdP, vIdM, vFecha, vPeso, vEstatura, vPArterial, vMConsulta, vDiagnostico, vIdConsulta);
+            //this.consultasTableAdapter.Update(vIdCita, vIdP, vIdM, vFecha, vPeso, vEstatura, vPArterial, vMConsulta, vDiagnostico, vIdConsulta);
 
             MessageBox.Show("Consulta actualizada correctamente", "ACTUALIZAR REGISTRO");
         }
@@ -52,7 +52,7 @@ namespace DOCUMED
             vMConsulta = motivoConsultaTextBox.Text;
             vDiagnostico = diagnosticoTextBox.Text;
 
-            this.consultasTableAdapter.EliminarConsulta(vIdConsulta);
+            //this.consultasTableAdapter.EliminarConsulta(vIdConsulta);
 
             MessageBox.Show("Consulta eliminada correctamente", "ELIMINAR REGISTRO");
         }
@@ -72,21 +72,21 @@ namespace DOCUMED
             idConsultaTextBox.Focus();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            Form1 frm1 = new Form1();
+            Form1 frm = new Form1();
             this.Hide();
-            frm1.Show();
+            frm.Show();
         }
 
-        private void FrmConsulta_Load(object sender, EventArgs e)
+        private void FrmConsulta_Load_1(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetConsulta.Consultas' table. You can move, or remove it, as needed.
-            this.consultasTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetConsulta.Consultas);
+            // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetConsultas.Consultas' table. You can move, or remove it, as needed.
+            this.consultasTableAdapter1.Fill(this.medical_Center_HVIRFILLDataSetConsultas.Consultas);
 
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             decimal vIdConsulta, vIdCita, vIdP, vIdM, vPeso, vEstatura;
             string vFecha, vPArterial, vMConsulta, vDiagnostico;
@@ -102,7 +102,7 @@ namespace DOCUMED
             vMConsulta = motivoConsultaTextBox.Text;
             vDiagnostico = diagnosticoTextBox.Text;
 
-            this.consultasTableAdapter.AgregarConsulta(vIdConsulta, vIdCita, vIdP, vIdM, vFecha, vPeso, vEstatura, vPArterial, vMConsulta, vDiagnostico);
+            this.consultasTableAdapter1.Insert(vIdConsulta, vIdCita, vIdP, vIdM, Convert.ToDateTime(vFecha), vPeso, vEstatura, vPArterial, vMConsulta, vDiagnostico);
 
             MessageBox.Show("Consulta agregada correctamente", "AGREGAR REGISTRO");
         }
