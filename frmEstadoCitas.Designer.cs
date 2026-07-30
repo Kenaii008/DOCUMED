@@ -36,9 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadoCitas));
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnE = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -47,6 +45,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.idEstadoTextBox = new System.Windows.Forms.TextBox();
+            this.binSrcECitas = new System.Windows.Forms.BindingSource(this.components);
+            this.medical_Center_HVIRFILLDataSetECitas = new DOCUMED.Medical_Center_HVIRFILLDataSetECitas();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.motivoTextBox = new System.Windows.Forms.TextBox();
             this.reprogramadoTextBox = new System.Windows.Forms.TextBox();
@@ -60,8 +60,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.binSrcECitas = new System.Windows.Forms.BindingSource(this.components);
-            this.medical_Center_HVIRFILLDataSetECitas = new DOCUMED.Medical_Center_HVIRFILLDataSetECitas();
             this.estadoCitasTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters.EstadoCitasTableAdapter();
             this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters.TableAdapterManager();
             idEstadoLabel = new System.Windows.Forms.Label();
@@ -71,53 +69,58 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.binSrcECitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetECitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // idEstadoLabel
             // 
             idEstadoLabel.AutoSize = true;
-            idEstadoLabel.Location = new System.Drawing.Point(503, 240);
+            idEstadoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idEstadoLabel.Location = new System.Drawing.Point(503, 265);
             idEstadoLabel.Name = "idEstadoLabel";
-            idEstadoLabel.Size = new System.Drawing.Size(71, 19);
+            idEstadoLabel.Size = new System.Drawing.Size(76, 21);
             idEstadoLabel.TabIndex = 93;
             idEstadoLabel.Text = "Id Estado:";
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(503, 272);
+            nombreLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(503, 301);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(63, 19);
+            nombreLabel.Size = new System.Drawing.Size(71, 21);
             nombreLabel.TabIndex = 95;
             nombreLabel.Text = "Nombre:";
             // 
             // motivoLabel
             // 
             motivoLabel.AutoSize = true;
-            motivoLabel.Location = new System.Drawing.Point(503, 304);
+            motivoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            motivoLabel.Location = new System.Drawing.Point(503, 336);
             motivoLabel.Name = "motivoLabel";
-            motivoLabel.Size = new System.Drawing.Size(56, 19);
+            motivoLabel.Size = new System.Drawing.Size(62, 21);
             motivoLabel.TabIndex = 97;
             motivoLabel.Text = "Motivo:";
             // 
             // reprogramadoLabel
             // 
             reprogramadoLabel.AutoSize = true;
-            reprogramadoLabel.Location = new System.Drawing.Point(503, 336);
+            reprogramadoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            reprogramadoLabel.Location = new System.Drawing.Point(503, 371);
             reprogramadoLabel.Name = "reprogramadoLabel";
-            reprogramadoLabel.Size = new System.Drawing.Size(103, 19);
+            reprogramadoLabel.Size = new System.Drawing.Size(118, 21);
             reprogramadoLabel.TabIndex = 99;
             reprogramadoLabel.Text = "Reprogramado:";
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(1191, 395);
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(1191, 378);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(109, 46);
+            this.btnLimpiar.Size = new System.Drawing.Size(109, 51);
             this.btnLimpiar.TabIndex = 60;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -125,52 +128,33 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(1191, 343);
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(1191, 321);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(109, 46);
+            this.btnEliminar.Size = new System.Drawing.Size(109, 51);
             this.btnEliminar.TabIndex = 59;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnE
-            // 
-            this.btnE.Location = new System.Drawing.Point(1191, 288);
-            this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(109, 46);
-            this.btnE.TabIndex = 58;
-            this.btnE.Text = "Editar";
-            this.btnE.UseVisualStyleBackColor = true;
-            this.btnE.Click += new System.EventHandler(this.btnE_Click);
-            // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(1191, 235);
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(1191, 260);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(109, 46);
+            this.btnGuardar.Size = new System.Drawing.Size(109, 51);
             this.btnGuardar.TabIndex = 57;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevo.Location = new System.Drawing.Point(1191, 179);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(109, 46);
-            this.btnNuevo.TabIndex = 56;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(755, 25);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(755, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 40);
+            this.label1.Size = new System.Drawing.Size(211, 40);
             this.label1.TabIndex = 48;
             this.label1.Text = "Estado Citas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -178,17 +162,17 @@
             // label8
             // 
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Location = new System.Drawing.Point(1163, 154);
+            this.label8.Location = new System.Drawing.Point(1163, 170);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 319);
+            this.label8.Size = new System.Drawing.Size(167, 353);
             this.label8.TabIndex = 61;
             // 
             // label9
             // 
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.Location = new System.Drawing.Point(463, 132);
+            this.label9.Location = new System.Drawing.Point(463, 146);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(898, 360);
+            this.label9.Size = new System.Drawing.Size(898, 398);
             this.label9.TabIndex = 62;
             // 
             // panel2
@@ -198,7 +182,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(1, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1901, 100);
+            this.panel2.Size = new System.Drawing.Size(1901, 110);
             this.panel2.TabIndex = 92;
             // 
             // pictureBox1
@@ -207,7 +191,7 @@
             this.pictureBox1.Image = global::DOCUMED.Properties.Resources.hvLog;
             this.pictureBox1.Location = new System.Drawing.Point(1526, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(127, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 90;
             this.pictureBox1.TabStop = false;
@@ -218,7 +202,7 @@
             this.pictureBox2.Image = global::DOCUMED.Properties.Resources.docMedLogo;
             this.pictureBox2.Location = new System.Drawing.Point(1681, -1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(127, 114);
+            this.pictureBox2.Size = new System.Drawing.Size(127, 126);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 89;
             this.pictureBox2.TabStop = false;
@@ -226,9 +210,9 @@
             // button1
             // 
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(1389, 394);
+            this.button1.Location = new System.Drawing.Point(1389, 435);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 98);
+            this.button1.Size = new System.Drawing.Size(163, 108);
             this.button1.TabIndex = 93;
             this.button1.Text = "Menú Principal";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -238,33 +222,47 @@
             // idEstadoTextBox
             // 
             this.idEstadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcECitas, "IdEstado", true));
-            this.idEstadoTextBox.Location = new System.Drawing.Point(612, 237);
+            this.idEstadoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idEstadoTextBox.Location = new System.Drawing.Point(629, 263);
             this.idEstadoTextBox.Name = "idEstadoTextBox";
-            this.idEstadoTextBox.Size = new System.Drawing.Size(216, 26);
+            this.idEstadoTextBox.Size = new System.Drawing.Size(216, 29);
             this.idEstadoTextBox.TabIndex = 94;
+            // 
+            // binSrcECitas
+            // 
+            this.binSrcECitas.DataMember = "EstadoCitas";
+            this.binSrcECitas.DataSource = this.medical_Center_HVIRFILLDataSetECitas;
+            // 
+            // medical_Center_HVIRFILLDataSetECitas
+            // 
+            this.medical_Center_HVIRFILLDataSetECitas.DataSetName = "Medical_Center_HVIRFILLDataSetECitas";
+            this.medical_Center_HVIRFILLDataSetECitas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcECitas, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(612, 269);
+            this.nombreTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreTextBox.Location = new System.Drawing.Point(629, 298);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(216, 26);
+            this.nombreTextBox.Size = new System.Drawing.Size(216, 29);
             this.nombreTextBox.TabIndex = 96;
             // 
             // motivoTextBox
             // 
             this.motivoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcECitas, "Motivo", true));
-            this.motivoTextBox.Location = new System.Drawing.Point(612, 301);
+            this.motivoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.motivoTextBox.Location = new System.Drawing.Point(629, 334);
             this.motivoTextBox.Name = "motivoTextBox";
-            this.motivoTextBox.Size = new System.Drawing.Size(216, 26);
+            this.motivoTextBox.Size = new System.Drawing.Size(216, 29);
             this.motivoTextBox.TabIndex = 98;
             // 
             // reprogramadoTextBox
             // 
             this.reprogramadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcECitas, "Reprogramado", true));
-            this.reprogramadoTextBox.Location = new System.Drawing.Point(612, 333);
+            this.reprogramadoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reprogramadoTextBox.Location = new System.Drawing.Point(629, 369);
             this.reprogramadoTextBox.Name = "reprogramadoTextBox";
-            this.reprogramadoTextBox.Size = new System.Drawing.Size(216, 26);
+            this.reprogramadoTextBox.Size = new System.Drawing.Size(216, 29);
             this.reprogramadoTextBox.TabIndex = 100;
             // 
             // bindingNavigator1
@@ -284,7 +282,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingNavigator1.Location = new System.Drawing.Point(612, 416);
+            this.bindingNavigator1.Location = new System.Drawing.Point(612, 460);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -363,16 +361,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // binSrcECitas
-            // 
-            this.binSrcECitas.DataMember = "EstadoCitas";
-            this.binSrcECitas.DataSource = this.medical_Center_HVIRFILLDataSetECitas;
-            // 
-            // medical_Center_HVIRFILLDataSetECitas
-            // 
-            this.medical_Center_HVIRFILLDataSetECitas.DataSetName = "Medical_Center_HVIRFILLDataSetECitas";
-            this.medical_Center_HVIRFILLDataSetECitas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // estadoCitasTableAdapter
             // 
             this.estadoCitasTableAdapter.ClearBeforeFill = true;
@@ -385,11 +373,11 @@
             // 
             // frmEstadoCitas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1370, 817);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(idEstadoLabel);
             this.Controls.Add(this.idEstadoTextBox);
@@ -402,14 +390,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnE);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEstadoCitas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -419,11 +405,11 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcECitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetECitas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.binSrcECitas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetECitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,9 +419,7 @@
 
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnE;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

@@ -67,66 +67,66 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.Color.White;
-            label1.Location = new System.Drawing.Point(284, 24);
+            label1.Location = new System.Drawing.Point(276, 24);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(83, 21);
+            label1.Size = new System.Drawing.Size(89, 25);
             label1.TabIndex = 95;
             label1.Text = "Pacientes";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label2.ForeColor = System.Drawing.Color.White;
             label2.Location = new System.Drawing.Point(84, 24);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(50, 21);
+            label2.Size = new System.Drawing.Size(53, 25);
             label2.TabIndex = 96;
             label2.Text = "Citas";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label3.ForeColor = System.Drawing.Color.White;
-            label3.Location = new System.Drawing.Point(500, 24);
+            label3.Location = new System.Drawing.Point(484, 24);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(86, 21);
+            label3.Size = new System.Drawing.Size(93, 25);
             label3.TabIndex = 97;
             label3.Text = "Consultas";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label4.ForeColor = System.Drawing.Color.White;
-            label4.Location = new System.Drawing.Point(289, 214);
+            label4.Location = new System.Drawing.Point(283, 214);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(73, 21);
+            label4.Size = new System.Drawing.Size(78, 25);
             label4.TabIndex = 98;
             label4.Text = "Médicos";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label5.ForeColor = System.Drawing.Color.White;
-            label5.Location = new System.Drawing.Point(55, 214);
+            label5.Location = new System.Drawing.Point(42, 214);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(131, 21);
+            label5.Size = new System.Drawing.Size(135, 25);
             label5.TabIndex = 99;
             label5.Text = "Estado de Citas";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label6.ForeColor = System.Drawing.Color.WhiteSmoke;
             label6.Location = new System.Drawing.Point(512, 214);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(47, 21);
+            label6.Size = new System.Drawing.Size(48, 25);
             label6.TabIndex = 100;
             label6.Text = "Salir";
             // 
@@ -269,11 +269,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(634, 51);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(281, 31);
+            this.label7.Size = new System.Drawing.Size(306, 37);
             this.label7.TabIndex = 2;
             this.label7.Text = "Bienvenido a DocuMed";
             // 

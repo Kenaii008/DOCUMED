@@ -108,5 +108,10 @@ namespace DOCUMED
             diagnosticoTextBox1.Clear();
             idConsultaTextBox1.Focus();
         }
+
+       // private void estaturaTextBox1_TextChanged(object sender, EventArgs e)
+       // {
+
+       // }
     }
 }
