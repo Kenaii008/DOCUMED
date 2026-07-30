@@ -260,7 +260,7 @@ WHERE IdPaciente = @IdPaciente</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FechaNacimiento" msprop:Generator_ColumnPropNameInRow="FechaNacimiento" msprop:Generator_ColumnPropNameInTable="FechaNacimientoColumn" msprop:Generator_ColumnVarNameInTable="columnFechaNacimiento" msprop:Generator_UserColumnName="FechaNacimiento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaNacimiento" msprop:Generator_ColumnPropNameInTable="FechaNacimientoColumn" msprop:Generator_ColumnPropNameInRow="FechaNacimiento" msprop:Generator_UserColumnName="FechaNacimiento" msprop:Generator_ColumnVarNameInTable="columnFechaNacimiento" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

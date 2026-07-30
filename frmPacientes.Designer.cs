@@ -54,6 +54,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.idPacienteTextBox = new System.Windows.Forms.TextBox();
+            this.binSrcPaciente = new System.Windows.Forms.BindingSource(this.components);
+            this.medical_Center_HVIRFILLDataSetPaciente = new DOCUMED.Medical_Center_HVIRFILLDataSetPaciente();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.fechaNacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.sexoTextBox = new System.Windows.Forms.TextBox();
@@ -74,8 +76,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.binSrcPaciente = new System.Windows.Forms.BindingSource(this.components);
-            this.medical_Center_HVIRFILLDataSetPaciente = new DOCUMED.Medical_Center_HVIRFILLDataSetPaciente();
             this.pacientesTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetPacienteTableAdapters.PacientesTableAdapter();
             this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetPacienteTableAdapters.TableAdapterManager();
             idPacienteLabel = new System.Windows.Forms.Label();
@@ -92,10 +92,10 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.binSrcPaciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetPaciente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // idPacienteLabel
@@ -215,6 +215,7 @@
             this.btnLimpiar.TabIndex = 99;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
@@ -324,6 +325,16 @@
             this.idPacienteTextBox.Name = "idPacienteTextBox";
             this.idPacienteTextBox.Size = new System.Drawing.Size(239, 26);
             this.idPacienteTextBox.TabIndex = 119;
+            // 
+            // binSrcPaciente
+            // 
+            this.binSrcPaciente.DataMember = "Pacientes";
+            this.binSrcPaciente.DataSource = this.medical_Center_HVIRFILLDataSetPaciente;
+            // 
+            // medical_Center_HVIRFILLDataSetPaciente
+            // 
+            this.medical_Center_HVIRFILLDataSetPaciente.DataSetName = "Medical_Center_HVIRFILLDataSetPaciente";
+            this.medical_Center_HVIRFILLDataSetPaciente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nombreTextBox
             // 
@@ -501,16 +512,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // binSrcPaciente
-            // 
-            this.binSrcPaciente.DataMember = "Pacientes";
-            this.binSrcPaciente.DataSource = this.medical_Center_HVIRFILLDataSetPaciente;
-            // 
-            // medical_Center_HVIRFILLDataSetPaciente
-            // 
-            this.medical_Center_HVIRFILLDataSetPaciente.DataSetName = "Medical_Center_HVIRFILLDataSetPaciente";
-            this.medical_Center_HVIRFILLDataSetPaciente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // pacientesTableAdapter
             // 
             this.pacientesTableAdapter.ClearBeforeFill = true;
@@ -527,7 +528,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1370, 766);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(idPacienteLabel);
             this.Controls.Add(this.idPacienteTextBox);
@@ -571,11 +572,11 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcPaciente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetPaciente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.binSrcPaciente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetPaciente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

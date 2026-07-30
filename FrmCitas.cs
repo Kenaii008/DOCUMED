@@ -12,12 +12,11 @@ namespace DOCUMED
 {
     public partial class FrmCitas : Form
     {
-        string vHora;
-        decimal vIdP, vIdM, vIdC, vIdE;
-        string vFecha;
-
         private void btnE_Click(object sender, EventArgs e)
         {
+            string vHora, vFecha;
+            decimal vIdP, vIdM, vIdC, vIdE;
+
             vIdC = decimal.Parse(idCitaTextBox.Text);
             vIdP = decimal.Parse(idPacienteTextBox.Text);
             vIdM = decimal.Parse(idMedicoTextBox.Text);
@@ -25,18 +24,20 @@ namespace DOCUMED
             vHora = horaTextBox.Text;
             vIdE = decimal.Parse(idEstadoTextBox.Text);
 
-            MessageBox.Show(vIdC + ", " + vIdP + ", " + vIdM + ", " + vFecha + ", " + vHora + ", " + vIdE);
+            this.citasTableAdapter.ActualizarCitas(vIdP, vIdM, vFecha, vHora, vIdE, vIdC);
 
-            this.citasTableAdapter.ActualizarCitas(vIdP, vIdM, Convert.ToDateTime(vFecha), vHora, vIdE, vIdC);
-
+            MessageBox.Show("Cita actualizada correctamente", "ACTUALIZAR REGISTRO");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            string vHora, vFecha;
+            decimal vIdP, vIdM, vIdC, vIdE;
+
             vIdC = decimal.Parse(idCitaTextBox.Text);
             vIdP = decimal.Parse(idPacienteTextBox.Text);
             vIdM = decimal.Parse(idMedicoTextBox.Text);
-           // vFecha = fechaDateTimePicker.Value;
+            vFecha = fechaDateTimePicker.Value.ToString("yyyy/MM/dd");
             vHora = horaTextBox.Text;
             vIdE = decimal.Parse(idEstadoTextBox.Text);
 
@@ -50,9 +51,15 @@ namespace DOCUMED
             InitializeComponent();
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            idCitaTextBox.Clear();
+            idPacienteTextBox.Clear();
+            idMedicoTextBox.Clear();
+            fechaDateTimePicker.Value = DateTime.Now;
+            horaTextBox.Clear();
+            idEstadoTextBox.Clear();
+            idCitaTextBox.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -69,15 +76,17 @@ namespace DOCUMED
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            string vHora, vFecha;
+            decimal vIdP, vIdM, vIdC, vIdE;
+
             vIdC = decimal.Parse(idCitaTextBox.Text);
             vIdP = decimal.Parse(idPacienteTextBox.Text);
             vIdM = decimal.Parse(idMedicoTextBox.Text);
-            fechaDateTimePicker.CustomFormat="yyyy/mm/dd";
-            //vFecha = (fechaDateTimePicker.Value);
+            vFecha = fechaDateTimePicker.Value.ToString("yyyy/MM/dd");
             vHora = horaTextBox.Text;
             vIdE = decimal.Parse(idEstadoTextBox.Text);
 
-            //this.citasTableAdapter.AgregarCita(vIdC, vIdP, vIdM, vFecha, vHora, vIdE);
+            this.citasTableAdapter.AgregarCita(vIdC, vIdP, vIdM, vFecha, vHora, vIdE);
 
             MessageBox.Show("Cita agregada correctamente", "NUEVO REGISTRO");
         }

@@ -51,10 +51,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.binSrcConsulta = new System.Windows.Forms.BindingSource(this.components);
-            this.medical_Center_HVIRFILLDataSetConsulta = new DOCUMED.Medical_Center_HVIRFILLDataSetConsulta();
-            this.consultasTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetConsultaTableAdapters.ConsultasTableAdapter();
-            this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetConsultaTableAdapters.TableAdapterManager();
             this.idConsultaTextBox = new System.Windows.Forms.TextBox();
             this.diagnosticoTextBox = new System.Windows.Forms.TextBox();
             this.motivoConsultaTextBox = new System.Windows.Forms.TextBox();
@@ -76,6 +72,10 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.binSrcConsulta = new System.Windows.Forms.BindingSource(this.components);
+            this.medical_Center_HVIRFILLDataSetConsulta = new DOCUMED.Medical_Center_HVIRFILLDataSetConsulta();
+            this.consultasTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetConsultaTableAdapters.ConsultasTableAdapter();
+            this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetConsultaTableAdapters.TableAdapterManager();
             diagnosticoLabel = new System.Windows.Forms.Label();
             motivoConsultaLabel = new System.Windows.Forms.Label();
             presionArterialLabel = new System.Windows.Forms.Label();
@@ -89,10 +89,10 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.binSrcConsulta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcConsulta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetConsulta)).BeginInit();
             this.SuspendLayout();
             // 
             // diagnosticoLabel
@@ -203,6 +203,7 @@
             this.btnLimpiar.TabIndex = 69;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
@@ -212,6 +213,7 @@
             this.btnEliminar.TabIndex = 68;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnE
             // 
@@ -221,6 +223,7 @@
             this.btnE.TabIndex = 67;
             this.btnE.Text = "Editar";
             this.btnE.UseVisualStyleBackColor = true;
+            this.btnE.Click += new System.EventHandler(this.btnE_Click);
             // 
             // btnGuardar
             // 
@@ -230,6 +233,7 @@
             this.btnGuardar.TabIndex = 66;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnNuevo
             // 
@@ -293,27 +297,6 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // binSrcConsulta
-            // 
-            this.binSrcConsulta.DataMember = "Consultas";
-            this.binSrcConsulta.DataSource = this.medical_Center_HVIRFILLDataSetConsulta;
-            // 
-            // medical_Center_HVIRFILLDataSetConsulta
-            // 
-            this.medical_Center_HVIRFILLDataSetConsulta.DataSetName = "Medical_Center_HVIRFILLDataSetConsulta";
-            this.medical_Center_HVIRFILLDataSetConsulta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // consultasTableAdapter
-            // 
-            this.consultasTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.ConsultasTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetConsultaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // idConsultaTextBox
             // 
@@ -500,13 +483,34 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // binSrcConsulta
+            // 
+            this.binSrcConsulta.DataMember = "Consultas";
+            this.binSrcConsulta.DataSource = this.medical_Center_HVIRFILLDataSetConsulta;
+            // 
+            // medical_Center_HVIRFILLDataSetConsulta
+            // 
+            this.medical_Center_HVIRFILLDataSetConsulta.DataSetName = "Medical_Center_HVIRFILLDataSetConsulta";
+            this.medical_Center_HVIRFILLDataSetConsulta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // consultasTableAdapter
+            // 
+            this.consultasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.ConsultasTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetConsultaTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // FrmConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 783);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(idConsultaLabel);
             this.Controls.Add(this.idConsultaTextBox);
@@ -548,11 +552,11 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.binSrcConsulta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetConsulta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcConsulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetConsulta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

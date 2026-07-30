@@ -46,10 +46,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.binSrcECitas = new System.Windows.Forms.BindingSource(this.components);
-            this.medical_Center_HVIRFILLDataSetECitas = new DOCUMED.Medical_Center_HVIRFILLDataSetECitas();
-            this.estadoCitasTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters.EstadoCitasTableAdapter();
-            this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters.TableAdapterManager();
             this.idEstadoTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.motivoTextBox = new System.Windows.Forms.TextBox();
@@ -64,6 +60,10 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.binSrcECitas = new System.Windows.Forms.BindingSource(this.components);
+            this.medical_Center_HVIRFILLDataSetECitas = new DOCUMED.Medical_Center_HVIRFILLDataSetECitas();
+            this.estadoCitasTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters.EstadoCitasTableAdapter();
+            this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters.TableAdapterManager();
             idEstadoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             motivoLabel = new System.Windows.Forms.Label();
@@ -71,10 +71,10 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.binSrcECitas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetECitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcECitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetECitas)).BeginInit();
             this.SuspendLayout();
             // 
             // idEstadoLabel
@@ -121,6 +121,7 @@
             this.btnLimpiar.TabIndex = 60;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
@@ -130,6 +131,7 @@
             this.btnEliminar.TabIndex = 59;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnE
             // 
@@ -139,6 +141,7 @@
             this.btnE.TabIndex = 58;
             this.btnE.Text = "Editar";
             this.btnE.UseVisualStyleBackColor = true;
+            this.btnE.Click += new System.EventHandler(this.btnE_Click);
             // 
             // btnGuardar
             // 
@@ -148,6 +151,7 @@
             this.btnGuardar.TabIndex = 57;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnNuevo
             // 
@@ -230,26 +234,6 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // binSrcECitas
-            // 
-            this.binSrcECitas.DataMember = "EstadoCitas";
-            this.binSrcECitas.DataSource = this.medical_Center_HVIRFILLDataSetECitas;
-            // 
-            // medical_Center_HVIRFILLDataSetECitas
-            // 
-            this.medical_Center_HVIRFILLDataSetECitas.DataSetName = "Medical_Center_HVIRFILLDataSetECitas";
-            this.medical_Center_HVIRFILLDataSetECitas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estadoCitasTableAdapter
-            // 
-            this.estadoCitasTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.EstadoCitasTableAdapter = this.estadoCitasTableAdapter;
-            this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // idEstadoTextBox
             // 
@@ -379,13 +363,33 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // binSrcECitas
+            // 
+            this.binSrcECitas.DataMember = "EstadoCitas";
+            this.binSrcECitas.DataSource = this.medical_Center_HVIRFILLDataSetECitas;
+            // 
+            // medical_Center_HVIRFILLDataSetECitas
+            // 
+            this.medical_Center_HVIRFILLDataSetECitas.DataSetName = "Medical_Center_HVIRFILLDataSetECitas";
+            this.medical_Center_HVIRFILLDataSetECitas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // estadoCitasTableAdapter
+            // 
+            this.estadoCitasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EstadoCitasTableAdapter = this.estadoCitasTableAdapter;
+            this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetECitasTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // frmEstadoCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 817);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(idEstadoLabel);
             this.Controls.Add(this.idEstadoTextBox);
@@ -415,11 +419,11 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.binSrcECitas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetECitas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.binSrcECitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medical_Center_HVIRFILLDataSetECitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

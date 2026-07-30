@@ -13,14 +13,31 @@ namespace DOCUMED
     public partial class frmPacientes : Form
     {
         string vNombre, vSexo, vAlergias, vPCronicos, vTelefono, vCorreo, vDireccion, vCEmergencia, vTEmergencia;
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            idPacienteTextBox.Clear();
+            nombreTextBox.Clear();
+            sexoTextBox.Clear();
+            fechaNacimientoDateTimePicker.Value = DateTime.Now;
+            alergiasTextBox.Clear();
+            padecimientosCronicosTextBox.Clear();
+            telefonoTextBox.Clear();
+            correoTextBox.Clear();
+            direccionTextBox.Clear();
+            contactoEmergenciaTextBox.Clear();
+            telefonoEmergenciaTextBox.Clear();
+            idPacienteTextBox.Focus();
+        }
+
         decimal vIdP;
-        DateTime vFNacimiento;
+        string vFNacimiento;
         private void btnE_Click(object sender, EventArgs e)
         {
             vIdP = decimal.Parse(idPacienteTextBox.Text);
             vNombre = nombreTextBox.Text;
             vSexo = sexoTextBox.Text;
-            //vFNacimiento = fechaNacimientoDateTimePicker.Value;
+            vFNacimiento = fechaNacimientoDateTimePicker.Value.ToString("yyyy/MM/dd");
             vAlergias = alergiasTextBox.Text;
             vPCronicos = padecimientosCronicosTextBox.Text;
             vTelefono = telefonoTextBox.Text;
@@ -29,9 +46,9 @@ namespace DOCUMED
             vCEmergencia = contactoEmergenciaTextBox.Text;
             vTEmergencia = telefonoEmergenciaTextBox.Text;
 
-            //this.pacientesTableAdapter.ActualizarPaciente(vNombre, vFNacimiento, vSexo, vAlergias, vPCronicos, vTelefono, vCorreo, vDireccion, vCEmergencia, vTEmergencia, vIdP);
+            this.pacientesTableAdapter.ActualizarPaciente(vNombre, vFNacimiento, vSexo, vAlergias, vPCronicos, vTelefono, vCorreo, vDireccion, vCEmergencia, vTEmergencia, vIdP);
 
-            MessageBox.Show("Paciente actualizado correctamente,", "ACTUALIZAR REGISTRO");
+            MessageBox.Show("Paciente actualizado correctamente", "ACTUALIZAR REGISTRO");
         }
         public frmPacientes()
         {
@@ -57,7 +74,7 @@ namespace DOCUMED
             vIdP = decimal.Parse(idPacienteTextBox.Text);
             vNombre = nombreTextBox.Text;
             vSexo = sexoTextBox.Text;
-            vFNacimiento = fechaNacimientoDateTimePicker.Value;
+            vFNacimiento = fechaNacimientoDateTimePicker.Value.ToString("yyyy/MM/dd");
             vAlergias = alergiasTextBox.Text;
             vPCronicos = padecimientosCronicosTextBox.Text;
             vTelefono = telefonoTextBox.Text;
@@ -66,9 +83,9 @@ namespace DOCUMED
             vCEmergencia = contactoEmergenciaTextBox.Text;
             vTEmergencia = telefonoEmergenciaTextBox.Text;
 
-            //this.pacientesTableAdapter.AgregarPaciente(vIdP, vNombre, vSexo, vFNacimiento, vAlergias, vPCronicos, vTelefono, vCorreo, vDireccion, vCEmergencia, vTEmergencia);
+            this.pacientesTableAdapter.AgregarPaciente(vIdP, vNombre, vSexo, vFNacimiento, vAlergias, vPCronicos, vTelefono, vCorreo, vDireccion, vCEmergencia, vTEmergencia);
 
-            MessageBox.Show("Paciente agregado correctamente,", "NUEVO REGISTRO");
+            MessageBox.Show("Paciente agregado correctamente", "NUEVO REGISTRO");
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -76,7 +93,7 @@ namespace DOCUMED
             vIdP = decimal.Parse(idPacienteTextBox.Text);
             vNombre = nombreTextBox.Text;
             vSexo = sexoTextBox.Text;
-            vFNacimiento = fechaNacimientoDateTimePicker.Value;
+            vFNacimiento = fechaNacimientoDateTimePicker.Value.ToString("yyyy/MM/dd");
             vAlergias = alergiasTextBox.Text;
             vPCronicos = padecimientosCronicosTextBox.Text;
             vTelefono = telefonoTextBox.Text;
@@ -87,7 +104,7 @@ namespace DOCUMED
 
             this.pacientesTableAdapter.EliminarPaciente(vIdP);
 
-            MessageBox.Show("Paciente eliminado correctamente,", "ELIMINAR REGISTRO");
+            MessageBox.Show("Paciente eliminado correctamente", "ELIMINAR REGISTRO");
         }
     }
 }

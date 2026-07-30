@@ -906,20 +906,13 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"UPDATE [dbo].[EstadoCitas] SET [IdEstado] = @IdEstado, [Nombre] = @Nombre, [Motivo] = @Motivo, [Reprogramado] = @Reprogramado WHERE (([IdEstado] = @Original_IdEstado) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Motivo = 1 AND [Motivo] IS NULL) OR ([Motivo] = @Original_Motivo)) AND ((@IsNull_Reprogramado = 1 AND [Reprogramado] IS NULL) OR ([Reprogramado] = @Original_Reprogramado)))
-SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado = @IdEstado)";
+            this._commandCollection[1].CommandText = "UPDATE EstadoCitas\r\nSET\r\n    Nombre = @Nombre,\r\n    Motivo = @Motivo,\r\n    Reprog" +
+                "ramado = @Reprogramado\r\nWHERE IdEstado = @IdEstado";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdEstado", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reprogramado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdEstado", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Motivo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Reprogramado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reprogramado", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Motivo", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reprogramado", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdEstado", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "INSERT INTO [dbo].[EstadoCitas] ([IdEstado], [Nombre], [Motivo], [Reprogramado]) " +
@@ -931,15 +924,9 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reprogramado", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"DELETE FROM [dbo].[EstadoCitas] WHERE (([IdEstado] = @Original_IdEstado) AND ((@IsNull_Nombre = 1 AND [Nombre] IS NULL) OR ([Nombre] = @Original_Nombre)) AND ((@IsNull_Motivo = 1 AND [Motivo] IS NULL) OR ([Motivo] = @Original_Motivo)) AND ((@IsNull_Reprogramado = 1 AND [Reprogramado] IS NULL) OR ([Reprogramado] = @Original_Reprogramado)))";
+            this._commandCollection[3].CommandText = "DELETE FROM EstadoCitas\r\nWHERE IdEstado = @IdEstado";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdEstado", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Motivo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Motivo", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Reprogramado", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reprogramado", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "Reprogramado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdEstado", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 3, 0, "IdEstado", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1158,64 +1145,27 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int ActualizarECitas(decimal IdEstado, string Nombre, string Motivo, string Reprogramado, decimal Original_IdEstado, global::System.Nullable<int> IsNull_Nombre, string Original_Nombre, global::System.Nullable<int> IsNull_Motivo, string Original_Motivo, global::System.Nullable<int> IsNull_Reprogramado, string Original_Reprogramado) {
+        public virtual int ActualizarECitas(string Nombre, string Motivo, string Reprogramado, decimal IdEstado) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            command.Parameters[0].Value = ((decimal)(IdEstado));
             if ((Nombre == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Nombre));
+            }
+            if ((Motivo == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[1].Value = ((string)(Nombre));
+                command.Parameters[1].Value = ((string)(Motivo));
             }
-            if ((Motivo == null)) {
+            if ((Reprogramado == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(Motivo));
+                command.Parameters[2].Value = ((string)(Reprogramado));
             }
-            if ((Reprogramado == null)) {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[3].Value = ((string)(Reprogramado));
-            }
-            command.Parameters[4].Value = ((decimal)(Original_IdEstado));
-            if ((IsNull_Nombre.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(IsNull_Nombre.Value));
-            }
-            else {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Nombre == null)) {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[6].Value = ((string)(Original_Nombre));
-            }
-            if ((IsNull_Motivo.HasValue == true)) {
-                command.Parameters[7].Value = ((int)(IsNull_Motivo.Value));
-            }
-            else {
-                command.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Motivo == null)) {
-                command.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[8].Value = ((string)(Original_Motivo));
-            }
-            if ((IsNull_Reprogramado.HasValue == true)) {
-                command.Parameters[9].Value = ((int)(IsNull_Reprogramado.Value));
-            }
-            else {
-                command.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Reprogramado == null)) {
-                command.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[10].Value = ((string)(Original_Reprogramado));
-            }
+            command.Parameters[3].Value = ((decimal)(IdEstado));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1279,45 +1229,9 @@ SELECT IdEstado, Nombre, Motivo, Reprogramado FROM EstadoCitas WHERE (IdEstado =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int EliminarECitas(decimal Original_IdEstado, global::System.Nullable<int> IsNull_Nombre, string Original_Nombre, global::System.Nullable<int> IsNull_Motivo, string Original_Motivo, global::System.Nullable<int> IsNull_Reprogramado, string Original_Reprogramado) {
+        public virtual int EliminarECitas(decimal IdEstado) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
-            command.Parameters[0].Value = ((decimal)(Original_IdEstado));
-            if ((IsNull_Nombre.HasValue == true)) {
-                command.Parameters[1].Value = ((int)(IsNull_Nombre.Value));
-            }
-            else {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Nombre == null)) {
-                command.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[2].Value = ((string)(Original_Nombre));
-            }
-            if ((IsNull_Motivo.HasValue == true)) {
-                command.Parameters[3].Value = ((int)(IsNull_Motivo.Value));
-            }
-            else {
-                command.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Motivo == null)) {
-                command.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[4].Value = ((string)(Original_Motivo));
-            }
-            if ((IsNull_Reprogramado.HasValue == true)) {
-                command.Parameters[5].Value = ((int)(IsNull_Reprogramado.Value));
-            }
-            else {
-                command.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Reprogramado == null)) {
-                command.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[6].Value = ((string)(Original_Reprogramado));
-            }
+            command.Parameters[0].Value = ((decimal)(IdEstado));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
