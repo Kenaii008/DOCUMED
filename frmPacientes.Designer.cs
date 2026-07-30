@@ -154,7 +154,7 @@
             padecimientosCronicosLabel.Name = "padecimientosCronicosLabel";
             padecimientosCronicosLabel.Size = new System.Drawing.Size(178, 21);
             padecimientosCronicosLabel.TabIndex = 128;
-            padecimientosCronicosLabel.Text = "Padecimientos Cronicos:";
+            padecimientosCronicosLabel.Text = "Padecimientos Crónicos:";
             // 
             // telefonoLabel
             // 
@@ -164,7 +164,7 @@
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(71, 21);
             telefonoLabel.TabIndex = 130;
-            telefonoLabel.Text = "Telefono:";
+            telefonoLabel.Text = "Teléfono:";
             // 
             // correoLabel
             // 
@@ -184,7 +184,7 @@
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(78, 21);
             direccionLabel.TabIndex = 134;
-            direccionLabel.Text = "Direccion:";
+            direccionLabel.Text = "Dirección:";
             // 
             // contactoEmergenciaLabel
             // 
@@ -204,7 +204,7 @@
             telefonoEmergenciaLabel.Name = "telefonoEmergenciaLabel";
             telefonoEmergenciaLabel.Size = new System.Drawing.Size(156, 21);
             telefonoEmergenciaLabel.TabIndex = 138;
-            telefonoEmergenciaLabel.Text = "Telefono Emergencia:";
+            telefonoEmergenciaLabel.Text = "Teléfono Emergencia:";
             // 
             // label14
             // 

@@ -69,7 +69,7 @@
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.Color.White;
-            label1.Location = new System.Drawing.Point(276, 24);
+            label1.Location = new System.Drawing.Point(272, 24);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(89, 25);
             label1.TabIndex = 95;
@@ -102,7 +102,7 @@
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label4.ForeColor = System.Drawing.Color.White;
-            label4.Location = new System.Drawing.Point(283, 214);
+            label4.Location = new System.Drawing.Point(279, 214);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(78, 25);
             label4.TabIndex = 98;

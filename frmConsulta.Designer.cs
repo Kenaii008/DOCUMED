@@ -129,7 +129,7 @@
             idMedicoLabel.Name = "idMedicoLabel";
             idMedicoLabel.Size = new System.Drawing.Size(81, 21);
             idMedicoLabel.TabIndex = 11;
-            idMedicoLabel.Text = "Id Medico:";
+            idMedicoLabel.Text = "Id Médico:";
             // 
             // fechaLabel
             // 
@@ -169,7 +169,7 @@
             presionArterialLabel.Name = "presionArterialLabel";
             presionArterialLabel.Size = new System.Drawing.Size(120, 21);
             presionArterialLabel.TabIndex = 19;
-            presionArterialLabel.Text = "Presion Arterial:";
+            presionArterialLabel.Text = "Presión Arterial:";
             // 
             // motivoConsultaLabel
             // 
@@ -189,7 +189,7 @@
             diagnosticoLabel.Name = "diagnosticoLabel";
             diagnosticoLabel.Size = new System.Drawing.Size(95, 21);
             diagnosticoLabel.TabIndex = 23;
-            diagnosticoLabel.Text = "Diagnostico:";
+            diagnosticoLabel.Text = "Diagnóstico:";
             // 
             // panel1
             // 
