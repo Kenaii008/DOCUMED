@@ -12,8 +12,8 @@ namespace DOCUMED
 {
     public partial class frmEstadoCitas : Form
     {
-        decimal vIdECitas;
-        string vNombre, vMotivo, vReprogramado;
+        decimal vIdECitas, vFCita;
+        string vMotivo, vReprogramado;
         public frmEstadoCitas()
         {
             InitializeComponent();
@@ -29,11 +29,11 @@ namespace DOCUMED
         private void btnE_Click(object sender, EventArgs e)
         {
             vIdECitas = decimal.Parse(idEstadoTextBox.Text);
-            vNombre = nombreTextBox.Text;
+            vFCita = decimal.Parse(folioCitaTextBox.Text);
             vMotivo = motivoTextBox.Text;
             vReprogramado = reprogramadoTextBox.Text;
 
-            this.estadoCitasTableAdapter.ActualizarECitas(vNombre, vMotivo, vReprogramado, vIdECitas);
+            //this.estadoCitasTableAdapter.ActualizarECitas(vNombre, vMotivo, vReprogramado, vIdECitas);
 
             MessageBox.Show("Estado de cita actualizado correctamente", "ACTUALIZAR REGISTRO");
         }
@@ -41,11 +41,11 @@ namespace DOCUMED
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             vIdECitas = decimal.Parse(idEstadoTextBox.Text);
-            vNombre = nombreTextBox.Text;
+            vFCita = decimal.Parse(folioCitaTextBox.Text);
             vMotivo = motivoTextBox.Text;
             vReprogramado = reprogramadoTextBox.Text;
 
-            this.estadoCitasTableAdapter.EliminarECitas(vIdECitas);
+            this.estadoCitasXYTableAdapter.Delete(vIdECitas, vFCita, vMotivo, vReprogramado);
 
             MessageBox.Show("Estado de cita eliminado correctamente", "ELIMINAR REGISTRO");
         }
@@ -53,7 +53,7 @@ namespace DOCUMED
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             idEstadoTextBox.Clear();
-            nombreTextBox.Clear();
+            folioCitaTextBox.Clear();
             motivoTextBox.Clear();
             reprogramadoTextBox.Clear();
             idEstadoTextBox.Focus();
@@ -61,20 +61,22 @@ namespace DOCUMED
 
         private void frmEstadoCitas_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetECitasXY.EstadoCitasXY' table. You can move, or remove it, as needed.
+            this.estadoCitasXYTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetECitasXY.EstadoCitasXY);
             // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetECitas.EstadoCitas' table. You can move, or remove it, as needed.
-            this.estadoCitasTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetECitas.EstadoCitas);
+            //this.estadoCitasTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetECitas.EstadoCitas);
 
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             vIdECitas = decimal.Parse(idEstadoTextBox.Text);
-            vNombre = nombreTextBox.Text;
+            vFCita = decimal.Parse(folioCitaTextBox.Text);
             vMotivo = motivoTextBox.Text;
             vReprogramado = reprogramadoTextBox.Text;
 
-            this.estadoCitasTableAdapter.AgregarECitas(vIdECitas, vNombre, vMotivo, vReprogramado);
-
+            this.estadoCitasXYTableAdapter.Insert(vIdECitas, vFCita, vMotivo, vReprogramado);
+            estadoCitasXYDataGridView.Refresh();
             MessageBox.Show("Estado de cita agregado correctamente", "AGREGAR REGISTRO");
         }
 

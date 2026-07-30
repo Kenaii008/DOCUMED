@@ -20,7 +20,7 @@ namespace DOCUMED
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string vHora, vFecha;
-            decimal vIdP, vIdM, vIdC, vIdE;
+            decimal vIdP, vIdM, vIdC, vIdE, vFCita;
 
             vIdC = decimal.Parse(idCitaTextBox.Text);
             vIdP = decimal.Parse(idPacienteTextBox.Text);
@@ -28,8 +28,10 @@ namespace DOCUMED
             vFecha = fechaTextBox.Text;
             vHora = horaTextBox.Text;
             vIdE = decimal.Parse(idEstadoTextBox.Text);
+            vFCita = decimal.Parse(folioCitaTextBox.Text);
 
-            this.citasYTableAdapter.Delete(vIdC, vIdP, vIdM, vFecha, vHora, vIdE);
+            this.citasXYTableAdapter.Delete(vIdC, vIdP, vIdM, vFecha, vHora, vIdE, vFCita);
+            citasXYDataGridView.Refresh();
 
             MessageBox.Show("Cita eliminada correctamente", "ELIMINAR REGISTRO");
         }
@@ -47,6 +49,7 @@ namespace DOCUMED
             fechaTextBox.Clear();
             horaTextBox.Clear();
             idEstadoTextBox.Clear();
+            folioCitaTextBox.Clear();
             idCitaTextBox.Focus();
         }
 
@@ -59,15 +62,17 @@ namespace DOCUMED
 
         private void FrmCitas_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetCitasXY.CitasXY' table. You can move, or remove it, as needed.
+            this.citasXYTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetCitasXY.CitasXY);
             // TODO: This line of code loads data into the 'medical_Center_HVIRFILLDataSetCitasY.CitasY' table. You can move, or remove it, as needed.
-            this.citasYTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetCitasY.CitasY);
+            //this.citasYTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetCitasY.CitasY);
             //this.citasTableAdapter.Fill(this.medical_Center_HVIRFILLDataSetCita.Citas);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string vHora, vFecha;
-            decimal vIdP, vIdM, vIdC, vIdE;
+            decimal vIdP, vIdM, vIdC, vIdE, vFCita;
 
             vIdC = decimal.Parse(idCitaTextBox.Text);
             vIdP = decimal.Parse(idPacienteTextBox.Text);
@@ -75,8 +80,10 @@ namespace DOCUMED
             vFecha = fechaTextBox.Text;
             vHora = horaTextBox.Text;
             vIdE = decimal.Parse(idEstadoTextBox.Text);
+            vFCita = decimal.Parse(folioCitaTextBox.Text);
 
-            this.citasYTableAdapter.Insert(vIdC, vIdP, vIdM, vFecha, vHora, vIdE);
+            this.citasXYTableAdapter.Insert(vIdC, vIdP, vIdM, vFecha, vHora, vIdE, vFCita);
+            citasXYDataGridView.Refresh();
 
             MessageBox.Show("Cita agregada correctamente", "NUEVO REGISTRO");
         }

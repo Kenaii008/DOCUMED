@@ -85,7 +85,7 @@
             // 
             idMedicoLabel.AutoSize = true;
             idMedicoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idMedicoLabel.Location = new System.Drawing.Point(491, 262);
+            idMedicoLabel.Location = new System.Drawing.Point(491, 290);
             idMedicoLabel.Name = "idMedicoLabel";
             idMedicoLabel.Size = new System.Drawing.Size(81, 21);
             idMedicoLabel.TabIndex = 93;
@@ -95,7 +95,7 @@
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(491, 294);
+            nombreLabel.Location = new System.Drawing.Point(491, 325);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(71, 21);
             nombreLabel.TabIndex = 95;
@@ -105,7 +105,7 @@
             // 
             especialidadLabel.AutoSize = true;
             especialidadLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            especialidadLabel.Location = new System.Drawing.Point(491, 326);
+            especialidadLabel.Location = new System.Drawing.Point(491, 360);
             especialidadLabel.Name = "especialidadLabel";
             especialidadLabel.Size = new System.Drawing.Size(98, 21);
             especialidadLabel.TabIndex = 97;
@@ -115,7 +115,7 @@
             // 
             cedulaProfesionalLabel.AutoSize = true;
             cedulaProfesionalLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cedulaProfesionalLabel.Location = new System.Drawing.Point(491, 358);
+            cedulaProfesionalLabel.Location = new System.Drawing.Point(491, 396);
             cedulaProfesionalLabel.Name = "cedulaProfesionalLabel";
             cedulaProfesionalLabel.Size = new System.Drawing.Size(143, 21);
             cedulaProfesionalLabel.TabIndex = 99;
@@ -125,7 +125,7 @@
             // 
             telefonoLabel.AutoSize = true;
             telefonoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoLabel.Location = new System.Drawing.Point(491, 390);
+            telefonoLabel.Location = new System.Drawing.Point(491, 431);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(71, 21);
             telefonoLabel.TabIndex = 101;
@@ -135,7 +135,7 @@
             // 
             correoLabel.AutoSize = true;
             correoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            correoLabel.Location = new System.Drawing.Point(491, 422);
+            correoLabel.Location = new System.Drawing.Point(491, 466);
             correoLabel.Name = "correoLabel";
             correoLabel.Size = new System.Drawing.Size(61, 21);
             correoLabel.TabIndex = 103;
@@ -144,9 +144,9 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(1170, 392);
+            this.btnLimpiar.Location = new System.Drawing.Point(1170, 416);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(109, 46);
+            this.btnLimpiar.Size = new System.Drawing.Size(109, 51);
             this.btnLimpiar.TabIndex = 60;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -155,9 +155,9 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(1170, 340);
+            this.btnEliminar.Location = new System.Drawing.Point(1170, 345);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(109, 46);
+            this.btnEliminar.Size = new System.Drawing.Size(109, 51);
             this.btnEliminar.TabIndex = 59;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -166,9 +166,9 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(1170, 291);
+            this.btnGuardar.Location = new System.Drawing.Point(1170, 264);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(109, 46);
+            this.btnGuardar.Size = new System.Drawing.Size(109, 51);
             this.btnGuardar.TabIndex = 57;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -178,7 +178,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(755, 25);
+            this.label1.Location = new System.Drawing.Point(755, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 47);
             this.label1.TabIndex = 48;
@@ -188,17 +188,17 @@
             // label8
             // 
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Location = new System.Drawing.Point(1142, 210);
+            this.label8.Location = new System.Drawing.Point(1142, 232);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 319);
+            this.label8.Size = new System.Drawing.Size(167, 353);
             this.label8.TabIndex = 61;
             // 
             // label9
             // 
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.Location = new System.Drawing.Point(444, 190);
+            this.label9.Location = new System.Drawing.Point(444, 210);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(898, 360);
+            this.label9.Size = new System.Drawing.Size(898, 398);
             this.label9.TabIndex = 62;
             // 
             // panel2
@@ -208,7 +208,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1901, 100);
+            this.panel2.Size = new System.Drawing.Size(1901, 110);
             this.panel2.TabIndex = 91;
             // 
             // pictureBox1
@@ -217,7 +217,7 @@
             this.pictureBox1.Image = global::DOCUMED.Properties.Resources.hvLog;
             this.pictureBox1.Location = new System.Drawing.Point(1526, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(127, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 90;
             this.pictureBox1.TabStop = false;
@@ -228,7 +228,7 @@
             this.pictureBox2.Image = global::DOCUMED.Properties.Resources.docMedLogo;
             this.pictureBox2.Location = new System.Drawing.Point(1681, -1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(127, 114);
+            this.pictureBox2.Size = new System.Drawing.Size(127, 126);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 89;
             this.pictureBox2.TabStop = false;
@@ -236,9 +236,9 @@
             // button1
             // 
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(1367, 452);
+            this.button1.Location = new System.Drawing.Point(1170, 496);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 98);
+            this.button1.Size = new System.Drawing.Size(109, 51);
             this.button1.TabIndex = 93;
             this.button1.Text = "Menú Principal";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -249,7 +249,7 @@
             // 
             this.idMedicoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcMedico, "IdMedico", true));
             this.idMedicoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idMedicoTextBox.Location = new System.Drawing.Point(640, 259);
+            this.idMedicoTextBox.Location = new System.Drawing.Point(640, 286);
             this.idMedicoTextBox.Name = "idMedicoTextBox";
             this.idMedicoTextBox.Size = new System.Drawing.Size(210, 29);
             this.idMedicoTextBox.TabIndex = 94;
@@ -268,7 +268,7 @@
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcMedico, "Nombre", true));
             this.nombreTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTextBox.Location = new System.Drawing.Point(640, 291);
+            this.nombreTextBox.Location = new System.Drawing.Point(640, 322);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(210, 29);
             this.nombreTextBox.TabIndex = 96;
@@ -277,7 +277,7 @@
             // 
             this.especialidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcMedico, "Especialidad", true));
             this.especialidadTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.especialidadTextBox.Location = new System.Drawing.Point(640, 323);
+            this.especialidadTextBox.Location = new System.Drawing.Point(640, 357);
             this.especialidadTextBox.Name = "especialidadTextBox";
             this.especialidadTextBox.Size = new System.Drawing.Size(210, 29);
             this.especialidadTextBox.TabIndex = 98;
@@ -286,7 +286,7 @@
             // 
             this.cedulaProfesionalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcMedico, "CedulaProfesional", true));
             this.cedulaProfesionalTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cedulaProfesionalTextBox.Location = new System.Drawing.Point(640, 355);
+            this.cedulaProfesionalTextBox.Location = new System.Drawing.Point(640, 392);
             this.cedulaProfesionalTextBox.Name = "cedulaProfesionalTextBox";
             this.cedulaProfesionalTextBox.Size = new System.Drawing.Size(210, 29);
             this.cedulaProfesionalTextBox.TabIndex = 100;
@@ -295,7 +295,7 @@
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcMedico, "Telefono", true));
             this.telefonoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefonoTextBox.Location = new System.Drawing.Point(640, 387);
+            this.telefonoTextBox.Location = new System.Drawing.Point(640, 428);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(210, 29);
             this.telefonoTextBox.TabIndex = 102;
@@ -304,7 +304,7 @@
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcMedico, "Correo", true));
             this.correoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.correoTextBox.Location = new System.Drawing.Point(640, 419);
+            this.correoTextBox.Location = new System.Drawing.Point(640, 463);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(210, 29);
             this.correoTextBox.TabIndex = 104;
@@ -326,7 +326,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingNavigator1.Location = new System.Drawing.Point(623, 472);
+            this.bindingNavigator1.Location = new System.Drawing.Point(623, 522);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -417,7 +417,7 @@
             // 
             // frmMedico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -443,7 +443,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMedico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

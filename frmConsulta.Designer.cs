@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label idConsultaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsulta));
             System.Windows.Forms.Label idCitaLabel;
             System.Windows.Forms.Label idPacienteLabel;
             System.Windows.Forms.Label idMedicoLabel;
@@ -39,7 +39,6 @@
             System.Windows.Forms.Label presionArterialLabel;
             System.Windows.Forms.Label motivoConsultaLabel;
             System.Windows.Forms.Label diagnosticoLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsulta));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -55,24 +54,22 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.idConsultaTextBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.diagnosticoTextBox1 = new System.Windows.Forms.TextBox();
-            this.idCitaTextBox1 = new System.Windows.Forms.TextBox();
-            this.motivoConsultaTextBox1 = new System.Windows.Forms.TextBox();
-            this.idPacienteTextBox1 = new System.Windows.Forms.TextBox();
-            this.presionArterialTextBox1 = new System.Windows.Forms.TextBox();
-            this.idMedicoTextBox1 = new System.Windows.Forms.TextBox();
-            this.estaturaTextBox1 = new System.Windows.Forms.TextBox();
-            this.fechaTextBox = new System.Windows.Forms.TextBox();
-            this.pesoTextBox1 = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.consultasWTableAdapter = new DOCUMED.Medical_Center_HVIRFILLDataSetConsultasWTableAdapters.ConsultasWTableAdapter();
             this.tableAdapterManager = new DOCUMED.Medical_Center_HVIRFILLDataSetConsultasWTableAdapters.TableAdapterManager();
-            idConsultaLabel = new System.Windows.Forms.Label();
+            this.diagnosticoTextBox1 = new System.Windows.Forms.TextBox();
+            this.motivoConsultaTextBox1 = new System.Windows.Forms.TextBox();
+            this.presionArterialTextBox1 = new System.Windows.Forms.TextBox();
+            this.estaturaTextBox1 = new System.Windows.Forms.TextBox();
+            this.pesoTextBox1 = new System.Windows.Forms.TextBox();
+            this.fechaTextBox = new System.Windows.Forms.TextBox();
+            this.idMedicoTextBox1 = new System.Windows.Forms.TextBox();
+            this.idPacienteTextBox1 = new System.Windows.Forms.TextBox();
+            this.idCitaTextBox1 = new System.Windows.Forms.TextBox();
             idCitaLabel = new System.Windows.Forms.Label();
             idPacienteLabel = new System.Windows.Forms.Label();
             idMedicoLabel = new System.Windows.Forms.Label();
@@ -91,120 +88,21 @@
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // idConsultaLabel
-            // 
-            idConsultaLabel.AutoSize = true;
-            idConsultaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idConsultaLabel.Location = new System.Drawing.Point(60, 20);
-            idConsultaLabel.Name = "idConsultaLabel";
-            idConsultaLabel.Size = new System.Drawing.Size(91, 21);
-            idConsultaLabel.TabIndex = 5;
-            idConsultaLabel.Text = "Id Consulta:";
-            // 
-            // idCitaLabel
-            // 
-            idCitaLabel.AutoSize = true;
-            idCitaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idCitaLabel.Location = new System.Drawing.Point(60, 53);
-            idCitaLabel.Name = "idCitaLabel";
-            idCitaLabel.Size = new System.Drawing.Size(57, 21);
-            idCitaLabel.TabIndex = 7;
-            idCitaLabel.Text = "Id Cita:";
-            // 
-            // idPacienteLabel
-            // 
-            idPacienteLabel.AutoSize = true;
-            idPacienteLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idPacienteLabel.Location = new System.Drawing.Point(60, 86);
-            idPacienteLabel.Name = "idPacienteLabel";
-            idPacienteLabel.Size = new System.Drawing.Size(87, 21);
-            idPacienteLabel.TabIndex = 9;
-            idPacienteLabel.Text = "Id Paciente:";
-            // 
-            // idMedicoLabel
-            // 
-            idMedicoLabel.AutoSize = true;
-            idMedicoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idMedicoLabel.Location = new System.Drawing.Point(60, 121);
-            idMedicoLabel.Name = "idMedicoLabel";
-            idMedicoLabel.Size = new System.Drawing.Size(81, 21);
-            idMedicoLabel.TabIndex = 11;
-            idMedicoLabel.Text = "Id Médico:";
-            // 
-            // fechaLabel
-            // 
-            fechaLabel.AutoSize = true;
-            fechaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fechaLabel.Location = new System.Drawing.Point(60, 156);
-            fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(53, 21);
-            fechaLabel.TabIndex = 13;
-            fechaLabel.Text = "Fecha:";
-            // 
-            // pesoLabel
-            // 
-            pesoLabel.AutoSize = true;
-            pesoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pesoLabel.Location = new System.Drawing.Point(62, 191);
-            pesoLabel.Name = "pesoLabel";
-            pesoLabel.Size = new System.Drawing.Size(45, 21);
-            pesoLabel.TabIndex = 15;
-            pesoLabel.Text = "Peso:";
-            // 
-            // estaturaLabel
-            // 
-            estaturaLabel.AutoSize = true;
-            estaturaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            estaturaLabel.Location = new System.Drawing.Point(62, 226);
-            estaturaLabel.Name = "estaturaLabel";
-            estaturaLabel.Size = new System.Drawing.Size(69, 21);
-            estaturaLabel.TabIndex = 17;
-            estaturaLabel.Text = "Estatura:";
-            // 
-            // presionArterialLabel
-            // 
-            presionArterialLabel.AutoSize = true;
-            presionArterialLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            presionArterialLabel.Location = new System.Drawing.Point(62, 261);
-            presionArterialLabel.Name = "presionArterialLabel";
-            presionArterialLabel.Size = new System.Drawing.Size(120, 21);
-            presionArterialLabel.TabIndex = 19;
-            presionArterialLabel.Text = "Presión Arterial:";
-            // 
-            // motivoConsultaLabel
-            // 
-            motivoConsultaLabel.AutoSize = true;
-            motivoConsultaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            motivoConsultaLabel.Location = new System.Drawing.Point(60, 297);
-            motivoConsultaLabel.Name = "motivoConsultaLabel";
-            motivoConsultaLabel.Size = new System.Drawing.Size(127, 21);
-            motivoConsultaLabel.TabIndex = 21;
-            motivoConsultaLabel.Text = "Motivo Consulta:";
-            // 
-            // diagnosticoLabel
-            // 
-            diagnosticoLabel.AutoSize = true;
-            diagnosticoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            diagnosticoLabel.Location = new System.Drawing.Point(62, 332);
-            diagnosticoLabel.Name = "diagnosticoLabel";
-            diagnosticoLabel.Size = new System.Drawing.Size(95, 21);
-            diagnosticoLabel.TabIndex = 23;
-            diagnosticoLabel.Text = "Diagnóstico:";
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(1, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1901, 100);
+            this.panel1.Size = new System.Drawing.Size(2218, 115);
             this.panel1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(755, 25);
+            this.label2.Location = new System.Drawing.Point(523, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 47);
             this.label2.TabIndex = 0;
@@ -214,8 +112,6 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.bindingNavigator2);
-            this.panel3.Controls.Add(idConsultaLabel);
-            this.panel3.Controls.Add(this.idConsultaTextBox1);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(idCitaLabel);
             this.panel3.Controls.Add(this.diagnosticoTextBox1);
@@ -235,9 +131,11 @@
             this.panel3.Controls.Add(estaturaLabel);
             this.panel3.Controls.Add(pesoLabel);
             this.panel3.Controls.Add(this.pesoTextBox1);
-            this.panel3.Location = new System.Drawing.Point(360, 199);
+            this.panel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(110, 123);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(898, 407);
+            this.panel3.Size = new System.Drawing.Size(1047, 469);
             this.panel3.TabIndex = 1;
             // 
             // bindingNavigator2
@@ -257,14 +155,15 @@
             this.toolStripButton3,
             this.toolStripButton4,
             this.toolStripSeparator3});
-            this.bindingNavigator2.Location = new System.Drawing.Point(188, 361);
+            this.bindingNavigator2.Location = new System.Drawing.Point(219, 416);
             this.bindingNavigator2.MoveFirstItem = this.toolStripButton1;
             this.bindingNavigator2.MoveLastItem = this.toolStripButton4;
             this.bindingNavigator2.MoveNextItem = this.toolStripButton3;
             this.bindingNavigator2.MovePreviousItem = this.toolStripButton2;
             this.bindingNavigator2.Name = "bindingNavigator2";
+            this.bindingNavigator2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bindingNavigator2.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator2.Size = new System.Drawing.Size(209, 25);
+            this.bindingNavigator2.Size = new System.Drawing.Size(218, 25);
             this.bindingNavigator2.TabIndex = 6;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -314,7 +213,7 @@
             this.toolStripTextBox1.AutoSize = false;
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(58, 23);
             this.toolStripTextBox1.Text = "0";
             this.toolStripTextBox1.ToolTipText = "Current position";
             // 
@@ -346,32 +245,26 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // idConsultaTextBox1
-            // 
-            this.idConsultaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "IdConsulta", true));
-            this.idConsultaTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idConsultaTextBox1.Location = new System.Drawing.Point(188, 17);
-            this.idConsultaTextBox1.Name = "idConsultaTextBox1";
-            this.idConsultaTextBox1.Size = new System.Drawing.Size(202, 29);
-            this.idConsultaTextBox1.TabIndex = 6;
-            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.btnBack);
             this.panel4.Controls.Add(this.btnClean);
             this.panel4.Controls.Add(this.btnDel);
             this.panel4.Controls.Add(this.btnAdd);
-            this.panel4.Location = new System.Drawing.Point(695, 20);
+            this.panel4.Location = new System.Drawing.Point(613, 19);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(167, 319);
+            this.panel4.Size = new System.Drawing.Size(194, 368);
             this.panel4.TabIndex = 0;
             // 
             // btnClean
             // 
             this.btnClean.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClean.Location = new System.Drawing.Point(27, 188);
+            this.btnClean.Location = new System.Drawing.Point(31, 183);
+            this.btnClean.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(109, 46);
+            this.btnClean.Size = new System.Drawing.Size(128, 53);
             this.btnClean.TabIndex = 4;
             this.btnClean.Text = "Limpiar";
             this.btnClean.UseVisualStyleBackColor = true;
@@ -380,9 +273,10 @@
             // btnDel
             // 
             this.btnDel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(27, 136);
+            this.btnDel.Location = new System.Drawing.Point(31, 102);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(109, 46);
+            this.btnDel.Size = new System.Drawing.Size(128, 53);
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "Eliminar";
             this.btnDel.UseVisualStyleBackColor = true;
@@ -391,101 +285,22 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(27, 82);
+            this.btnAdd.Location = new System.Drawing.Point(31, 24);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(109, 46);
+            this.btnAdd.Size = new System.Drawing.Size(128, 53);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Guardar";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // diagnosticoTextBox1
-            // 
-            this.diagnosticoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "Diagnostico", true));
-            this.diagnosticoTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diagnosticoTextBox1.Location = new System.Drawing.Point(188, 329);
-            this.diagnosticoTextBox1.Name = "diagnosticoTextBox1";
-            this.diagnosticoTextBox1.Size = new System.Drawing.Size(202, 29);
-            this.diagnosticoTextBox1.TabIndex = 24;
-            // 
-            // idCitaTextBox1
-            // 
-            this.idCitaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "IdCita", true));
-            this.idCitaTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idCitaTextBox1.Location = new System.Drawing.Point(188, 50);
-            this.idCitaTextBox1.Name = "idCitaTextBox1";
-            this.idCitaTextBox1.Size = new System.Drawing.Size(202, 29);
-            this.idCitaTextBox1.TabIndex = 8;
-            // 
-            // motivoConsultaTextBox1
-            // 
-            this.motivoConsultaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "MotivoConsulta", true));
-            this.motivoConsultaTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.motivoConsultaTextBox1.Location = new System.Drawing.Point(188, 294);
-            this.motivoConsultaTextBox1.Name = "motivoConsultaTextBox1";
-            this.motivoConsultaTextBox1.Size = new System.Drawing.Size(202, 29);
-            this.motivoConsultaTextBox1.TabIndex = 22;
-            // 
-            // idPacienteTextBox1
-            // 
-            this.idPacienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "IdPaciente", true));
-            this.idPacienteTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idPacienteTextBox1.Location = new System.Drawing.Point(188, 83);
-            this.idPacienteTextBox1.Name = "idPacienteTextBox1";
-            this.idPacienteTextBox1.Size = new System.Drawing.Size(202, 29);
-            this.idPacienteTextBox1.TabIndex = 10;
-            // 
-            // presionArterialTextBox1
-            // 
-            this.presionArterialTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "PresionArterial", true));
-            this.presionArterialTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.presionArterialTextBox1.Location = new System.Drawing.Point(188, 258);
-            this.presionArterialTextBox1.Name = "presionArterialTextBox1";
-            this.presionArterialTextBox1.Size = new System.Drawing.Size(202, 29);
-            this.presionArterialTextBox1.TabIndex = 20;
-            // 
-            // idMedicoTextBox1
-            // 
-            this.idMedicoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "IdMedico", true));
-            this.idMedicoTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idMedicoTextBox1.Location = new System.Drawing.Point(188, 118);
-            this.idMedicoTextBox1.Name = "idMedicoTextBox1";
-            this.idMedicoTextBox1.Size = new System.Drawing.Size(202, 29);
-            this.idMedicoTextBox1.TabIndex = 12;
-            // 
-            // estaturaTextBox1
-            // 
-            this.estaturaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "Estatura", true));
-            this.estaturaTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estaturaTextBox1.Location = new System.Drawing.Point(188, 223);
-            this.estaturaTextBox1.Name = "estaturaTextBox1";
-            this.estaturaTextBox1.Size = new System.Drawing.Size(202, 29);
-            this.estaturaTextBox1.TabIndex = 18;
-            // 
-            // fechaTextBox
-            // 
-            this.fechaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "Fecha", true));
-            this.fechaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaTextBox.Location = new System.Drawing.Point(188, 153);
-            this.fechaTextBox.Name = "fechaTextBox";
-            this.fechaTextBox.Size = new System.Drawing.Size(202, 29);
-            this.fechaTextBox.TabIndex = 14;
-            // 
-            // pesoTextBox1
-            // 
-            this.pesoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "Peso", true));
-            this.pesoTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pesoTextBox1.Location = new System.Drawing.Point(188, 188);
-            this.pesoTextBox1.Name = "pesoTextBox1";
-            this.pesoTextBox1.Size = new System.Drawing.Size(202, 29);
-            this.pesoTextBox1.TabIndex = 16;
-            // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(1299, 461);
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(30, 263);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(163, 98);
+            this.btnBack.Size = new System.Drawing.Size(129, 52);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Menú Principal";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -501,16 +316,197 @@
             this.tableAdapterManager.ConsultasWTableAdapter = this.consultasWTableAdapter;
             this.tableAdapterManager.UpdateOrder = DOCUMED.Medical_Center_HVIRFILLDataSetConsultasWTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // idCitaLabel
+            // 
+            idCitaLabel.AutoSize = true;
+            idCitaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idCitaLabel.Location = new System.Drawing.Point(70, 61);
+            idCitaLabel.Name = "idCitaLabel";
+            idCitaLabel.Size = new System.Drawing.Size(57, 21);
+            idCitaLabel.TabIndex = 7;
+            idCitaLabel.Text = "Id Cita:";
+            // 
+            // idPacienteLabel
+            // 
+            idPacienteLabel.AutoSize = true;
+            idPacienteLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idPacienteLabel.Location = new System.Drawing.Point(70, 99);
+            idPacienteLabel.Name = "idPacienteLabel";
+            idPacienteLabel.Size = new System.Drawing.Size(87, 21);
+            idPacienteLabel.TabIndex = 9;
+            idPacienteLabel.Text = "Id Paciente:";
+            // 
+            // idMedicoLabel
+            // 
+            idMedicoLabel.AutoSize = true;
+            idMedicoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idMedicoLabel.Location = new System.Drawing.Point(70, 139);
+            idMedicoLabel.Name = "idMedicoLabel";
+            idMedicoLabel.Size = new System.Drawing.Size(81, 21);
+            idMedicoLabel.TabIndex = 11;
+            idMedicoLabel.Text = "Id Médico:";
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fechaLabel.Location = new System.Drawing.Point(70, 180);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(53, 21);
+            fechaLabel.TabIndex = 13;
+            fechaLabel.Text = "Fecha:";
+            // 
+            // pesoLabel
+            // 
+            pesoLabel.AutoSize = true;
+            pesoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            pesoLabel.Location = new System.Drawing.Point(72, 221);
+            pesoLabel.Name = "pesoLabel";
+            pesoLabel.Size = new System.Drawing.Size(45, 21);
+            pesoLabel.TabIndex = 15;
+            pesoLabel.Text = "Peso:";
+            // 
+            // estaturaLabel
+            // 
+            estaturaLabel.AutoSize = true;
+            estaturaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            estaturaLabel.Location = new System.Drawing.Point(72, 261);
+            estaturaLabel.Name = "estaturaLabel";
+            estaturaLabel.Size = new System.Drawing.Size(69, 21);
+            estaturaLabel.TabIndex = 17;
+            estaturaLabel.Text = "Estatura:";
+            // 
+            // presionArterialLabel
+            // 
+            presionArterialLabel.AutoSize = true;
+            presionArterialLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            presionArterialLabel.Location = new System.Drawing.Point(72, 301);
+            presionArterialLabel.Name = "presionArterialLabel";
+            presionArterialLabel.Size = new System.Drawing.Size(120, 21);
+            presionArterialLabel.TabIndex = 19;
+            presionArterialLabel.Text = "Presión Arterial:";
+            // 
+            // motivoConsultaLabel
+            // 
+            motivoConsultaLabel.AutoSize = true;
+            motivoConsultaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            motivoConsultaLabel.Location = new System.Drawing.Point(70, 343);
+            motivoConsultaLabel.Name = "motivoConsultaLabel";
+            motivoConsultaLabel.Size = new System.Drawing.Size(127, 21);
+            motivoConsultaLabel.TabIndex = 21;
+            motivoConsultaLabel.Text = "Motivo Consulta:";
+            // 
+            // diagnosticoLabel
+            // 
+            diagnosticoLabel.AutoSize = true;
+            diagnosticoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            diagnosticoLabel.Location = new System.Drawing.Point(72, 383);
+            diagnosticoLabel.Name = "diagnosticoLabel";
+            diagnosticoLabel.Size = new System.Drawing.Size(95, 21);
+            diagnosticoLabel.TabIndex = 23;
+            diagnosticoLabel.Text = "Diagnóstico:";
+            // 
+            // diagnosticoTextBox1
+            // 
+            this.diagnosticoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "Diagnostico", true));
+            this.diagnosticoTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diagnosticoTextBox1.Location = new System.Drawing.Point(219, 379);
+            this.diagnosticoTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.diagnosticoTextBox1.Name = "diagnosticoTextBox1";
+            this.diagnosticoTextBox1.Size = new System.Drawing.Size(235, 29);
+            this.diagnosticoTextBox1.TabIndex = 24;
+            // 
+            // motivoConsultaTextBox1
+            // 
+            this.motivoConsultaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "MotivoConsulta", true));
+            this.motivoConsultaTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.motivoConsultaTextBox1.Location = new System.Drawing.Point(219, 339);
+            this.motivoConsultaTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.motivoConsultaTextBox1.Name = "motivoConsultaTextBox1";
+            this.motivoConsultaTextBox1.Size = new System.Drawing.Size(235, 29);
+            this.motivoConsultaTextBox1.TabIndex = 22;
+            // 
+            // presionArterialTextBox1
+            // 
+            this.presionArterialTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "PresionArterial", true));
+            this.presionArterialTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.presionArterialTextBox1.Location = new System.Drawing.Point(219, 298);
+            this.presionArterialTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.presionArterialTextBox1.Name = "presionArterialTextBox1";
+            this.presionArterialTextBox1.Size = new System.Drawing.Size(235, 29);
+            this.presionArterialTextBox1.TabIndex = 20;
+            // 
+            // estaturaTextBox1
+            // 
+            this.estaturaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "Estatura", true));
+            this.estaturaTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estaturaTextBox1.Location = new System.Drawing.Point(219, 257);
+            this.estaturaTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.estaturaTextBox1.Name = "estaturaTextBox1";
+            this.estaturaTextBox1.Size = new System.Drawing.Size(235, 29);
+            this.estaturaTextBox1.TabIndex = 18;
+            // 
+            // pesoTextBox1
+            // 
+            this.pesoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "Peso", true));
+            this.pesoTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pesoTextBox1.Location = new System.Drawing.Point(219, 217);
+            this.pesoTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pesoTextBox1.Name = "pesoTextBox1";
+            this.pesoTextBox1.Size = new System.Drawing.Size(235, 29);
+            this.pesoTextBox1.TabIndex = 16;
+            // 
+            // fechaTextBox
+            // 
+            this.fechaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "Fecha", true));
+            this.fechaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechaTextBox.Location = new System.Drawing.Point(219, 176);
+            this.fechaTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.fechaTextBox.Name = "fechaTextBox";
+            this.fechaTextBox.Size = new System.Drawing.Size(235, 29);
+            this.fechaTextBox.TabIndex = 14;
+            // 
+            // idMedicoTextBox1
+            // 
+            this.idMedicoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "IdMedico", true));
+            this.idMedicoTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idMedicoTextBox1.Location = new System.Drawing.Point(219, 136);
+            this.idMedicoTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idMedicoTextBox1.Name = "idMedicoTextBox1";
+            this.idMedicoTextBox1.Size = new System.Drawing.Size(235, 29);
+            this.idMedicoTextBox1.TabIndex = 12;
+            // 
+            // idPacienteTextBox1
+            // 
+            this.idPacienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "IdPaciente", true));
+            this.idPacienteTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idPacienteTextBox1.Location = new System.Drawing.Point(219, 96);
+            this.idPacienteTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idPacienteTextBox1.Name = "idPacienteTextBox1";
+            this.idPacienteTextBox1.Size = new System.Drawing.Size(235, 29);
+            this.idPacienteTextBox1.TabIndex = 10;
+            // 
+            // idCitaTextBox1
+            // 
+            this.idCitaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcConsultasW, "IdCita", true));
+            this.idCitaTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idCitaTextBox1.Location = new System.Drawing.Point(219, 58);
+            this.idCitaTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idCitaTextBox1.Name = "idCitaTextBox1";
+            this.idCitaTextBox1.Size = new System.Drawing.Size(235, 29);
+            this.idCitaTextBox1.TabIndex = 8;
+            // 
             // FrmConsulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.btnBack);
+            this.ClientSize = new System.Drawing.Size(1246, 535);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -575,20 +571,10 @@
         private Medical_Center_HVIRFILLDataSetConsultasW medical_Center_HVIRFILLDataSetConsultasW;
         private Medical_Center_HVIRFILLDataSetConsultasWTableAdapters.ConsultasWTableAdapter consultasWTableAdapter;
         private Medical_Center_HVIRFILLDataSetConsultasWTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox idConsultaTextBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox diagnosticoTextBox1;
-        private System.Windows.Forms.TextBox idCitaTextBox1;
-        private System.Windows.Forms.TextBox motivoConsultaTextBox1;
-        private System.Windows.Forms.TextBox idPacienteTextBox1;
-        private System.Windows.Forms.TextBox presionArterialTextBox1;
-        private System.Windows.Forms.TextBox idMedicoTextBox1;
-        private System.Windows.Forms.TextBox estaturaTextBox1;
-        private System.Windows.Forms.TextBox fechaTextBox;
-        private System.Windows.Forms.TextBox pesoTextBox1;
         private System.Windows.Forms.BindingNavigator bindingNavigator2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
@@ -599,5 +585,14 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.TextBox diagnosticoTextBox1;
+        private System.Windows.Forms.TextBox idCitaTextBox1;
+        private System.Windows.Forms.TextBox motivoConsultaTextBox1;
+        private System.Windows.Forms.TextBox idPacienteTextBox1;
+        private System.Windows.Forms.TextBox presionArterialTextBox1;
+        private System.Windows.Forms.TextBox idMedicoTextBox1;
+        private System.Windows.Forms.TextBox estaturaTextBox1;
+        private System.Windows.Forms.TextBox fechaTextBox;
+        private System.Windows.Forms.TextBox pesoTextBox1;
     }
 }

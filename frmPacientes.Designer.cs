@@ -100,7 +100,7 @@
             // 
             idPacienteLabel.AutoSize = true;
             idPacienteLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idPacienteLabel.Location = new System.Drawing.Point(621, 213);
+            idPacienteLabel.Location = new System.Drawing.Point(633, 235);
             idPacienteLabel.Name = "idPacienteLabel";
             idPacienteLabel.Size = new System.Drawing.Size(87, 21);
             idPacienteLabel.TabIndex = 118;
@@ -110,7 +110,7 @@
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(621, 245);
+            nombreLabel.Location = new System.Drawing.Point(633, 271);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(71, 21);
             nombreLabel.TabIndex = 120;
@@ -120,7 +120,7 @@
             // 
             fechaNacimientoLabel.AutoSize = true;
             fechaNacimientoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fechaNacimientoLabel.Location = new System.Drawing.Point(621, 277);
+            fechaNacimientoLabel.Location = new System.Drawing.Point(633, 306);
             fechaNacimientoLabel.Name = "fechaNacimientoLabel";
             fechaNacimientoLabel.Size = new System.Drawing.Size(137, 21);
             fechaNacimientoLabel.TabIndex = 122;
@@ -130,7 +130,7 @@
             // 
             sexoLabel.AutoSize = true;
             sexoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sexoLabel.Location = new System.Drawing.Point(621, 309);
+            sexoLabel.Location = new System.Drawing.Point(633, 342);
             sexoLabel.Name = "sexoLabel";
             sexoLabel.Size = new System.Drawing.Size(46, 21);
             sexoLabel.TabIndex = 124;
@@ -140,7 +140,7 @@
             // 
             alergiasLabel.AutoSize = true;
             alergiasLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            alergiasLabel.Location = new System.Drawing.Point(621, 341);
+            alergiasLabel.Location = new System.Drawing.Point(633, 377);
             alergiasLabel.Name = "alergiasLabel";
             alergiasLabel.Size = new System.Drawing.Size(69, 21);
             alergiasLabel.TabIndex = 126;
@@ -150,7 +150,7 @@
             // 
             padecimientosCronicosLabel.AutoSize = true;
             padecimientosCronicosLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            padecimientosCronicosLabel.Location = new System.Drawing.Point(621, 373);
+            padecimientosCronicosLabel.Location = new System.Drawing.Point(633, 412);
             padecimientosCronicosLabel.Name = "padecimientosCronicosLabel";
             padecimientosCronicosLabel.Size = new System.Drawing.Size(178, 21);
             padecimientosCronicosLabel.TabIndex = 128;
@@ -160,7 +160,7 @@
             // 
             telefonoLabel.AutoSize = true;
             telefonoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoLabel.Location = new System.Drawing.Point(621, 405);
+            telefonoLabel.Location = new System.Drawing.Point(633, 448);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(71, 21);
             telefonoLabel.TabIndex = 130;
@@ -170,7 +170,7 @@
             // 
             correoLabel.AutoSize = true;
             correoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            correoLabel.Location = new System.Drawing.Point(621, 437);
+            correoLabel.Location = new System.Drawing.Point(633, 483);
             correoLabel.Name = "correoLabel";
             correoLabel.Size = new System.Drawing.Size(61, 21);
             correoLabel.TabIndex = 132;
@@ -180,7 +180,7 @@
             // 
             direccionLabel.AutoSize = true;
             direccionLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionLabel.Location = new System.Drawing.Point(621, 469);
+            direccionLabel.Location = new System.Drawing.Point(633, 518);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(78, 21);
             direccionLabel.TabIndex = 134;
@@ -190,7 +190,7 @@
             // 
             contactoEmergenciaLabel.AutoSize = true;
             contactoEmergenciaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contactoEmergenciaLabel.Location = new System.Drawing.Point(621, 501);
+            contactoEmergenciaLabel.Location = new System.Drawing.Point(633, 554);
             contactoEmergenciaLabel.Name = "contactoEmergenciaLabel";
             contactoEmergenciaLabel.Size = new System.Drawing.Size(160, 21);
             contactoEmergenciaLabel.TabIndex = 136;
@@ -200,7 +200,7 @@
             // 
             telefonoEmergenciaLabel.AutoSize = true;
             telefonoEmergenciaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoEmergenciaLabel.Location = new System.Drawing.Point(621, 533);
+            telefonoEmergenciaLabel.Location = new System.Drawing.Point(633, 589);
             telefonoEmergenciaLabel.Name = "telefonoEmergenciaLabel";
             telefonoEmergenciaLabel.Size = new System.Drawing.Size(156, 21);
             telefonoEmergenciaLabel.TabIndex = 138;
@@ -210,7 +210,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(755, 25);
+            this.label14.Location = new System.Drawing.Point(755, 28);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(286, 45);
             this.label14.TabIndex = 116;
@@ -219,9 +219,9 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(1303, 412);
+            this.btnLimpiar.Location = new System.Drawing.Point(1326, 444);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(109, 46);
+            this.btnLimpiar.Size = new System.Drawing.Size(109, 51);
             this.btnLimpiar.TabIndex = 99;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -230,9 +230,9 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(1303, 360);
+            this.btnEliminar.Location = new System.Drawing.Point(1326, 374);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(109, 46);
+            this.btnEliminar.Size = new System.Drawing.Size(109, 51);
             this.btnEliminar.TabIndex = 98;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -241,9 +241,9 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(1303, 308);
+            this.btnGuardar.Location = new System.Drawing.Point(1326, 303);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(109, 46);
+            this.btnGuardar.Size = new System.Drawing.Size(109, 51);
             this.btnGuardar.TabIndex = 96;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -252,17 +252,17 @@
             // label8
             // 
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Location = new System.Drawing.Point(1275, 227);
+            this.label8.Location = new System.Drawing.Point(1293, 278);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 319);
+            this.label8.Size = new System.Drawing.Size(168, 332);
             this.label8.TabIndex = 100;
             // 
             // label9
             // 
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.Location = new System.Drawing.Point(577, 192);
+            this.label9.Location = new System.Drawing.Point(589, 212);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(901, 422);
+            this.label9.Size = new System.Drawing.Size(901, 466);
             this.label9.TabIndex = 101;
             // 
             // panel2
@@ -272,7 +272,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Location = new System.Drawing.Point(1, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1901, 100);
+            this.panel2.Size = new System.Drawing.Size(1901, 110);
             this.panel2.TabIndex = 117;
             // 
             // pictureBox1
@@ -281,7 +281,7 @@
             this.pictureBox1.Image = global::DOCUMED.Properties.Resources.hvLog;
             this.pictureBox1.Location = new System.Drawing.Point(1526, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(127, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 90;
             this.pictureBox1.TabStop = false;
@@ -292,7 +292,7 @@
             this.pictureBox2.Image = global::DOCUMED.Properties.Resources.docMedLogo;
             this.pictureBox2.Location = new System.Drawing.Point(1681, -1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(127, 114);
+            this.pictureBox2.Size = new System.Drawing.Size(127, 126);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 89;
             this.pictureBox2.TabStop = false;
@@ -300,9 +300,9 @@
             // button1
             // 
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(1508, 516);
+            this.button1.Location = new System.Drawing.Point(1326, 515);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 98);
+            this.button1.Size = new System.Drawing.Size(109, 60);
             this.button1.TabIndex = 118;
             this.button1.Text = "Menú Principal";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -333,7 +333,7 @@
             // 
             this.idPacienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "IdPaciente", true));
             this.idPacienteTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idPacienteTextBox.Location = new System.Drawing.Point(808, 210);
+            this.idPacienteTextBox.Location = new System.Drawing.Point(820, 232);
             this.idPacienteTextBox.Name = "idPacienteTextBox";
             this.idPacienteTextBox.Size = new System.Drawing.Size(214, 29);
             this.idPacienteTextBox.TabIndex = 119;
@@ -342,7 +342,7 @@
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "Nombre", true));
             this.nombreTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTextBox.Location = new System.Drawing.Point(808, 242);
+            this.nombreTextBox.Location = new System.Drawing.Point(820, 267);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(214, 29);
             this.nombreTextBox.TabIndex = 121;
@@ -351,7 +351,7 @@
             // 
             this.fechaNacimientoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "FechaNacimiento", true));
             this.fechaNacimientoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaNacimientoTextBox.Location = new System.Drawing.Point(808, 274);
+            this.fechaNacimientoTextBox.Location = new System.Drawing.Point(820, 303);
             this.fechaNacimientoTextBox.Name = "fechaNacimientoTextBox";
             this.fechaNacimientoTextBox.Size = new System.Drawing.Size(214, 29);
             this.fechaNacimientoTextBox.TabIndex = 123;
@@ -360,7 +360,7 @@
             // 
             this.sexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "Sexo", true));
             this.sexoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sexoTextBox.Location = new System.Drawing.Point(808, 306);
+            this.sexoTextBox.Location = new System.Drawing.Point(820, 338);
             this.sexoTextBox.Name = "sexoTextBox";
             this.sexoTextBox.Size = new System.Drawing.Size(214, 29);
             this.sexoTextBox.TabIndex = 125;
@@ -369,7 +369,7 @@
             // 
             this.alergiasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "Alergias", true));
             this.alergiasTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alergiasTextBox.Location = new System.Drawing.Point(808, 338);
+            this.alergiasTextBox.Location = new System.Drawing.Point(820, 374);
             this.alergiasTextBox.Name = "alergiasTextBox";
             this.alergiasTextBox.Size = new System.Drawing.Size(214, 29);
             this.alergiasTextBox.TabIndex = 127;
@@ -378,7 +378,7 @@
             // 
             this.padecimientosCronicosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "PadecimientosCronicos", true));
             this.padecimientosCronicosTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.padecimientosCronicosTextBox.Location = new System.Drawing.Point(808, 370);
+            this.padecimientosCronicosTextBox.Location = new System.Drawing.Point(820, 409);
             this.padecimientosCronicosTextBox.Name = "padecimientosCronicosTextBox";
             this.padecimientosCronicosTextBox.Size = new System.Drawing.Size(214, 29);
             this.padecimientosCronicosTextBox.TabIndex = 129;
@@ -387,7 +387,7 @@
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "Telefono", true));
             this.telefonoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefonoTextBox.Location = new System.Drawing.Point(808, 402);
+            this.telefonoTextBox.Location = new System.Drawing.Point(820, 444);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(214, 29);
             this.telefonoTextBox.TabIndex = 131;
@@ -396,7 +396,7 @@
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "Correo", true));
             this.correoTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.correoTextBox.Location = new System.Drawing.Point(808, 434);
+            this.correoTextBox.Location = new System.Drawing.Point(820, 480);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(214, 29);
             this.correoTextBox.TabIndex = 133;
@@ -405,7 +405,7 @@
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "Direccion", true));
             this.direccionTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direccionTextBox.Location = new System.Drawing.Point(808, 466);
+            this.direccionTextBox.Location = new System.Drawing.Point(820, 515);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(214, 29);
             this.direccionTextBox.TabIndex = 135;
@@ -414,7 +414,7 @@
             // 
             this.contactoEmergenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "ContactoEmergencia", true));
             this.contactoEmergenciaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactoEmergenciaTextBox.Location = new System.Drawing.Point(808, 498);
+            this.contactoEmergenciaTextBox.Location = new System.Drawing.Point(820, 550);
             this.contactoEmergenciaTextBox.Name = "contactoEmergenciaTextBox";
             this.contactoEmergenciaTextBox.Size = new System.Drawing.Size(214, 29);
             this.contactoEmergenciaTextBox.TabIndex = 137;
@@ -423,7 +423,7 @@
             // 
             this.telefonoEmergenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.binSrcPacientesX, "TelefonoEmergencia", true));
             this.telefonoEmergenciaTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefonoEmergenciaTextBox.Location = new System.Drawing.Point(808, 530);
+            this.telefonoEmergenciaTextBox.Location = new System.Drawing.Point(820, 586);
             this.telefonoEmergenciaTextBox.Name = "telefonoEmergenciaTextBox";
             this.telefonoEmergenciaTextBox.Size = new System.Drawing.Size(214, 29);
             this.telefonoEmergenciaTextBox.TabIndex = 139;
@@ -445,7 +445,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
-            this.bindingNavigator1.Location = new System.Drawing.Point(808, 577);
+            this.bindingNavigator1.Location = new System.Drawing.Point(820, 638);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -526,7 +526,7 @@
             // 
             // frmPacientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -562,7 +562,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
